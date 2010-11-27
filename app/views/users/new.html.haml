@@ -1,0 +1,21 @@
+- title "Регистрация"
+
+= form_header "Регистрация"
+
+= simple_form_for @user do |f|
+  .columns
+    .column.halfsized.column-f-x2
+      = f.input :username, :label => "Логин", :hint => "Можно использовать только английские буквы и цифры.", :required => false
+      = f.input :email, :label => "Электронная почта", :required => false
+      .input.password.optional
+        %label.password.optional{:for => "user_password"} Пароль
+        %input#user_password.password.optional{:name => "user[password]", :type => "text"}     
+        %span.password-trigger.show-pass
+          %span.show-pass
+            = image_tag "eye-open.gif", :height => 10, :width => 16
+          %span.hide-pass
+            = image_tag "eye-close.gif", :height => 10, :width => 16
+              		
+      = submit_button "Зарегистрироваться"
+      
+    .column.column-f-x1

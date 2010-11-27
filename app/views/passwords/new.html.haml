@@ -1,0 +1,11 @@
+- title "Забыли пароль?"
+
+= form_header "Восстановление пароля"
+
+= simple_form_for :password, :url => passwords_path do |f|
+  .columns
+    .column.halfsized.column-f-x2
+      = f.input :email, :label => "Электронная почта", :hint => "Мы отправим вам письмо с инструкциями по восстановлению пароля.", :required => false
+      = submit_button "Восстановить"
+      
+    .column.column-f-x1

@@ -1,0 +1,16 @@
+﻿= link_to "Новый параграф", new_user_post_path
+
+%table
+  %tr
+    %th Title
+    %th Body
+    %th
+    %th
+    %th
+- @posts.each do |post|
+  %tr
+    %td= post.title
+    %td= post.conversation + '<br />' + post.note
+    %td= link_to 'Show', post
+    %td= link_to 'Edit', edit_post_path(post)
+    %td= link_to 'Destroy', post, :confirm => 'Вы уверены?', :method => :delete

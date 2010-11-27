@@ -1,0 +1,15 @@
+%table.editorsTable
+	%thead= editors_table_heading(:manager, [<%= @attributes.collect {|a| ":#{a.name}" }.join(", ") %>])
+	%tbody
+		- <%= @plural_name %>.each do |<%= @single_name %>|
+			%tr
+			<%- @attributes.each do |attribute| -%>
+				%td 
+					= <%= @single_name %>.<%= attribute.name %>
+				<%- if attribute == @attributes.first -%>
+					= service_links do
+						= link_to t('edit'), edit_admin_<%= @single_name %>_url(<%= @single_name %>)
+				<%- end -%>
+			<%- end -%>
+= service_links do
+	= link_to t('add'), new_admin_<%= @single_name %>_url

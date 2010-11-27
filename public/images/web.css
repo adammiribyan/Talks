@@ -1,0 +1,5478 @@
+body {
+	padding:0;
+	margin:0;
+}
+img {
+	border:0;
+}
+table {
+	width:100%;
+	border-collapse:collapse;
+	border:0;
+}
+td, th {
+	padding:0;
+	vertical-align:top;
+	text-align:left;
+	border:0;
+}
+p {
+	margin-top:0;
+	margin:0;
+}
+form, fieldset {
+	margin:0;
+	padding:0;
+	border:0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+}
+small {
+	font-size:80%!important;
+}
+ul, ol, li, dl, dl dt, dl dd {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+a::-moz-focus-inner, a {
+border:0;
+padding:0;
+margin:0;
+outline:none;
+}
+a:link, a:visited {
+	color:black;
+	text-decoration:underline;
+}
+a:hover {
+	color:#6e2727;
+	text-decoration:underline;
+}
+a.g-link-inv:link, a.g-link-inv:visited {
+	color:#888;
+	text-decoration:underline;
+}
+a.g-link-inv:hover {
+	text-decoration:none;
+}
+.g-pseudo-link, .g-border-link {
+	position:relative;
+	top:-0.14em;
+	cursor:pointer;
+	white-space:nowrap;
+	text-decoration:none;
+	border-bottom:1px dotted;
+}
+.g-border-link {
+	border-bottom-style:solid;
+}
+.g-pseudo-link:hover, .g-border-link:hover {
+	color:#6e2727;
+	text-decoration:none;
+}
+.g-pseudo-link span, .g-border-link span {
+	position:relative;
+	top:.14em;
+	font-weight:normal;
+}
+@font-face {
+font-family:'Garamond';
+src:url(http://assets.bookmate.ru/8692994313/framework/stylesheets/global/garamond.eot);
+src:local('☺'), url(http://assets.bookmate.ru/0121996265/framework/stylesheets/global/garamond.woff) format('woff'), url(http://assets.bookmate.ru/8979793742/framework/stylesheets/global/garamond.ttf) format('truetype');
+font-weight:normal;
+font-style:normal;
+}
+.f-garamond {
+	font-family:"Garamond", Georgia, serif!important;
+	font-weight:normal;
+}
+html, body {
+	width:100%;
+	height:100%;
+}
+body {
+	font:13px Helvetica, Arial, sans-serif;
+	background-color:white;
+	color:black;
+	position:relative;
+	background-image:url(http://assets.bookmate.ru/1762166858/framework/stylesheets/global/d.gif);
+	background-attachment:fixed;
+}
+.g-color {
+	color:#0971B2;
+}
+.clear {
+	clear:both;
+}
+.clear-left {
+	clear:left;
+}
+.clear-right {
+	clear:right;
+}
+.g-clear-after {
+	height:1%;
+}
+.g-clear-after:after {
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+}
+.g-limit {
+	width:1000px;
+}
+.g-centered {
+	margin:0 auto;
+}
+h1, h2, h3, h4, h5 {
+	font-weight:bold;
+	position:relative;
+}
+h1 {
+	font-size:20px;
+}
+h2 {
+	font-size:18px;
+}
+h3 {
+	font-size:15px;
+}
+h4 {
+	font-size:14px;
+}
+h5 {
+	font-size:11px;
+}
+.g-page {
+	position:relative;
+	z-index:1;
+	height:100%;
+}
+.l-page {
+	position:relative;
+	min-height:100%;
+}
+.l-page .l-page {
+	min-height:0;
+	padding-bottom:120px;
+}
+.l-page-bottom {
+	z-index:1;
+	clear:both;
+	position:relative;
+	margin-top:-100px;
+	height:100px;
+}
+.l-view {
+	width:990px;
+	margin:0 auto;
+}
+.l-block {
+	margin:0 6%;
+}
+.l-block-left {
+	margin-right:0;
+}
+.l-layout-backend {
+	position:relative;
+}
+.l-layout-backend h1 {
+	z-index:0;
+}
+.l-column {
+	float:left;
+}
+.l-column, .l-x1 {
+	width:250px;
+}
+.l-x2 {
+	width:500px;
+}
+.l-x3, .l-column-full {
+	width:750px;
+}
+.l-column-right {
+	width:200px;
+	float:right;
+}
+.l-column-half {
+	width:48%;
+}
+.l-grid .l-column, .l-grid .l-x1 {
+	width:230px;
+}
+.l-grid .l-x2 {
+	width:460px;
+}
+.l-grid .l-x3, .l-grid .l-column-full {
+	width:690px;
+}
+.l-grid .l-column-right {
+	width:300px;
+}
+.l-5x, .l-grid .l-5x {
+	width:198px;
+}
+.l-3x, .l-grid .l-3x {
+	width:330px;
+}
+.l-2x, .l-grid .l-2x {
+	width:495px;
+}
+.formtastic .l-x1 {
+	width:220px;
+}
+.formtastic .l-x2 {
+	width:440px;
+}
+.formtastic .l-x3, .formtastic .l-column-full {
+	width:660px;
+}
+.formtastic .l-column-right {
+	width:285px;
+}
+.l-float-left {
+	float:left;
+}
+.l-float-right {
+	float:right;
+}
+.l-align-left {
+	text-align:left;
+}
+.l-align-right {
+	text-align:right;
+}
+.l-align-center {
+	text-align:center;
+}
+.l-offset-right-45 {
+	padding-right:45px;
+}
+.l-offset-right-30 {
+	padding-right:30px;
+}
+.l-offset-right-20 {
+	padding-right:20px;
+}
+.l-offset-right-15 {
+	padding-right:15px;
+}
+.l-offset-30 {
+	padding-left:30px;
+	padding-right:30px;
+}
+.l-layout-block {
+	padding:15px;
+	border:1px solid #d9d9d9;
+	border-top-width:0;
+}
+.l-layout-gray {
+	background:#303030;
+}
+.l-layout-gray .b-header .b-header-account {
+	border-color:#5c5c5c!important;
+}
+.l-text {
+	font-size:13px;
+	line-height:21px;
+}
+.l-text p {
+	margin-bottom:1em;
+}
+.formtastic {
+	margin-bottom:25px;
+	position:relative;
+	zoom:1;
+}
+.formtastic abbr {
+	display:none;
+}
+.formtastic .l-layout-block {
+	border-bottom-width:0;
+}
+.formtastic .formtastic-inputs {
+	border-bottom:1px solid #e5e5e5;
+	padding-bottom:20px;
+	margin-bottom:10px;
+	position:relative;
+	zoom:1;
+}
+.formtastic .formtastic-inputs_borderless {
+	border:0;
+	padding-bottom:0;
+}
+.formtastic ol {
+	position:relative;
+	zoom:1;
+}
+.formtastic ol li {
+	padding-left:140px;
+	position:relative;
+	zoom:1;
+}
+.formtastic ol li label, .formtastic ol li span.label {
+	font-size:13px;
+	position:absolute;
+	left:0;
+	top:.4em;
+	color:black;
+}
+.formtastic ol li label abbr, .formtastic ol li span.label abbr {
+	border:0;
+	color:red;
+	margin-left:2px;
+}
+.formtastic ol li .inline-hints {
+	font-size:11px;
+	padding-top:5px;
+}
+.formtastic ol li .inline-hints, .formtastic ol li .inline-hints a {
+	color:gray;
+}
+.formtastic ol li .inline-hints a:hover {
+	text-decoration:underline;
+}
+.formtastic ol li.text h2 {
+	font-size:15px;
+	padding-top:4px;
+}
+.formtastic ol li.string, .formtastic ol li.password, .formtastic ol li.radio, .formtastic ol li.date, .formtastic ol li.boolean, .formtastic ol li.text {
+	margin-bottom:15px;
+}
+.formtastic ol li.string input, .formtastic ol li.text textarea, .formtastic ol li.password input {
+	width:99%;
+	display:block;
+	margin-top:4px;
+	font-size:12px;
+	font-family:Arial, sans-serif;
+}
+.formtastic ol li.password input {
+	width:170px;
+}
+.formtastic ol li.string span span {
+	top:5px!important;
+	line-height:20px;
+}
+.e-gecko-mac .formtastic ol li.string span span {
+	top:6px!important;
+}
+.formtastic ol li.radio ol {
+	padding-top:5px;
+}
+.formtastic ol li.radio ol li {
+	padding:0;
+	display:inline;
+	margin-right:20px;
+}
+.formtastic ol li.radio ol li label {
+	position:relative;
+	top:0;
+	zoom:1;
+}
+.formtastic ol li.radio ol li input {
+	vertical-align:middle;
+	margin:0 3px 0 0;
+	position:relative;
+	top:-2px;
+}
+.e-gecko-mac .formtastic ol li.radio ol li input {
+	top:0;
+}
+.formtastic ol li.radio .inline-hints {
+	font-size:13px;
+	line-height:18px;
+	padding-top:10px;
+}
+.formtastic ol li.date ol {
+	padding-top:2px;
+}
+.formtastic ol li.date ol li {
+	padding:0;
+	display:inline;
+	margin-right:4px;
+}
+.formtastic ol li.date ol li label {
+	display:none;
+}
+.formtastic ol li.boolean label {
+	position:relative;
+	top:0;
+}
+.formtastic ol li.boolean input {
+	margin:0 6px 0 0;
+	vertical-align:middle;
+	position:relative;
+	top:-2px;
+}
+.formtastic ol li.userpic, .formtastic ol li.cover {
+	padding:5px 0 0 0;
+}
+.formtastic ol li.userpic label, .formtastic ol li.cover label {
+	position:relative;
+	display:block;
+	top:0;
+	margin-bottom:10px;
+}
+.formtastic ol li.userpic input, .formtastic ol li.cover input {
+	width:99%;
+	display:block;
+}
+.formtastic .formtastic-buttons {
+	background:#efeeec;
+}
+.formtastic .formtastic-buttons .bnb-bottom {
+	text-align:left;
+}
+.formtastic .formtastic-buttons .bnb-bottom .b-button {
+	vertical-align:top;
+}
+.formtastic .formtastic-buttons .l-layout-block {
+	border-top:0;
+	border-bottom-width:1px;
+}
+.formtastic .formtastic-buttons .formtastic-buttons-layout {
+	padding-left:140px;
+}
+.formtastic .formtastic-buttons button {
+	margin-right:19px;
+}
+.formtastic .formtastic-inputs_social .string {
+	padding-left:25px;
+	padding-right:32px;
+	width:273px;
+	float:left;
+}
+.formtastic .formtastic-inputs_social .string label {
+	top:.55em;
+}
+.formtastic .formtastic-inputs legend {
+	padding:0;
+	margin:0 0 10px 0;
+	font-size:18px;
+}
+.formtastic .formtastic-inputs legend span {
+	font-size:13px;
+	color:#767676;
+	line-height:18px;
+}
+.formtastic .l-column-right .formtastic-inputs_social .string, .formtastic .formtastic-inputs_social .l-column-right .string {
+	width:auto;
+	padding-right:0;
+}
+.formtastic .formtastic-inputs_notifications ol li {
+	padding-left:0;
+	padding-top:10px;
+}
+.formtastic_auth .formtastic-inputs {
+	padding:0;
+	margin:0;
+	border:0;
+}
+.formtastic_auth .formtastic-buttons {
+	background:none;
+}
+.formtastic_auth ol li {
+	padding-left:0;
+}
+.formtastic_auth ol li label {
+	font-size:14px;
+	color:#dadada;
+	position:relative;
+	top:0;
+}
+.formtastic_auth ol li.string, .formtastic_auth ol li.password, .formtastic_auth ol li.text {
+	margin-bottom:25px;
+}
+.formtastic_auth ol li.password input {
+	width:99%;
+}
+.formtastic_auth ol li.boolean {
+	position:relative;
+	margin-bottom:25px;
+}
+.formtastic_auth ol li.boolean label {
+	font-size:12px;
+}
+.formtastic_auth ol li.boolean label input {
+	padding:0;
+	margin:0;
+	margin-right:5px;
+	vertical-align:middle;
+	position:relative;
+	top:-1px;
+}
+.formtastic_auth ol li .inline-hints {
+	font-size:12px;
+	padding-top:5px;
+}
+.formtastic_auth ol li .inline-hints, .formtastic_auth ol li .inline-hints a {
+	color:#dadada;
+}
+.formtastic_auth ol li .inline-hints a:hover {
+	color:white;
+	text-decoration:underline;
+}
+.formtastic_auth ol li.remember_me {
+	margin-bottom:25px;
+}
+.formtastic_auth ol #user_session_password_input {
+	margin-bottom:10px;
+}
+.formtastic_invite {
+	text-align:center;
+}
+.formtastic_invite input {
+	text-align:center;
+}
+.formtastic_invite .formtastic-buttons {
+	margin-bottom:20px;
+}
+.formtastic_invite .formtastic-buttons button {
+	display:inline-block;
+	float:none;
+	margin-right:0;
+}
+.l-page-bottom .l-view {
+	padding-top:15px;
+}
+.b-footer {
+	height:60px;
+	border:1px solid #dfdfdf;
+	color:#888;
+	padding-left:55px;
+	background:url(http://assets.bookmate.ru/4960510946/framework/stylesheets/blocks/b-footer/logo.gif) no-repeat 17px 15px;
+	font-size:13px;
+}
+.b-footer a {
+	color:#888;
+}
+.b-footer a:hover {
+	color:#6e2727;
+}
+.b-footer a.highlighted {
+	color:black;
+	padding:3px 5px 2px;
+	border-radius:2px;
+}
+.b-footer a.highlighted:hover {
+	color:#6e2727;
+}
+.b-footer .b-footer-info {
+	height:60px;
+	border-left:1px solid #dfdfdf;
+}
+.b-footer .b-footer-menu {
+	border-bottom:1px solid #dfdfdf;
+	font-weight:bold;
+	padding:8px 11px 7px;
+}
+.b-footer .b-footer-menu ul {
+	float:left;
+}
+.b-footer .b-footer-menu ul li {
+	display:inline;
+	padding-right:15px;
+}
+.b-footer .b-footer-menu .b-footer-menu-social {
+	float:right;
+	font-weight:normal;
+	margin:-2px 0 -10px 10px;
+}
+.b-footer .b-footer-menu .b-footer-menu-social a {
+	color:black;
+	width:18px;
+	height:18px;
+	display:block;
+	background:url(http://assets.bookmate.ru/8053794577/framework/stylesheets/blocks/b-footer/social.png) no-repeat 0 0;
+}
+.b-footer .b-footer-menu .b-footer-menu-twitter a {
+	background-position:-40px 0;
+}
+.b-footer .b-footer-menu .b-footer-menu-facebook a {
+	background-position:0 0;
+}
+.b-footer .b-footer-menu .b-footer-menu-vk a {
+	background-position:-20px 0;
+}
+.b-footer .b-footer-menu .b-footer-menu-twitter a:hover {
+	background-position:-40px -20px;
+}
+.b-footer .b-footer-menu .b-footer-menu-facebook a:hover {
+	background-position:0 -20px;
+}
+.b-footer .b-footer-menu .b-footer-menu-vk a:hover {
+	background-position:-20px -20px;
+}
+.b-footer .b-footer-copyright {
+	padding:8px 0 0 11px;
+}
+.b-footer .b-footer-copyright span {
+	padding-left:18px;
+}
+.l-layout-gray .l-page-bottom {
+	background:black;
+}
+.l-layout-gray .b-footer {
+	background-position:17px -84px;
+}
+.l-layout-gray .b-footer, .l-layout-gray .b-footer .b-footer-info, .l-layout-gray .b-footer .b-footer-menu {
+	border-color:#303030;
+}
+.l-layout-gray .b-footer, .l-layout-gray .b-footer .b-footer-copyright a {
+	color:#606060;
+}
+.l-layout-gray .b-footer a {
+	color:white;
+}
+.l-layout-gray .b-footer a:hover {
+	color:#aaa;
+}
+.l-layout-gray .b-footer .b-footer-menu .b-footer-menu-twitter a {
+	color:white;
+}
+.l-layout-gray .b-footer .b-footer-menu .b-footer-menu-twitter a {
+	background-position:-40px -40px;
+}
+.l-layout-gray .b-footer .b-footer-menu .b-footer-menu-facebook a {
+	background-position:0 -40px;
+}
+.l-layout-gray .b-footer .b-footer-menu .b-footer-menu-vk a {
+	background-position:-20px -40px;
+}
+.l-layout-gray .b-footer .b-footer-menu .b-footer-menu-twitter a:hover {
+	background-position:-40px -60px;
+}
+.l-layout-gray .b-footer .b-footer-menu .b-footer-menu-facebook a:hover {
+	background-position:0 -60px;
+}
+.l-layout-gray .b-footer .b-footer-menu .b-footer-menu-vk a:hover {
+	background-position:-20px -60px;
+}
+.b-header {
+	position:relative;
+	z-index:1;
+}
+.b-header .b-header-account {
+	padding:12px 0 7px 0;
+}
+.b-header .b-header-account .b-header-bookmate {
+	width:160px;
+	height:20px;
+	background:url(http://assets.bookmate.ru/0387174689/framework/stylesheets/blocks/b-header/logo.png) no-repeat 0 -30px;
+	float:left;
+	position:relative;
+	top:-3px;
+	margin-bottom:-3px;
+	zoom:1;
+}
+.b-header .b-header-account .b-header-bookatme {
+	background:url(http://assets.bookmate.ru/3846850348/framework/stylesheets/blocks/b-header/logo-bookatme.png) no-repeat 0 -30px;
+}
+.b-header .b-header-account a .b-header-bookmate {
+	cursor:pointer;
+}
+.b-header .b-header-account ul {
+	float:right;
+	font-weight:bold;
+	font-size:13px;
+	padding-top:3px;
+}
+.b-header .b-header-account ul li {
+	float:left;
+	margin-left:15px;
+}
+.b-header .b-header-account ul li.right {
+	float:right;
+}
+.b-header .b-header-account .b-header-right {
+	float:right;
+}
+.b-header .b-header-account .b-header-right ul {
+	float:none;
+	font-weight:normal;
+}
+.b-header .b-header-account .b-header-right ul li {
+	margin-left:0;
+	margin-right:15px;
+	white-space:nowrap;
+}
+.b-header .b-header-account .b-header-right ul li.last {
+	margin:0;
+}
+.b-header .b-header-account .b-header-right ul li .b-user a {
+	font-weight:bold;
+}
+.b-header .b-header-banner {
+	margin-top:5px;
+	height:90px;
+	overflow:hidden;
+}
+.b-header .b-header-navigation .b-header-navigation-panel {
+	background:#383838;
+	padding:11px 3px 11px 0;
+	height:30px;
+}
+.b-header .b-header-navigation .b-header-logo {
+	width:22px;
+	height:30px;
+	background:url(http://assets.bookmate.ru/0387174689/framework/stylesheets/blocks/b-header/logo.png) no-repeat -30px 0;
+	float:left;
+	position:relative;
+	left:14px;
+}
+.b-header .b-header-navigation a .b-header-logo {
+	cursor:pointer;
+}
+.b-header .b-header-navigation ul {
+	padding-top:5px;
+	position:relative;
+	right:-1px;
+}
+.b-header .b-header-navigation ul li {
+	float:left;
+	font-family:Arial, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	margin-left:25px;
+}
+.b-header .b-header-navigation ul li, .b-header .b-header-navigation ul li a {
+	color:#d2d2d2;
+	text-decoration:none;
+}
+.b-header .b-header-navigation ul li a:hover {
+	color:white;
+}
+.b-header .b-header-navigation ul li.selected, .b-header .b-header-navigation ul li.selected a {
+	color:white;
+}
+.b-header .b-header-navigation ul li.disabled {
+	visibility:hidden;
+}
+.b-header .b-header-navigation ul li.b-header-search {
+	font-size:13px;
+	font-style:italic;
+	padding-top:2px;
+}
+.b-header .b-header-navigation ul li.b-header-search .b-header-search-icon {
+	width:12px;
+	height:12px;
+	display:inline-block;
+	background:url(http://assets.bookmate.ru/3104627622/framework/stylesheets/blocks/b-header/search.gif) no-repeat;
+	vertical-align:-0.15em;
+	margin-right:4px;
+}
+.b-header .b-header-navigation ul li.b-header-search .b-search {
+	font-style:normal;
+	top:-7px;
+	float:left;
+	width:200px;
+}
+.b-header .b-header-navigation ul li.b-header-search .bhs-text {
+	float:left;
+	font-size:12px;
+	color:#7f7f7f;
+	padding-left:5px;
+	line-height:15px;
+}
+.b-header .b-search {
+	top:-1px;
+}
+.b-header .b-header-navigation .b-header-navigation-right {
+	float:right;
+	position:relative;
+	top:-4px;
+	margin-bottom:-12px;
+	white-space:nowrap;
+}
+.b-header .b-header-navigation .b-header-navigation-right ul {
+	padding:0;
+}
+.b-header .b-header-navigation .b-header-navigation-right ul li {
+	margin-left:0;
+	margin-right:10px;
+	font-weight:normal;
+}
+.l-layout-gray .b-header, .l-layout-gray .b-header a {
+	color:white;
+}
+.l-layout-gray .b-header a:hover {
+	color:#aaa;
+}
+.l-layout-gray .b-header .b-header-account {
+	border-bottom:1px solid white;
+}
+.l-layout-gray .b-header .b-header-account .b-header-bookmate {
+	background-position:0 -55px;
+}
+.l-layout-gray .b-header .b-header-navigation {
+	line-height:18px;
+	padding-top:10px;
+}
+.l-layout-gray .b-header .b-header-navigation .b-header-logo {
+	background-position:-30px 0;
+	left:0;
+	display:none;
+}
+.b-header-banner .l-view {
+	position:relative;
+}
+.b-header-banner .b-header-banner_badge {
+	position:absolute;
+	left:-11px;
+	top:0;
+}
+.b-login {
+	width:350px;
+	margin:0 auto;
+	padding:35px 0;
+	color:white;
+}
+.b-login h1 {
+	font-size:36px;
+	font-family:"Times New Roman", serif;
+	font-weight:normal;
+	margin-bottom:12px;
+}
+.b-login a {
+	color:white;
+	text-decoration:underline;
+}
+.b-login a:hover {
+	text-decoration:underline;
+	color:#aaa;
+}
+.b-login .b-login-right {
+	float:right;
+	padding-top:6px;
+}
+.b-user {
+	font-weight:bold;
+	padding-left:34px;
+	position:relative;
+}
+.b-user img {
+	position:absolute;
+	left:0;
+	top:-5px;
+}
+.b-user_list {
+	padding-left:40px;
+	font-weight:normal;
+	color:#999;
+	font-size:12px;
+	width:120px;
+	float:left;
+	height:33px;
+	margin-bottom:15px;
+	overflow:hidden;
+	line-height:15px;
+}
+.b-user_list img {
+	right:auto;
+	left:0;
+	top:0;
+}
+.b-user_list a {
+	display:block;
+	font-size:13px;
+	font-weight:bold;
+	margin-bottom:2px;
+	margin-top:2px;
+}
+.e-webkit .b-user_list a {
+	margin-bottom:1px;
+}
+.b-user_list_inline {
+	display:inline;
+}
+.b-user_list_inline .b-user_list {
+	display:inline-block;
+	float:none;
+	text-align:left;
+}
+.b-user_list .b-user-app {
+	font-weight:normal!important;
+}
+.b-user-current a {
+	text-decoration:none;
+}
+.b-subnavigation {
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+.b-subnavigation .b-subnavigation-corner {
+	position:relative;
+	margin:0 auto;
+	width:12px;
+}
+.b-subnavigation .b-subnavigation-corner i {
+	position:absolute;
+	left:-994px;
+	top:0;
+	width:2000px;
+	height:12px;
+	background:url(http://assets.bookmate.ru/5637191261/framework/stylesheets/blocks/b-subnavigation/corners.png) no-repeat 0 0;
+}
+.l-layout-library .b-subnavigation-corner i {
+	background-position:0 -20px;
+}
+.l-layout-edit .b-subnavigation-corner i {
+	background-position:0 -40px;
+}
+.b-subnavigation_white .b-subnavigation-corner i {
+	background-position:0 0;
+}
+.b-userpanel {
+	padding-top:14px;
+	height:28px;
+	background:black;
+	color:#979797;
+	line-height:16px;
+}
+.e-gecko-mac .b-userpanel {
+	padding-top:15px;
+	height:27px;
+}
+.b-userpanel a {
+	color:white;
+}
+.b-userpanel ul {
+	text-align:center;
+}
+.b-userpanel ul li {
+	display:inline-block;
+	font-size:15px;
+	font-weight:bold;
+	padding:0 25px;
+	position:relative;
+}
+.e-gecko-mac .b-userpanel ul li .b-navigation-corner {
+	top:-1px;
+}
+.b-userpanel .b-userpanel-right {
+	position:absolute;
+	right:12px;
+	top:14px;
+}
+.b-userpanel .b-userpanel-right a {
+	color:#757575;
+}
+.b-userpanel .b-userpanel-right a:hover {
+	color:white;
+}
+.b-userpanel button {
+	position:relative;
+	top:-6px;
+}
+.b-userpanel .b-user_big {
+	position:absolute;
+	left:11px;
+	top:15px;
+	font-weight:normal;
+}
+.b-userpanel .b-user_big a {
+	font-size:15px;
+	font-weight:bold;
+	margin-right:5px;
+}
+.b-userpanel-header {
+	width:100%;
+	overflow:hidden;
+	background:url(http://assets.bookmate.ru/0690597840/framework/stylesheets/blocks/b-userpanel/shadow.png) repeat-x left bottom;
+	position:relative;
+	zoom:1;
+}
+.b-userpanel-header, .b-userpanel-header .l-layout-block {
+	height:65px!important;
+	padding-top:0!important;
+	padding-bottom:0!important;
+	position:relative;
+	border-top-width:1px;
+	border-bottom-width:0;
+	zoom:1;
+	overflow:hidden;
+}
+.l-layout-edit .b-userpanel-header {
+	background:#efeeec;
+}
+.b-userpanel-header .l-x3 {
+	width:700px;
+}
+.b-userpanel-header h1 {
+	font-family:"Times New Roman", times, serif;
+	font-size:24px;
+	font-weight:normal;
+	margin:.5em 0;
+}
+.b-userpanel-header h2 {
+	font-size:13px;
+	padding-top:7px;
+	margin-bottom:-14px;
+	line-height:21px;
+	font-weight:normal;
+}
+.b-userpanel-header ul {
+	padding-top:3px;
+}
+.e-gecko-mac .b-userpanel-header ul {
+	padding-top:4px;
+}
+.b-userpanel-header ul li {
+	float:left;
+	margin-right:30px;
+	font-size:13px;
+	font-weight:bold;
+	position:relative;
+	zoom:1;
+}
+.b-userpanel-header ul li span {
+	color:#191919;
+	font-weight:normal;
+}
+.b-userpanel-header ul li.icon {
+	padding-left:15px;
+	float:right;
+	margin-right:0;
+}
+.b-userpanel-header ul li .remove {
+	position:absolute;
+	width:9px;
+	height:12px;
+	background:url(http://assets.bookmate.ru/5771154324/framework/stylesheets/blocks/b-userpanel/remove.png) no-repeat 0 0;
+	left:0;
+	top:0;
+}
+.b-userpanel-header ul li .b-subnavigation-corner {
+	bottom:0;
+	left:50%;
+	margin-left:-6px;
+	width:12px;
+	position:absolute;
+}
+.b-userpanel-header #WishlistButtonContainer {
+	position:relative;
+	left:1px;
+	top:-12px;
+}
+.b-userpanel-header #WishlistButtonContainer .b-button_form span {
+	font-weight:bold;
+}
+.b-userpanel-header_right ul {
+	float:right;
+	padding-top:36px!important;
+	line-height:16px;
+}
+.b-userpanel-header_right ul li {
+	margin-right:0;
+	margin-left:30px;
+	float:left;
+}
+.b-follow {
+	margin-bottom:20px;
+}
+.b-follow ul {
+	border-bottom:1px solid #dfdfdf;
+	font-size:13px;
+	font-weight:bold;
+	margin-bottom:12px;
+}
+.b-follow ul li {
+	display:inline;
+	position:relative;
+	zoom:1;
+}
+.b-follow ul li div {
+	border:1px solid #dfdfdf;
+	border-bottom:0;
+	display:inline-block;
+	padding:5px 8px;
+	background:white;
+	cursor:pointer;
+	position:relative;
+	zoom:1;
+}
+.b-follow ul li div:hover {
+	border:1px solid #6e2727;
+	border-bottom:0;
+	color:#6e2727;
+}
+.b-follow ul li, .b-follow ul li span {
+	color:#82817e;
+}
+.b-follow ul li span {
+	padding-left:12px;
+	font-weight:normal;
+}
+.b-follow ul li.current div {
+	color:#504e4b;
+	padding-bottom:6px;
+	margin-bottom:-1px;
+	cursor:auto;
+}
+.b-follow ul li.current div:hover {
+	border-color:#dfdfdf;
+}
+.b-follow .b-follow-empty {
+	text-align:left;
+	color:#898989;
+	font-size:15px;
+	font-family:Georgia, serif;
+}
+.b-file {
+	padding-left:30px;
+	min-height:30px;
+	font-size:11px;
+	color:#666;
+	line-height:17px;
+	position:relative;
+}
+.b-file i {
+	position:absolute;
+	left:0;
+	top:0;
+	width:30px;
+	height:30px;
+	background:url(http://assets.bookmate.ru/0533888904/framework/stylesheets/blocks/b-file/ext.png) no-repeat 0 0;
+}
+.b-file p {
+	padding-top:2px;
+	width:100%;
+	position:relative;
+	overflow:hidden;
+}
+.b-file a {
+	font-weight:bold;
+	color:#333;
+	display:block;
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+}
+.b-file_link i {
+	background-position:-30px 0;
+}
+.b-banner {
+	border:1px solid #ccc;
+	height:120px;
+}
+.b-banner_line {
+	border-top:0;
+	height:62px;
+	background:url(http://assets.bookmate.ru/7037566257/framework/stylesheets/blocks/b-banner/background.gif) repeat-x;
+}
+.b-banner_inline {
+	height:120px;
+	float:left;
+	border-right:1px solid #ccc;
+}
+.b-banner_features {
+	width:490px;
+}
+.b-banner_search {
+	width:490px;
+	border:0;
+}
+.b-banner_inline {
+	height:62px;
+	position:relative;
+}
+.b-banner_inline .b-banner-layout {
+	padding:13px 12px 0;
+}
+.b-banner_inline h3 {
+	font-size:13px;
+	margin-bottom:4px;
+}
+.b-banner_inline p {
+	font-size:11.5px;
+	color:#737373;
+	line-height:15px;
+}
+.b-banner_inline p .important {
+	background:#dcd6d0;
+	color:#4b4b4b;
+	padding:2px 2px 0;
+}
+.b-banner_features img {
+	position:absolute;
+	right:22px;
+	bottom:-1px;
+}
+.b-banner_search .bl-search {
+	width:290px;
+	position:absolute;
+	right:15px;
+	top:26px;
+}
+.b-banner_try {
+	border:1px solid #ccc;
+	height:123px;
+	padding:0 12px;
+	position:relative;
+}
+.b-banner_try .b-banner-layout {
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+.b-banner_try .b-banner-shadow {
+	position:absolute;
+	z-index:-1;
+	width:100%;
+	height:20px;
+	left:0;
+	bottom:0;
+	background:url(http://assets.bookmate.ru/7034121126/framework/stylesheets/blocks/b-shadow/shadows.png) no-repeat 50% top;
+}
+.b-banner_try .b-banner-text {
+	width:135px;
+	float:left;
+	padding-top:12px;
+}
+.b-banner_try .b-banner-text h3 {
+	font-size:18px;
+	font-family:Georgia, serif;
+	font-weight:normal;
+	margin-bottom:10px;
+}
+.b-banner_try .b-banner-text p {
+	font-size:11.5px;
+	color:#737373;
+	line-height:15px;
+}
+.b-banner_try .b-book_folder_small {
+	width:165px;
+	padding-top:15px;
+}
+.b-banner_try .b-book_folder_small .b-book .b-book-cover img {
+	cursor:pointer;
+}
+.b-booksearch {
+	line-height:21px;
+}
+.b-booksearch h1 {
+	font-family:"Times New Roman", times, serif, serif;
+	font-size:24px;
+	font-weight:normal;
+	margin:.5em 0;
+}
+.b-booksearch h1 .b-booksearch-count {
+	font-size:13px;
+	font-style:italic;
+	position:relative;
+	top:-8px;
+}
+.b-booksearch .b-booksearch-book .b-book {
+	float:left;
+}
+.b-booksearch .b-booksearch-book {
+	padding-bottom:50px;
+	position:relative;
+	zoom:1;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-cover {
+	width:130px;
+	float:left;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about {
+	width:540px;
+	margin-left:130px;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about .author {
+	font-weight:normal;
+	margin-bottom:3px;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about .author, .b-booksearch .b-booksearch-book .b-booksearch-book-about .author a {
+	color:#7b7574;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about .author a:hover {
+	color:#6e2727;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about .title a {
+	font-family:"Times New Roman", times, serif, serif;
+	font-size:24px;
+	font-weight:normal;
+	margin-bottom:.5em;
+	display:inline-block;
+	line-height:28px;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about p .more {
+	font-family:Arial, sans-serif;
+	font-size:13px;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about .controls {
+	font-family:Arial, sans-serif;
+	padding-top:6px;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about .controls span {
+	margin-right:10px;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about .controls a {
+	text-decoration:underline;
+}
+.b-booksearch .b-booksearch-book .b-booksearch-book-about .controls a:hover {
+	text-decoration:none;
+}
+.b-booksearch .b-booksearch-icons {
+	font-size:11px;
+	color:#737373;
+	margin-bottom:18px;
+}
+.b-booksearch .b-booksearch-filter ul li {
+	color:#898989;
+	float:left;
+	font-size:13px;
+	font-weight:bold;
+	margin-right:20px;
+	position:relative;
+	padding-bottom:7px;
+	zoom:1;
+}
+.b-booksearch .b-booksearch-filter ul li.selected {
+	color:black;
+}
+.b-booksearch .b-booksearch-filter ul li span {
+	font-family:Georgia, serif;
+	font-style:italic;
+	font-weight:normal;
+}
+.b-booksearch .b-booksearch-filter ul li a span {
+	color:#737373;
+}
+.b-booksearch .b-booksearch-filter ul li i {
+	position:absolute;
+	width:70px;
+	height:15px;
+	left:50%;
+	margin-left:-35px;
+	top:100%;
+	background:url(http://assets.bookmate.ru/9950745918/framework/stylesheets/blocks/b-booksearch/corner.png) no-repeat 0 0;
+}
+.b-booksearch .b-booksearch-shadow {
+	height:20px;
+	background:url(http://assets.bookmate.ru/7034121126/framework/stylesheets/blocks/b-shadow/shadows.png) no-repeat center -20px;
+	margin-bottom:10px;
+}
+.b-booksearch .b-icons {
+	position:relative;
+	top:-1px;
+}
+.b-booksearch_result {
+	font-family:Georgia, serif;
+	padding-top:5px;
+}
+.b-booksearch_result h2 a {
+	font-size:16px;
+	color:#7b7574;
+	font-weight:normal;
+}
+.b-booksearch_result h1 {
+	font-size:23px;
+	font-weight:normal;
+	margin:3px 0 20px 0;
+}
+.b-booksearch_result .b-bsr-wishlist {
+	float:right;
+	padding-top:6px;
+}
+.b-booksearch_result .b-bsr-book {
+	text-align:center;
+}
+.b-booksearch_result .b-bsr-book .b-bsr-book-layout {
+	display:inline;
+	position:relative;
+	zoom:1;
+	vertical-align:bottom;
+}
+.b-booksearch_result .b-bsr-book .b-bsr-book-layout .b-bsr-book-layout {
+	display:inline-block;
+}
+.b-booksearch_result .b-bsr-book .b-book_any {
+	float:left;
+}
+.b-booksearch_result .b-bsr-book .b-book_any .b-book-cover_picture img {
+	width:180px;
+	height:auto;
+	position:static;
+}
+.b-booksearch_result .b-bsr-book .b-book_any .b-book-cover .b-book-cover-blank {
+	width:180px;
+	height:240px;
+}
+.b-booksearch_result .b-shelf {
+	position:relative;
+	margin-right:-25px;
+}
+.b-booksearch_result .b-bsr-book, .b-booksearch_result .b-bsr-book-shelf, .b-booksearch_result .b-bsr-readbutton {
+	margin-right:8px;
+}
+.b-booksearch_result .b-bsr-readbutton {
+	text-align:center;
+	margin-top:-20px;
+	position:relative;
+	z-index:2;
+}
+.b-booksearch_result .b-bsr-readbutton .b-button_form {
+	display:inline-block;
+	float:none;
+}
+.b-booksearch_result .b-bsr-description {
+	font-size:14.5px;
+	line-height:20px;
+}
+.b-booksearch_result .b-bsr-description .condense_control {
+	font-weight:bold;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:13px;
+	color:#353431;
+	text-decoration:underline;
+}
+.b-booksearch_result .b-bsr-info {
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:13px;
+	line-height:15px;
+	color:#5d5f65;
+	padding:15px 0;
+}
+.b-booksearch_result .b-bsr-info a {
+	color:#5d5f65;
+}
+.b-booksearch_result .b-bsr-info dl dt {
+	width:75px;
+	margin-right:5px;
+	float:left;
+	clear:left;
+	margin-bottom:5px;
+}
+.b-booksearch_result .b-bsr-info dl dd {
+	float:left;
+	width:330px;
+	margin-bottom:5px;
+}
+.b-booksearch_result .b-bsr-description, .b-booksearch_result .b-bsr-info {
+	margin-left:10px;
+	margin-right:30px;
+}
+.b-booksearch_result .b-bsr-shadow {
+	height:20px;
+	position:relative;
+	background:url(http://assets.bookmate.ru/7034121126/framework/stylesheets/blocks/b-shadow/shadows.png) no-repeat 53% -20px;
+}
+.b-booksearch_result .b-bsr-special {
+	padding:0 0 30px 0;
+	font-size:14.5px;
+	line-height:20px;
+}
+.b-booksearch_result .b-bsr-special h4 {
+	font-size:18px;
+	font-weight:normal;
+	margin-bottom:.5em;
+}
+.b-booksearch_result .b-bsr-special p {
+	margin-bottom:1em;
+}
+.b-booksearch_result .b-bsr-series {
+	font-family:Helvetica, Arial, sans-serif;
+	padding-top:15px;
+}
+.b-booksearch_result .b-bsr-series h3 {
+	font-size:15px;
+	margin-bottom:12px;
+}
+.b-booksearch_result .b-bsr-series h3 span {
+	font-size:13px;
+	padding-left:10px;
+}
+.b-booksearch_result .b-bsr-series .b-bsr-series-book {
+	width:170px;
+	float:left;
+	text-align:center;
+}
+.b-booksearch_result .b-bsr-series .b-bsr-series-book .b-bsr-series-book-layout {
+	display:inline;
+	position:relative;
+	zoom:1;
+	vertical-align:top;
+}
+.b-booksearch_result .b-bsr-series .b-bsr-series-book .b-bsr-series-book-layout .b-bsr-series-book-layout {
+	display:inline-block;
+}
+.b-booksearch_result .b-bsr-series .b-bsr-series-book .b-bsr-series-book-layout .b-book_any {
+	float:left;
+}
+.b-booksearch_result .b-bsr-series .b-bsr-series-book .b-bsr-series-book-layout .b-icons {
+	position:absolute;
+	left:-5px;
+	top:100%;
+	margin-top:3px;
+}
+.b-booksearch_result .b-bsr-series-loading {
+	height:50px;
+	background:url(http://assets.bookmate.ru/6333319984/framework/stylesheets/blocks/b-booksearch/ajax-loader.gif) no-repeat center center;
+}
+.b-booksearch_result .b-bsr-series-etc {
+	padding-top:20px;
+	font-size:14.5px;
+	line-height:20px;
+}
+.b-booksearch_result .b-bsr-hr {
+	margin-top:30px;
+	border-top:1px solid #e5e5e5;
+}
+.b-booksearch_result .b-bsr-banner {
+	padding-bottom:20px;
+}
+.b-booksearch_popular .l-column-full {
+	width:740px;
+}
+.b-booksearch_popular .l-column-right {
+	width:250px;
+}
+.b-booksearch_popular .b-user_list {
+	width:210px;
+	height:auto;
+	font-family:Arial, sans-serif;
+	margin-bottom:25px;
+}
+.b-booksearch_popular .b-user_list span {
+	display:block;
+	margin-bottom:4px;
+}
+.b-booksearch_popular .b-user_list span a {
+	font-weight:bold;
+	display:inline;
+	margin:0;
+	color:black;
+}
+.b-booksearch_popular .b-user_list ins {
+	text-decoration:none;
+	line-height:17px;
+}
+.b-booksearch_popular .b-user_list ins a {
+	font-weight:normal;
+	display:inline;
+	margin:0;
+}
+.b-booksearch_popular .b-book {
+	text-align:center;
+	width:235px;
+	margin-bottom:40px;
+}
+.b-paginate {
+	font-size:20px;
+	color:#9a9a9a;
+	margin-left:-15px;
+	position:relative;
+	zoom:1;
+}
+.b-paginate a, .b-paginate span {
+	float:left;
+	margin-right:8px;
+	padding:4px 7px 2px;
+}
+.b-paginate span {
+	border:1px solid #d7d7d7;
+	position:relative;
+	top:-1px;
+}
+.b-paginate .prev_page, .b-paginate .next_page {
+	margin:0 15px;
+	padding:1px 0 0;
+	border:0;
+	top:0;
+	text-decoration:none;
+}
+.b-paginate .gap {
+	border:0;
+	top:0;
+}
+.b-icons {
+	display:inline;
+	line-height:120%;
+}
+.b-icons i {
+	width:15px;
+	height:15px;
+	display:inline-block;
+	background:url(http://assets.bookmate.ru/5294709647/framework/stylesheets/blocks/b-icons/icons.gif) no-repeat 15px 15px;
+	vertical-align:middle;
+}
+.b-icons-offset-left {
+	margin-left:5px;
+}
+.b-icons-offset-right {
+	margin-right:5px;
+}
+.b-icons_e i {
+	background-position:0 0;
+	width:42px;
+}
+.b-icons_p i {
+	background-position:-50px 0;
+}
+.b-icons_w i {
+	background-position:-70px 0;
+	width:53px;
+}
+.b-icons_bookmate i {
+	background-position:-130px -1px;
+	width:69px;
+}
+.b-icons_external i {
+	background-position:-210px -1px;
+	width:53px;
+}
+.b-icons_unavailable {
+	display:none;
+}
+.b-icons-logo i, .b-icons-leaf i {
+	background-image:url(http://assets.bookmate.ru/3077244307/framework/stylesheets/blocks/b-icons/icons.png);
+}
+.b-icons-logo i {
+	width:16px;
+	height:16px;
+	background-position:0 0;
+}
+.b-icons-leaf i {
+	width:20px;
+	height:12px;
+	background-position:-20px 0;
+}
+.b-icons_social {
+	margin-left:0;
+}
+.b-icons_social i {
+	width:16px;
+	height:16px;
+	background:url(http://assets.bookmate.ru/2534928738/framework/stylesheets/blocks/b-icons/social.gif) no-repeat 20px 20px;
+}
+.b-icons_social-livejournal i {
+	background-position:0 0;
+}
+.b-icons_social-livejournal_gray i {
+	background-position:0 -20px;
+}
+.b-icons_social-facebook i {
+	background-position:-20px 0;
+}
+.b-icons_social-facebook_gray i {
+	background-position:-20px -20px;
+}
+.b-icons_social-vkontakte i {
+	background-position:-40px 0;
+}
+.b-icons_social-vkontakte_gray i {
+	background-position:-40px -20px;
+}
+.b-icons_social-twitter i {
+	background-position:-60px 0;
+}
+.b-icons_social-twitter_gray i {
+	background-position:-60px -20px;
+}
+.b-icons_social-moikrug i {
+	background-position:-80px 0;
+}
+.b-icons_social-moikrug_gray i {
+	background-position:-80px -20px;
+}
+.b-icons_social-yaru i {
+	background-position:-100px 0;
+}
+.b-icons_social-yaru_gray i {
+	background-position:-100px -20px;
+}
+.b-icons_social-lastfm i {
+	background-position:-120px 0;
+}
+.b-icons_social-lastfm_gray i {
+	background-position:-120px -20px;
+}
+.b-icons_social-youtube i {
+	background-position:-140px 0;
+}
+.b-icons_social-youtube_gray i {
+	background-position:-140px -20px;
+}
+.b-icons_social-flickr i {
+	background-position:-160px 0;
+}
+.b-icons_social-flickr_gray i {
+	background-position:-160px -20px;
+}
+.b-icons_social-skype i {
+	background-position:-180px 0;
+}
+.b-icons_social-skype_gray i {
+	background-position:-180px -20px;
+}
+.b-icons_social-icq i {
+	background-position:-200px 0;
+}
+.b-icons_social-icq_gray i {
+	background-position:-200px -20px;
+}
+.b-icons_social-friendfeed i {
+	background-position:-220px 0;
+}
+.b-icons_social-friendfeed_gray i {
+	background-position:-220px -20px;
+}
+.b-icons_social-lookatme i {
+	background-position:-240px 0;
+}
+.b-icons_social-lookatme_gray i {
+	background-position:-240px -20px;
+}
+.b-icons_social-tandp i {
+	background-position:-260px 0;
+}
+.b-icons_social-tandp_gray i {
+	background-position:-260px -20px;
+}
+div.b-shelf {
+	position:relative;
+}
+div.b-shelf div.b-shelf-layout {
+	position:relative;
+	z-index:2;
+}
+div.b-shelf div.b-shelf-front {
+	position:absolute;
+	width:100%;
+	left:-30px;
+	height:59px;
+	padding:0 30px;
+	z-index:3;
+}
+div.b-shelf div.b-shelf-front div.l, div.b-shelf div.b-shelf-front div.r {
+	height:59px;
+	width:50%;
+	left:0;
+	top:0;
+	position:absolute;
+	overflow:hidden;
+}
+div.b-shelf div.b-shelf-front div.r {
+	margin-left:50%;
+	background:url(http://assets.bookmate.ru/5688950432/framework/stylesheets/blocks/b-shelf/shelf.png) no-repeat right -16px;
+}
+div.b-shelf div.b-shelf-front div.l i {
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background:url(http://assets.bookmate.ru/5688950432/framework/stylesheets/blocks/b-shelf/shelf.png) no-repeat left -16px;
+	overflow:hidden;
+}
+div.b-shelf div.b-shelf-back {
+	position:absolute;
+	width:100%;
+	left:-30px;
+	height:16px;
+	padding:0 30px;
+	z-index:1;
+}
+div.b-shelf div.b-shelf-back div.l, div.b-shelf div.b-shelf-back div.r {
+	height:16px;
+	width:50%;
+	left:0;
+	top:-16px;
+	position:absolute;
+}
+div.b-shelf div.b-shelf-back div.r {
+	margin-left:50%;
+	background:url(http://assets.bookmate.ru/5688950432/framework/stylesheets/blocks/b-shelf/shelf.png) no-repeat right 0;
+}
+div.b-shelf div.b-shelf-back div.l i {
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background:url(http://assets.bookmate.ru/5688950432/framework/stylesheets/blocks/b-shelf/shelf.png) no-repeat left 0;
+	overflow:hidden;
+}
+.b-profile {
+	line-height:21px;
+	position:relative;
+}
+.b-profile .b-profile-userpic {
+	width:100px;
+	float:left;
+}
+.b-profile .b-profile-columns {
+	width:800px;
+	float:left;
+}
+.b-profile .b-profile-layout {
+	margin-left:115px;
+	width:580px;
+}
+.b-profile .b-profile-shadow {
+	height:20px;
+	background:url(http://assets.bookmate.ru/7034121126/framework/stylesheets/blocks/b-shadow/shadows.png) no-repeat -60px -80px;
+	position:relative;
+	top:0;
+}
+.b-profile .b-profile-edit {
+	padding-left:80px;
+	font-size:11px;
+}
+.b-profile .b-profile-edit a {
+	color:#898989;
+	text-decoration:underline;
+}
+.b-profile .b-profile-edit a:hover {
+	color:#6e2727;
+}
+.b-profile .b-profile-info .b-profile-subscription {
+	font-size:11px;
+}
+.b-profile .b-profile-sidebar {
+	float:right;
+	width:160px;
+	overflow:hidden;
+}
+.b-profile .b-profile-info {
+	padding-bottom:30px;
+	min-height:100px;
+}
+.b-profile .b-profile-info a {
+	color:#898989;
+	text-decoration:underline;
+}
+.b-profile .b-profile-info a:hover {
+	color:#6e2727;
+}
+.b-profile .b-profile-info dl {
+	position:relative;
+	zoom:1;
+}
+.b-profile .b-profile-info dl dt {
+	position:absolute;
+	left:0;
+	margin-top:1px;
+	color:#7e7e7e;
+}
+.e-mac .b-profile .b-profile-info dl dt {
+	margin-top:0;
+}
+.b-profile .b-profile-info dl dd {
+	padding-left:80px;
+	margin-bottom:8px;
+	padding-right:10%;
+}
+.b-profile .b-profile-info .b-profile-site a {
+	color:black;
+}
+.b-profile .b-profile-sidebar {
+	margin-bottom:20px;
+}
+.b-profile .b-profile-sidebar .b-profile-services {
+	padding-top:10px;
+}
+.b-profile .b-profile-sidebar dl {
+	position:relative;
+	padding-bottom:25px;
+}
+.b-profile .b-profile-sidebar dl dt {
+	position:absolute;
+	left:0;
+	margin-top:-2px;
+}
+.b-profile .b-profile-sidebar dl dd {
+	position:relative;
+	padding-left:25px;
+	margin-bottom:25px;
+	font-size:12px;
+	font-weight:bold;
+}
+.b-profile .b-profile-sidebar dl dd span {
+	position:absolute;
+	font-size:10px;
+	color:#898989;
+	top:-1.2em;
+	left:25px;
+	font-weight:normal;
+}
+.b-profile .b-profile-sidebar .b-icons_social-icq i, .b-profile .b-profile-sidebar .b-icons_social-skype i {
+	top:2px;
+	position:relative;
+}
+.b-profile .b-profile-sidebar dl.contacts dd {
+	margin-bottom:12px;
+}
+.b-profile .b-book-shelf {
+	line-height:15px;
+}
+.b-profile .b-book-shelf .b-search {
+	line-height:12px;
+}
+.b-profile-friends {
+	padding-top:10px;
+	width:810px;
+}
+.b-share {
+	font-family:Helvetica, Arial, sans-serif;
+	border:1px solid #d1d0cd;
+	font-size:13px;
+	font-weight:bold;
+	color:#353330;
+	padding:7px 7px 6px 15px;
+	margin-bottom:30px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.b-share .b-share-title {
+	float:left;
+}
+.b-share .b-share-icons {
+	float:right;
+	margin-bottom:-4px;
+	position:relative;
+	top:-2px;
+	zoom:1;
+}
+.b-share .b-share-icons .b-icons {
+	margin-left:7px;
+}
+.b-share a, .b-share a:hover {
+	text-decoration:none;
+}
+div.b-book a {
+	color:black;
+}
+div.b-book_inline {
+	display:inline-block;
+	vertical-align:bottom;
+}
+div.b-books-cell {
+	width:197px;
+	display:inline-block;
+	vertical-align:bottom;
+	text-align:center;
+	padding:25px 0 30px;
+}
+div.b-book div.b-book-cover {
+	display:inline-block;
+	position:relative;
+	vertical-align:bottom;
+}
+div.b-book div.b-book-helper {
+	display:inline;
+	zoom:1;
+	position:relative;
+}
+div.b-book .b-book-read {
+	width:60px;
+	left:50%;
+	bottom:40px;
+	margin-left:-42px;
+	display:none;
+	position:absolute;
+	z-index:10;
+	background:white;
+	padding:2px;
+	text-decoration:none;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-ms-border-radius:3px;
+	border-radius:3px;
+	-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+}
+div.b-book .b-book-read span {
+	display:block;
+	color:white;
+	font-size:11px;
+	padding:3px 6px;
+	text-decoration:none;
+	background:#778590;
+	background:-webkit-gradient(linear, left top, left bottom, from(#778590), to(#4a5359));
+	background:-moz-linear-gradient(top, #778590, #4a5359);
+	background-clip:border-box;
+	-moz-background-clip:border;
+	-webkit-background-clip:border-box;
+	background-origin:border-box;
+	-moz-background-origin:border;
+	-webkit-background-origin:border-box;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	-o-border-radius:2px;
+	-ms-border-radius:2px;
+	border-radius:2px;
+}
+div.b-book .b-book-read:hover span {
+	display:block;
+	color:white;
+	font-size:11px;
+	padding:3px 6px;
+	text-decoration:none;
+	background:#8a99a4;
+	background:-webkit-gradient(linear, left top, left bottom, from(#8a99a4), to(#59666d));
+	background:-moz-linear-gradient(top, #8a99a4, #59666d);
+	background-clip:border-box;
+	-moz-background-clip:border;
+	-webkit-background-clip:border-box;
+	background-origin:border-box;
+	-moz-background-origin:border;
+	-webkit-background-origin:border-box;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	-o-border-radius:2px;
+	-ms-border-radius:2px;
+	border-radius:2px;
+}
+div.b-book .b-book-read:hover {
+	text-decoration:none;
+}
+div.b-book-hover .b-book-read {
+	display:block;
+}
+div.b-book div.b-book-title {
+	font-size:13px;
+	line-height:16px;
+	font-weight:bold;
+	text-shadow:white 0 1px 0;
+	text-shadow:rgba(255, 255, 255, 0.75) 0 1px 0;
+}
+div.b-book div.b-book-author {
+	font-size:11px;
+	line-height:13px;
+	font-weight:normal;
+	text-shadow:white 0 1px 0;
+	text-shadow:rgba(255, 255, 255, 0.75) 0 1px 0;
+}
+div.b-book div.b-book-author, div.b-book div.b-book-author a {
+	color:#464646;
+}
+div.b-book div.b-book-title a, div.b-book div.b-book-title a:hover, div.b-book div.b-book-author a, div.b-book div.b-book-author a:hover, div.b-book div.b-book-status span.bbs-author a, div.b-book div.b-book-status span.bbs-author a:hover {
+	text-decoration:none;
+	color:black;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout_large {
+	width:180px;
+	height:240px;
+	background:url(http://assets.bookmate.ru/7171952487/framework/stylesheets/blocks/b-book/cover.large.gif) no-repeat 0 0;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout_web {
+	width:153px;
+	height:200px;
+	background:url(http://assets.bookmate.ru/5713690067/framework/stylesheets/blocks/b-book/cover.web.gif) no-repeat 0 0;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout_thumb {
+	width:111px;
+	height:145px;
+	background:url(http://assets.bookmate.ru/0613380225/framework/stylesheets/blocks/b-book/cover.thumb.gif) no-repeat 0 0;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout a {
+	text-align:left;
+	font-family:"Times New Roman", times, serif;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout a, div.b-book div.b-book-cover div.b-book-cover-layout a:hover {
+	text-decoration:none;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout a.titles {
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	display:block;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout .authors {
+	font-size:12.5px;
+	padding:9px 10px;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout .authors span {
+	display:block;
+	width:100%;
+	position:relative;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout_thumb .authors {
+	font-size:12px;
+	padding:5px 10px;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout_large .authors {
+	padding-top:12px;
+	padding-left:15px;
+	font-size:13px;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout .title {
+	font-size:11.5px;
+	text-transform:uppercase;
+	padding:10px;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout .title span {
+	display:block;
+	width:100%;
+	position:relative;
+	overflow:hidden;
+	line-height:18px;
+	max-height:7.9em;
+	text-overflow:ellipsis;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout_thumb .title {
+	font-size:11px;
+	text-transform:uppercase;
+	padding:8px 10px;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout_thumb .title span {
+	line-height:14px;
+	max-height:6.4em;
+}
+div.b-book div.b-book-cover div.b-book-cover-layout_large .title {
+	font-size:14px;
+	padding-left:15px;
+}
+div.b-book_cover div.b-book-cover, div.b-books_cover div.b-book div.b-book-cover {
+	padding:40px 0 0 40px;
+	margin:0 -20px -20px 0;
+}
+div.b-book_cover div.b-book-cover img.b-book-cover_small, div.b-books_cover div.b-book div.b-book-cover img.b-book-cover_small {
+	display:none;
+}
+div.b-book_cover div.b-book-cover div.b-book-cover-layout-outer, div.b-books_cover div.b-book div.b-book-cover div.b-book-cover-layout-outer {
+	display:inline-block;
+	position:relative;
+	z-index:1;
+	zoom:1;
+}
+div.b-book_cover div.b-book-cover div.b-book-cover-layout, div.b-books_cover div.b-book div.b-book-cover div.b-book-cover-layout {
+	position:relative;
+	margin:0 -40px -40px 0;
+	left:-40px;
+	top:-40px;
+	zoom:1;
+}
+div.b-book_cover div.b-book-cover div.bbc-bg, div.b-books_cover div.b-book div.b-book-cover div.bbc-bg, div.b-book_cover div.b-book-cover i.bbc-bg, div.b-books_cover div.b-book div.b-book-cover i.bbc-bg {
+	background:url(http://assets.bookmate.ru/6911390467/framework/stylesheets/blocks/b-book/shadow.png) no-repeat;
+}
+div.b-book_cover div.b-book-cover div.bbc-tl, div.b-books_cover div.b-book div.b-book-cover div.bbc-tl {
+	margin:0 -40px -40px 0;
+	left:-40px;
+	top:-40px;
+	padding:40px 0 0 40px;
+	position:relative;
+	z-index:2;
+}
+div.b-book_cover div.b-book-cover div.bbc-tl i.bbc-bg, div.b-books_cover div.b-book div.b-book-cover div.bbc-tl i.bbc-bg {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-position:left top;
+}
+div.b-book_cover div.b-book-cover div.bbc-br, div.b-books_cover div.b-book div.b-book-cover div.bbc-br {
+	padding:0 20px 20px 0;
+	margin:0;
+	background-position:right bottom;
+	position:relative;
+}
+div.b-book_cover div.b-book-cover div.bbc-br i.bbc-bg, div.b-books_cover div.b-book div.b-book-cover div.bbc-br i.bbc-bg {
+	background-position:right bottom;
+}
+div.b-book_cover div.b-book-cover div.bbc-tr, div.b-books_cover div.b-book div.b-book-cover div.bbc-tr {
+	position:absolute;
+	width:40px;
+	height:40px;
+	right:0;
+	background-position:right top;
+	top:0;
+	overflow:hidden;
+}
+div.b-book_cover div.b-book-cover div.bbc-bl, div.b-books_cover div.b-book div.b-book-cover div.bbc-bl {
+	position:absolute;
+	width:40px;
+	height:40px;
+	background-position:left bottom;
+	left:0;
+	bottom:0;
+	overflow:hidden;
+}
+div.b-book_cover_thumb div.b-book-cover div.bbc-bg, div.b-books_cover_thumb div.b-book div.b-book-cover div.bbc-bg, div.b-book_cover_thumb div.b-book-cover i.bbc-bg, div.b-books_cover_thumb div.b-book div.b-book-cover i.bbc-bg {
+	background-image:url(http://assets.bookmate.ru/5082836464/framework/stylesheets/blocks/b-book/shadow.thumb.png);
+}
+div.b-book_cover_editing div.b-book-cover, div.b-books_cover_editing div.b-book div.b-book-cover {
+	padding:80px;
+	margin:0 -76px -76px 0;
+	left:-26px;
+	top:-25px;
+}
+div.b-book_cover_editing div.b-book-cover div.b-book-cover-layout, div.b-books_cover_editing div.b-book div.b-book-cover div.b-book-cover-layout {
+	margin:0 -54px -55px 0;
+	left:-54px;
+	top:-55px;
+}
+div.b-book_cover_editing div.b-book-cover div.bbc-bg, div.b-books_cover_editing div.b-book div.b-book-cover div.bbc-bg, div.b-book_cover_editing div.b-book-cover i.bbc-bg, div.b-books_cover_editing div.b-book div.b-book-cover i.bbc-bg {
+	background-image:url(http://assets.bookmate.ru/1948040343/framework/stylesheets/blocks/b-book/shadow.editing.png);
+}
+div.b-book_cover_editing div.b-book-cover div.bbc-tl, div.b-books_cover_editing div.b-book div.b-book-cover div.bbc-tl {
+	margin:0 -80px -80px 0;
+	left:-80px;
+	top:-80px;
+	padding:80px 0 0 80px;
+}
+div.b-book_cover_editing div.b-book-cover div.bbc-br, div.b-books_cover_editing div.b-book div.b-book-cover div.bbc-br {
+	padding:0 50px 51px 0;
+	margin:-80px -80px 0 0;
+	top:80px;
+}
+div.b-book_cover_editing div.b-book-cover div.bbc-tr, div.b-books_cover_editing div.b-book div.b-book-cover div.bbc-tr {
+	width:80px;
+	height:80px;
+}
+div.b-book_cover_editing div.b-book-cover div.bbc-tr i.bbc-bg, div.b-books_cover_editing div.b-book div.b-book-cover div.bbc-tr i.bbc-bg {
+	width:80px;
+	height:80px;
+}
+div.b-book_cover_editing div.b-book-cover div.bbc-bl, div.b-books_cover_editing div.b-book div.b-book-cover div.bbc-bl {
+	width:80px;
+	height:80px;
+}
+div.b-book_cover_editing div.b-book-cover div.bbc-bl i.bbc-bg, div.b-books_cover_editing div.b-book div.b-book-cover div.bbc-bl i.bbc-bg {
+	width:80px;
+	height:80px;
+}
+div.b-book_cover div.b-book-meta {
+	height:3.7em;
+	position:relative;
+	z-index:3;
+}
+div.b-book_cover div.b-book-title, div.b-books_cover div.b-book div.b-book-title {
+	margin:15px 10px 0;
+	position:relative;
+	z-index:3;
+	zoom:1;
+	max-height:2.5em;
+	overflow:hidden;
+}
+div.b-book_cover div.b-book-author, div.b-books_cover div.b-book div.b-book-author {
+	margin:2px 10px 0;
+	position:relative;
+	z-index:3;
+	zoom:1;
+	max-height:1.2em;
+	overflow:hidden;
+}
+div.b-book_cover div.b-book-status, div.b-books_cover div.b-book div.b-book-status {
+	position:absolute;
+	left:5px;
+	height:17px;
+	top:-17px;
+}
+div.b-book_cover_editing div.b-book-status, div.b-books_cover_editing div.b-book div.b-book-status {
+	left:31px;
+	top:8px;
+}
+div.b-book_cover div.b-book-status span, div.b-books_cover div.b-book div.b-book-status span {
+	display:inline-block;
+	height:17px;
+	background:url(http://assets.bookmate.ru/1213718461/framework/stylesheets/blocks/b-book/status.png) no-repeat 20px 20px;
+	vertical-align:bottom;
+	margin-left:5px;
+}
+div.b-book_cover div.b-book-status span.bbs-author, div.b-books_cover div.b-book div.b-book-status span.bbs-author {
+	display:none;
+}
+div.b-book_cover div.b-book-status span.bbs-bookmark, div.b-books_cover div.b-book div.b-book-status span.bbs-bookmark {
+	background-position:0 0;
+	padding-left:17px;
+	font-size:10px;
+	line-height:20px;
+	color:#646464;
+	font-weight:bold;
+}
+div.b-book_cover div.b-book-status span.bbs-done, div.b-books_cover div.b-book div.b-book-status span.bbs-done {
+	background-position:-80px 0;
+	width:14px;
+}
+div.b-book_cover div.b-book-status span.bbs-private, div.b-books_cover div.b-book div.b-book-status span.bbs-private {
+	background-position:-60px 0;
+	width:10px;
+}
+div.b-book_cover div.b-book-status span.bbs-edit, div.b-books_cover div.b-book div.b-book-status span.bbs-edit {
+	background-position:-120px 0;
+	width:16px;
+}
+div.b-book_cover div.b-book-status span.bbs-warning, div.b-books_cover div.b-book div.b-book-status span.bbs-warning {
+	background-position:-140px 0;
+	width:16px;
+}
+div.b-book_cover .b-book-icons, div.b-books_cover div.b-book .b-book-icons {
+	position:absolute;
+	left:0;
+	bottom:0;
+	z-index:3;
+}
+div.b-book_cover .b-book-icons .bbi-new, div.b-books_cover div.b-book .b-book-icons .bbi-new {
+	display:block;
+	width:33px;
+	height:15px;
+	background:url(http://assets.bookmate.ru/0599675112/framework/stylesheets/blocks/b-book/things.png) no-repeat -20px -80px;
+	margin-right:4px;
+	float:left;
+}
+div.b-book_cover .b-book-icons .bbi-iphone, div.b-books_cover div.b-book .b-book-icons .bbi-iphone {
+	display:block;
+	width:43px;
+	height:15px;
+	background:url(http://assets.bookmate.ru/0599675112/framework/stylesheets/blocks/b-book/things.png) no-repeat -55px -80px;
+	float:left;
+}
+div.b-books_list {
+	margin-bottom:-3px;
+}
+div.b-books_list div.b-books-cell {
+	display:block;
+	width:100%;
+	padding:0;
+	text-align:left;
+}
+div.b-books_list div.b-book {
+	border-bottom:1px solid #ebeae7;
+	margin-top:-2px;
+}
+div.b-books_list div.b-book-helper {
+	height:49px;
+	padding-top:1px;
+	border-bottom:1px solid #cbcac3;
+	padding-left:50px;
+	position:relative;
+}
+div.b-books_list div.b-book div.b-book-cover {
+	position:static;
+	padding-top:10px;
+}
+div.b-books_list div.b-book div.b-book-cover .bbc-tl {
+	position:absolute;
+	left:12px;
+	top:10px;
+	width:32px;
+	height:32px;
+	text-align:center;
+}
+div.b-books_list div.b-book div.b-book-cover div.b-book-cover-layout-outer {
+	display:inline-block;
+}
+div.b-books_list div.b-book div.b-book-cover .bbc-bg {
+	display:none;
+}
+div.b-books_list div.b-book div.b-book-cover img {
+	display:none;
+}
+div.b-books_list div.b-book div.b-book-cover img.b-book-cover_small {
+	display:block;
+}
+div.b-books_list div.b-book div.b-book-cover div.b-book-cover-layout_large, div.b-books_list div.b-book div.b-book-cover div.b-book-cover-layout_web, div.b-books_list div.b-book div.b-book-cover div.b-book-cover-layout_thumb {
+	width:24px;
+	height:32px;
+	background-image:url(http://assets.bookmate.ru/8152861007/framework/stylesheets/blocks/b-book/cover.list.gif);
+}
+div.b-books_list div.b-book div.b-book-author {
+	display:none;
+}
+div.b-books_list div.b-book div.b-book-status {
+	font-size:11px;
+	height:1.4em;
+}
+div.b-books_list div.b-book div.b-book-status span.bbs-author {
+	color:#464646;
+	text-shadow:white 0 1px 0;
+	text-shadow:rgba(255, 255, 255, 0.75) 0 1px 0;
+}
+div.b-books_list div.b-book div.b-book-status span.bbs-author a {
+	color:#464646;
+}
+div.b-books_list div.b-book div.b-book-status span {
+	display:inline-block;
+	height:11px;
+	background:url(http://assets.bookmate.ru/1213718461/framework/stylesheets/blocks/b-book/status.png) no-repeat 20px 20px;
+	vertical-align:bottom;
+	margin-right:5px;
+}
+div.b-books_list div.b-book div.b-book-status span.bbs-bookmark {
+	background-position:0 -20px;
+	padding-left:13px;
+	font-size:10px;
+	font-weight:bold;
+	color:#646464;
+}
+div.b-books_list div.b-book div.b-book-status span.bbs-done {
+	background-position:-80px -20px;
+	width:11px;
+}
+div.b-books_list div.b-book div.b-book-status span.bbs-private {
+	background-position:-60px -20px;
+	width:7px;
+}
+div.b-books_list div.b-book div.b-book-status span.bbs-edit {
+	background-position:-120px -20px;
+	width:11px;
+}
+div.b-books_list div.b-book div.b-book-status span.bbs-warning {
+	background-position:-140px -20px;
+	width:11px;
+}
+div.b-books_list div.b-book-hover {
+	background:#b6b4ad;
+	border-color:white;
+}
+div.b-books_list div.b-book-hover div.b-book-helper {
+	border-color:#b6b4ad;
+	border-top:1px solid #92908a;
+	padding-top:0;
+}
+.b-book_loading div.b-book-cover .bbc-bg, .b-book_loading div.b-book-cover div.bbc-bl, .b-book_loading div.b-book-cover div.bbc-tr, .b-book_loading div.b-book-cover div.b-book-cover-layout .title, .b-book_loading div.b-book-cover div.b-book-cover-layout .authors {
+	display:none;
+}
+.b-book_loading div.b-book-cover div.b-book-cover-layout {
+	background:url(http://assets.bookmate.ru/8155808006/framework/stylesheets/blocks/b-book/cover_loading.png) no-repeat 4px 5px!important;
+}
+.b-book_loading div.b-book-cover div.b-book-cover-layout .text {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:url(http://assets.bookmate.ru/5463514213/framework/stylesheets/blocks/b-book/loader.gif) no-repeat center 76px;
+}
+.b-book_loading div.b-book-cover div.b-book-cover-layout .text-content {
+	padding-top:120px;
+	color:white;
+	text-shadow:0 1px 0 gray;
+}
+.b-book_loading_failed div.b-book-cover div.b-book-cover-layout {
+	background-position:-146px 5px!important;
+}
+.b-book_loading_failed div.b-book-cover div.b-book-cover-layout .text {
+	background:url(http://assets.bookmate.ru/8065754883/framework/stylesheets/blocks/b-book/fail.png) no-repeat center 35px;
+}
+.b-book_loading div.b-book-cover div.b-book-cover-layout .text-content {
+	text-align:center;
+	font-family:Helvetica, Arial, sans-serif;
+	color:white;
+	font-size:13px;
+	line-height:20px;
+	position:relative;
+}
+.b-book_loading div.b-book-cover div.b-book-cover-layout .text-content p {
+	padding:0 15px;
+}
+.b-book_loading div.b-book-cover div.b-book-cover-layout .text-content h5 {
+	font-size:13px;
+	font-weight:bold;
+	position:absolute;
+	width:100%;
+	left:0;
+	top:100px;
+}
+.b-explore-bookmate {
+	background:#383838;
+	color:white;
+}
+.b-explore-bookmate a {
+	color:white;
+}
+.b-explore-bookmate .b-explore-header, .b-explore-bookmate .b-explore-header a {
+	color:#e1dfdc;
+}
+.b-explore-bookmate .b-explore-color, .b-explore-bookmate .b-explore-color a {
+	color:#97908d;
+}
+.b-explore-bookmate .b-button .b-button-form .b-button-value span {
+	color:#383735;
+}
+.b-explore-external {
+	background:#97908d;
+	color:white;
+}
+.b-explore-external a {
+	color:white;
+}
+.b-explore-external .b-explore-color, .b-explore-external .b-explore-color a {
+	color:#ccc;
+}
+.b-explore-absent {
+	border:1px solid #cfcecc;
+	color:#802626;
+}
+.b-explore-absent a {
+	color:#802626;
+}
+.b-explore-book {
+	line-height:21px;
+	padding-top:18px;
+}
+.b-explore-book .b-explore-book-author, .b-explore-book .b-explore-book-author a {
+	font-size:13px;
+	color:#7b7574;
+	font-weight:normal;
+}
+.b-explore-book .b-explore-book-author a:hover {
+	color:#6e2727;
+}
+.b-explore-book .b-explore-book-title {
+	font-family:"Times New Roman", times, serif, serif;
+	font-size:24px;
+	font-weight:normal;
+	margin-bottom:1em;
+}
+.b-explore-book .b-explore-book-title .b-icons {
+	margin-left:5px;
+}
+.b-explore-book .beb-underbook {
+	padding-top:40px;
+	position:relative;
+	z-index:4;
+	color:#383838;
+	font-family:Helvetica, Arial, sans-serif;
+}
+.b-explore-book .beb-underbook .beb-underbook-stat {
+	padding:30px 0 20px;
+}
+.b-explore-book .beb-underbook .beb-note {
+	padding:10px 5px;
+}
+.b-explore-panel {
+	height:75px;
+	background:black;
+	padding-top:1px;
+	margin-bottom:10px;
+}
+.b-explore-panel .b-explore-panel-layout {
+	margin:12px 13px 0;
+	position:relative;
+	zoom:1;
+	text-align:center;
+}
+.b-explore-panel h1 {
+	font-size:35px;
+	color:#9a928f;
+	font-weight:normal;
+	position:absolute;
+	left:-1px;
+	top:0;
+	line-height:34px;
+}
+.b-explore-panel form {
+	display:inline-block;
+	height:40px;
+}
+.b-explore-panel form input {
+	width:510px;
+	font-size:15px;
+	vertical-align:middle;
+}
+.e-webkit .b-explore-panel form input {
+	padding:2px 2px 1px;
+}
+.b-explore-panel ul {
+	font-size:13px;
+	font-weight:bold;
+	text-align:left;
+}
+.b-explore-panel ul li {
+	display:inline;
+	margin-right:12px;
+	color:#555;
+}
+.b-explore-panel ul li a {
+	color:white;
+}
+.b-explore-more {
+	font-family:Georgia, serif;
+	margin-bottom:40px;
+}
+.b-explore-more h3 {
+	text-align:center;
+	font-size:15px;
+	font-style:italic;
+	color:#383838;
+	margin-bottom:15px;
+}
+.b-explore-more .bem-results {
+	text-align:center;
+	vertical-align:baseline;
+}
+.b-explore-more .bem-results a, .b-explore-more .bem-results span {
+	margin:7px 12px;
+	display:inline-block;
+}
+.b-explore-more .bem-results span.current {
+	border:2px solid #97908d;
+	padding:5px;
+	margin:0 5px;
+}
+.b-explore-related {
+	vertical-align:bottom;
+	padding:30px 44px 0;
+	position:relative;
+}
+.b-explore-related .ber-book {
+	width:180px;
+	display:inline-block;
+	vertical-align:bottom;
+	text-align:center;
+	margin-bottom:25px;
+}
+.b-explore-related-prev {
+	width:25px;
+	height:40px;
+	background:url(http://assets.bookmate.ru/1771843975/framework/stylesheets/blocks/b-explore/arrows.gif) no-repeat 0 0;
+	position:absolute;
+	left:25px;
+	top:250px;
+	cursor:pointer;
+	z-index:2;
+}
+.b-explore-related-next {
+	width:25px;
+	height:40px;
+	background:url(http://assets.bookmate.ru/1771843975/framework/stylesheets/blocks/b-explore/arrows.gif) no-repeat -25px 0;
+	position:absolute;
+	right:25px;
+	top:250px;
+	cursor:pointer;
+	z-index:2;
+}
+.b-explore-related-prev-loading {
+	width:24px;
+	height:24px;
+	background:url(http://assets.bookmate.ru/9288963412/framework/stylesheets/blocks/b-explore/ajax-loader.gif) no-repeat 0 0;
+	position:absolute;
+	left:25px;
+	top:257px;
+	cursor:default;
+	z-index:2;
+}
+.b-explore-related-next-loading {
+	width:24px;
+	height:24px;
+	background:url(http://assets.bookmate.ru/9288963412/framework/stylesheets/blocks/b-explore/ajax-loader.gif) no-repeat 0 0;
+	position:absolute;
+	right:25px;
+	top:257px;
+	cursor:default;
+	z-index:2;
+}
+.b-explore-related-loading-grey {
+	opacity:1;
+	width:24px;
+	height:24px;
+	background:url(http://assets.bookmate.ru/9288963412/framework/stylesheets/blocks/b-explore/ajax-loader-grey.gif) no-repeat 0 0;
+	position:relative;
+	right:25px;
+	top:-5px;
+	cursor:default;
+	z-index:2;
+	float:right;
+}
+#related_container {
+	overflow:hidden;
+}
+.b-explore-series {
+	margin-top:30px;
+}
+.b-explore-series h2 {
+	font-size:20px;
+	margin-bottom:.8em;
+}
+.b-explore-series ul {
+	font-family:Georgia, serif;
+	font-size:12px;
+	line-height:14px;
+	margin-right:20px;
+}
+.b-explore-series ul li {
+	margin-bottom:7px;
+}
+.b-explore-now {
+	border-bottom:3px solid black;
+	padding-top:15px;
+}
+.b-explore-now .b-user {
+	width:158px;
+	line-height:14px;
+	height:43px;
+	margin-bottom:10px;
+}
+.b-explore-now .b-user span {
+	font-size:11px;
+	color:black;
+}
+.b-explore-now .b-user span a {
+	display:inline;
+	font-size:11px;
+}
+.b-explore-now .b-user ins {
+	color:#505050;
+	text-decoration:none;
+	font-size:11px;
+	margin-right:10px;
+	display:block;
+}
+.b-explore-now .b-user ins a {
+	font-size:11px;
+	color:#505050;
+	margin:0;
+	font-weight:normal;
+	text-decoration:none;
+}
+.b-explore-page {
+	font-size:13px;
+	line-height:21px;
+	position:relative;
+}
+.b-explore-page h1.b-explore-page-title, .b-explore-page .b-explore-page-header h1 {
+	font-family:"Times New Roman", times, serif, serif;
+	font-size:24px;
+	font-weight:normal;
+	margin:.5em 0;
+}
+.b-explore-page h1.b-explore-page-title_big, .b-explore-page .b-explore-page-header h1 {
+	font-size:36px;
+	font-style:italic;
+}
+.b-explore-page .b-explore-page-text p+p {
+	margin-top:1em;
+}
+.b-explore-page .b-explore-page-text h2 {
+	font-size:15px;
+	line-height:21px;
+}
+.b-explore-page .b-explore-page-text .smaller {
+	font-size:12px;
+	line-height:18px;
+}
+.b-explore-page .b-explore-page-text_disabled {
+	color:#9b9b9b;
+}
+.b-explore-page .b-explore-page-more {
+	text-align:right;
+	margin-top:25px;
+	color:black;
+	font-size:14px;
+}
+.b-explore-page .b-explore-page-header {
+	text-align:center;
+	padding-top:50px;
+	margin-bottom:30px;
+}
+.b-explore-page .b-explore-page-header h1 {
+	font-weight:normal;
+}
+.b-explore-page .b-explore-page-header p {
+	font-size:18px;
+	line-height:27px;
+	color:#615956;
+}
+.b-explore-page .b-explore-page-text ul, .b-explore-page .b-explore-page-text ol {
+	margin-top:.4em;
+	padding-left:2.4em;
+	margin-bottom:1em;
+}
+.b-explore-page .b-explore-page-text ul li, .b-explore-page .b-explore-page-text ol li {
+	margin-bottom:1em;
+}
+.b-explore-page .b-explore-page-text ol li {
+	list-style-type:decimal;
+}
+.b-explore-page .b-explore-page-text ul li {
+	list-style:none;
+}
+.b-explore-page .b-explore-page-text ul li {
+behavior:expression(!this.before && this.parentNode && this.parentNode.nodeName == 'UL' ? this.before = this.innerHTML = '<span class="bullet">&mdash;&nbsp;</span>'+this.innerHTML:'');
+text-indent:expression(this.parentNode && this.parentNode.nodeName == 'UL' ? '-2.3em':0);
+}
+.b-explore-page .b-explore-page-text ul>li {
+	text-indent:-1.3em;
+}
+.b-explore-page .b-explore-page-text ul>li:before {
+	content:'\2014\a0';
+}
+.b-explore-page .b-explore-page-text .hr {
+	border-top:1px solid #DFDFDF;
+}
+.b-explore-page .b-explore-page-offset_link {
+	position:absolute;
+	top:119px;
+	right:0;
+	width:200px;
+}
+.b-explore-page .b-fixed {
+	position:fixed;
+}
+.b-sidebar {
+	font-family:Helvetica, Arial, sans-serif;
+}
+.b-sidebar .b-sidebar-layout {
+	padding:15px;
+}
+.b-sidebar h2 {
+	font-size:17px;
+}
+.b-sidebar h4 {
+	font-size:13px;
+}
+.b-sidebar h5 {
+	font-size:12px;
+}
+.b-sidebar .b-sidebar-bookinfo {
+	font-size:11px;
+	margin:18px 0 0;
+}
+.b-sidebar .b-sidebar-bookinfo li {
+	line-height:14px;
+	margin-bottom:6px;
+}
+.b-sidebar .b-sidebar-button .b-button {
+	margin-top:12px;
+}
+.b-sidebar .b-sidebar-button .b-button-value-text {
+	overflow:visible!important;
+}
+.b-sidebar .b-sidebar-button .b-button-value-text .title {
+	padding-left:65px;
+	display:block;
+	text-align:left;
+}
+.b-sidebar .b-sidebar-button .b-button-value-text .price {
+	width:45px;
+	position:absolute;
+	left:0;
+	text-align:right;
+}
+.b-sidebar .b-sidebar-button .b-button-value-text .line {
+	position:absolute;
+	left:55px;
+	border-left:1px solid #858380;
+	height:25px;
+	top:-6px;
+}
+.b-sidebar .b-sidebar-button .b-button_down .b-button-value-text .line {
+	top:-7px;
+border-color:;
+}
+.b-sidebar .b-sidebar-buttongroup {
+	margin-top:8px;
+	margin-bottom:15px;
+}
+.b-sidebar .b-sidebar-buttongroup .bsb-group {
+	padding-top:7px;
+}
+.b-sidebar .b-sidebar-buttongroup .bsb-right {
+	float:right;
+	width:95px;
+}
+.b-sidebar .b-sidebar-buttongroup .bsb-full {
+	margin-right:95px;
+}
+.b-sidebar .b-sidebar-store {
+	margin-top:15px;
+}
+.b-sidebar .b-sidebar-store dt {
+	width:50px;
+	margin-right:5px;
+	float:left;
+	clear:left;
+	margin-bottom:5px;
+	text-align:right;
+}
+.b-sidebar .b-sidebar-store dd {
+	float:left;
+	width:210px;
+	margin-bottom:5px;
+}
+.b-sidebar .b-sidebar-store dd a {
+	text-decoration:underline;
+}
+.b-sidebar .b-sidebar-rights {
+	background:#9d9d9d;
+	border-radius:3px;
+	text-align:left;
+	padding:10px 15px;
+	font-size:13px;
+	position:relative;
+	top:15px;
+}
+.b-sidebar .b-sidebar-rights a {
+	color:white;
+}
+.b-sidebar .b-sidebar-rights a:hover {
+	color:#6e2727;
+}
+.b-sidebar .b-button_flex:link, .b-sidebar .b-button_flex:active, .b-sidebar .b-button_flex:visited, .b-sidebar .b-button_flex:hover {
+	display:block;
+	width:100%;
+}
+.b-sidebar-accordion {
+	margin:30px 0;
+	border:1px solid #d0cfcc;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-o-border-radius:3px;
+	-ms-border-radius:3px;
+	border-radius:3px;
+}
+.b-sidebar-accordion .b-sidebar-layout {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.b-sidebar-accordion .bsa-panel {
+	background:url(http://assets.bookmate.ru/8229696734/framework/stylesheets/blocks/b-sidebar/accordion.shadow.png) repeat-x 0 0;
+	cursor:pointer;
+}
+.b-sidebar-accordion .bsa-panel_first {
+	background:none;
+}
+.b-sidebar-accordion .bsa-panel h5 {
+	color:#373633;
+}
+.b-sidebar-accordion .bsa-panel ul {
+	padding-top:15px;
+}
+.b-sidebar-accordion .g-pseudo-link em {
+	font-style:normal;
+}
+.b-shadow {
+	background:url(http://assets.bookmate.ru/7034121126/framework/stylesheets/blocks/b-shadow/shadows.png) no-repeat center top;
+	height:20px;
+}
+.b-shadow_full {
+	background-position:center -60px;
+}
+.b-shadow_middle {
+	background-position:center -80px;
+}
+.b-shadow_small {
+	background-position:center -40px;
+}
+.b-delimiter {
+	height:13px;
+	background:url(http://assets.bookmate.ru/8815733543/framework/stylesheets/blocks/b-delimiter/delimiter.gif) no-repeat 10px 0;
+}
+.b-delimiter_small {
+	background-image:url(http://assets.bookmate.ru/8863725699/framework/stylesheets/blocks/b-delimiter/delimiter_small.gif);
+}
+.b-navigation {
+	padding-top:11px;
+	padding-bottom:10px;
+	position:relative;
+}
+.b-navigation ul li {
+	float:left;
+	margin-right:20px;
+}
+.b-navigation ul li.disabled {
+	color:#ccc;
+}
+.b-navigation ul li.current {
+	font-weight:bold;
+}
+.b-navigation .b-navigation-right {
+	right:0;
+	position:absolute;
+	top:17px;
+	font-weight:normal;
+}
+.b-navigation .b-navigation-right ul li {
+	margin-right:0;
+	margin-left:20px;
+}
+.b-navigation .b-user {
+	float:left;
+	padding-right:0;
+	padding-left:45px;
+	margin-right:35px;
+}
+.b-navigation .b-user img {
+	right:auto;
+	left:0;
+	top:-10px;
+}
+.b-navigation .b-navigation-upload {
+	top:-6px;
+	position:relative;
+}
+.b-navigation_user {
+	padding:17px 0 17px;
+}
+.b-navigation-block {
+	border:1px solid #d8d8d8;
+	font-family:Helvetica, Arial, sans-serif;
+	position:relative;
+	zoom:1;
+}
+.b-navigation-block .bnb-header {
+	background:url(http://assets.bookmate.ru/6872539839/framework/stylesheets/blocks/b-navigation/navigation.shadow.png) repeat-x left bottom;
+	height:70px;
+	position:relative;
+	zoom:1;
+}
+.b-navigation-block .bnb-header_gray {
+	background-color:#efeeec;
+}
+.b-navigation-block .bnb-layout-block {
+	padding:10px 15px;
+}
+.b-navigation-block .bnb-header a {
+	text-decoration:underline;
+	color:black;
+	position:relative;
+	display:inline-block;
+}
+.b-navigation-block .bnb-header a:hover {
+	text-decoration:underline;
+	color:#6e2727;
+	border-bottom:none;
+}
+.b-navigation-block .bnb-header h1 {
+	font-size:24px;
+	font-weight:normal;
+	font-family:"Times New Roman", serif;
+}
+.b-navigation-block .bnb-header .bnb-header-menu {
+	position:absolute;
+	left:0;
+	bottom:-5px;
+	width:100%;
+	zoom:1;
+}
+.b-navigation-block .bnb-header .bnb-header-menu .bnb-header-menu_right {
+	float:right;
+	position:relative;
+	zoom:1;
+	z-index:2;
+}
+.b-navigation-block .bnb-header .bnb-header-menu .bnb-header-menu-buttons {
+	margin:-8px 0;
+}
+.b-navigation-block .bnb-header .bnb-header-menu .bnb-layout-block {
+	padding-top:0;
+	padding-bottom:15px;
+	vertical-align:bottom;
+	position:relative;
+	zoom:1;
+}
+.b-navigation-block .bnb-header .bnb-header-menu ul {
+	position:relative;
+	zoom:1;
+}
+.b-navigation-block .bnb-header .bnb-header-menu ul li {
+	display:inline-block;
+	margin-right:25px;
+	font-weight:bold;
+	position:relative;
+	zoom:1;
+}
+.b-navigation-block .bnb-header .bnb-header-menu .bnb-header-menu_right ul li {
+	margin-left:25px;
+	margin-right:0;
+}
+.b-navigation-block .bnb-header .bnb-header-menu ul li ins {
+	font-style:italic;
+	color:#737373;
+	font-family:Georgia, serif;
+	font-weight:normal;
+	text-decoration:none;
+}
+.b-navigation-block .bnb-header .bnb-header-menu ul li i {
+	position:absolute;
+	width:11px;
+	height:7px;
+	margin-left:50%;
+	left:-5px;
+	top:18px;
+	background:url(http://assets.bookmate.ru/8229696734/framework/stylesheets/blocks/b-navigation/navigation.corner.png) no-repeat 0 0;
+}
+.b-navigation-block .bnb-icon {
+	display:inline-block;
+	width:10px;
+	height:10px;
+	background:url(http://assets.bookmate.ru/5024169304/framework/stylesheets/blocks/b-navigation/icons.png) no-repeat 20px 20px;
+	margin-right:5px;
+	vertical-align:baseline;
+	position:absolute;
+}
+.b-navigation-block .bnb-icon-remove {
+	width:9px;
+	height:12px;
+	background-position:0 0;
+	left:-18px;
+	top:0;
+}
+.b-navigation-block .bnb-bottom {
+	background-color:#efeeec;
+	text-align:right;
+}
+.b-navigation-block .bnb-layout_empty {
+	padding:40px 0;
+	text-align:center;
+	color:#686360;
+	font-family:Georgia, serif;
+}
+.b-navigation-block .bnb-layout_empty h1 {
+	font-weight:normal;
+	font-size:35px;
+	margin-bottom:5px;
+}
+.b-navigation-block_user {
+	margin-top:12px;
+}
+.b-response {
+	margin-bottom:20px;
+}
+.b-response .b-user {
+	float:none;
+	width:auto;
+	margin-bottom:6px;
+}
+.b-response .b-response-text {
+	font-size:11px;
+	color:#474747;
+	padding:14px;
+	position:relative;
+	border:1px solid #cacaca;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	-o-border-radius:2px;
+	-ms-border-radius:2px;
+	border-radius:2px;
+	line-height:17px;
+}
+.b-response .b-response-text .corner {
+	width:11px;
+	height:16px;
+	background:url(http://assets.bookmate.ru/0770087319/framework/stylesheets/blocks/b-response/corner.png) no-repeat 0 0;
+	position:absolute;
+	left:18px;
+	top:-16px;
+}
+.b-response_edit .b-response-text {
+	padding:0;
+	border-color:#505050;
+	margin-bottom:10px;
+}
+.b-response_edit .b-response-text textarea {
+	margin:0;
+	padding:14px;
+	border:0;
+	background:transparent;
+	width:153px;
+	height:140px;
+}
+.b-response_edit .b-response-text .corner {
+	background-position:-15px 0;
+	z-index:2;
+}
+.b-tabs {
+	margin-bottom:20px;
+}
+.b-tabs ul {
+	border-bottom:1px solid #dfdfdf;
+	font-size:13px;
+	font-weight:bold;
+	margin-bottom:12px;
+	display:inline-block;
+	width:100%;
+}
+.b-tabs ul li {
+	position:relative;
+	zoom:1;
+	text-align:center;
+	float:left;
+	margin-right:5px;
+}
+.b-tabs ul li div {
+	border:1px solid #dfdfdf;
+	color:#626262;
+	border-bottom:0;
+	display:inline-block;
+	padding:5px 18px;
+	background:white;
+	cursor:pointer;
+	position:relative;
+	zoom:1;
+}
+.b-tabs ul li {
+	cursor:auto;
+}
+.b-tabs ul li.current div {
+	color:black;
+	padding-bottom:6px;
+	margin-bottom:-1px;
+}
+.b-tabs ul li.right {
+	float:right;
+}
+.b-book-shelf {
+	background:#dcdbd6;
+	padding:10px 15px;
+	margin-bottom:12px;
+}
+.b-book-shelf_navless {
+	padding-top:40px;
+}
+.b-book-shelf-nav {
+	margin-bottom:40px;
+	font-size:13px;
+	font-weight:bold;
+	position:relative;
+	left:-5px;
+	line-height:15px;
+}
+.b-book-shelf-nav li {
+	display:inline;
+	position:relative;
+	zoom:1;
+}
+.b-book-shelf-nav li a, .b-book-shelf-nav li a:hover {
+	text-decoration:none;
+	cursor:pointer;
+}
+.b-book-shelf-nav li div {
+	display:inline-block;
+	padding-left:10px;
+	height:21px;
+	position:relative;
+	zoom:1;
+}
+.b-book-shelf-nav li div i {
+	position:absolute;
+	width:10px;
+	height:21px;
+	left:0;
+	top:0;
+	background:url(http://assets.bookmate.ru/1512556683/framework/plugins/b-book-shelf/stylesheets/menu.png) no-repeat 0 0;
+}
+.b-book-shelf-nav li div div {
+	display:block;
+	padding-right:10px;
+	padding-left:0;
+	background:url(http://assets.bookmate.ru/1512556683/framework/plugins/b-book-shelf/stylesheets/menu.png) no-repeat right top;
+	padding-top:3px;
+	height:18px;
+}
+.e-gecko .b-book-shelf-nav li div div {
+	padding-top:2px;
+	height:19px;
+}
+.e-gecko-mac .b-book-shelf-nav li div div {
+	padding-top:3px;
+	height:18px;
+}
+.b-book-shelf-nav h3 {
+	font-size:13px;
+	padding:5px 0 5px 10px;
+}
+.b-book-shelf-nav li div div div {
+	padding:0!important;
+	background:none;
+	position:relative;
+}
+.b-book-shelf-nav li div div div span {
+	position:relative;
+	display:block;
+	white-space:nowrap;
+	color:black;
+	z-index:2;
+}
+.b-book-shelf-nav li div div div span.shadow {
+	position:absolute;
+	left:0;
+	top:1px;
+	color:white!important;
+	z-index:1;
+	opacity:.5;
+	filter:alpha(opacity=50);
+}
+.b-book-shelf-nav li div div div span.shadow ins {
+	color:white!important;
+}
+.b-book-shelf-nav li div div div span ins {
+	text-decoration:none;
+	padding-left:5px;
+	color:#444;
+}
+.b-book-shelf-nav li a div i, .b-book-shelf-nav li a div div {
+	background-image:none;
+}
+.b-book-shelf-nav li a div div div span {
+	color:#444;
+}
+.b-book-shelf-nav li a:hover div i, .b-book-shelf-nav li a:hover div div {
+	background-image:url(http://assets.bookmate.ru/1512556683/framework/plugins/b-book-shelf/stylesheets/menu.png);
+}
+.b-book-shelf-nav li a:hover div i {
+	background-position:0 -25px;
+}
+.b-book-shelf-nav li a:hover div div {
+	background-position:right -25px;
+}
+.b-book-shelf-nav li a:hover div div div {
+	background-image:none;
+}
+.b-book-shelf_social {
+	background:#e6e6e6;
+}
+.b-book-shelf_small .b-book-shelf-nav {
+	margin-bottom:32px;
+}
+.b-book-shelf_small .b-book-shelf-nav-friends {
+	margin-bottom:22px;
+}
+.b-book-shelf .bbs-quicksearch {
+	position:relative;
+	zoom:1;
+	z-index:5;
+}
+.b-book-shelf .bbs-quicksearch .bbs-quicksearch-layout {
+	position:absolute;
+	width:200px;
+	right:-5px;
+	top:0;
+	z-index:1;
+}
+.b-book-shelf .b-book {
+	width:192px;
+	text-align:center;
+	margin-bottom:40px;
+}
+.b-book-shelf_small .b-book {
+	width:auto;
+	margin-bottom:10px;
+}
+.b-book-shelf_small .b-book-shelf_small {
+	width:150px;
+	display:inline-block;
+	text-align:center;
+	margin-bottom:20px;
+}
+.b-book-shelf_small .b-book-shelf_small .bbs-reader {
+	margin-bottom:5px;
+}
+.b-book-shelf_small .b-book-shelf_small .bbs-reader {
+	font-size:11px;
+}
+.b-book-shelf_small .b-book-shelf_small .bbs-reader span {
+	width:90%;
+	display:block;
+	white-space:nowrap;
+	position:relative;
+	overflow:hidden;
+	margin:0 auto;
+}
+.b-book-shelf_small .b-book-shelf_small .bbs-reader, .b-book-shelf_small .b-book-shelf_small .bbs-reader a {
+	color:#595959;
+}
+.b-book-shelf_empty {
+	padding-top:40px;
+	text-align:center;
+	color:#686360;
+	font-family:Georgia, serif;
+}
+.b-book-shelf_empty h1 {
+	font-weight:normal;
+	font-size:35px;
+	margin-bottom:5px;
+}
+.b-book-shelf_empty a {
+	color:#686360;
+	text-decoration:underline;
+}
+.b-book-shelf_empty a:hover {
+	color:black!important;
+}
+.b-book-shelf_empty p {
+	font-size:14px;
+	line-height:22px;
+	margin-bottom:15px;
+}
+.b-book-shelf_empty .bbs-search {
+	width:350px;
+	margin:0 auto 18px;
+}
+.b-book-shelf_empty .bbs-search .bbs-search-example {
+	font-size:11px;
+	font-family:Helvetica, Arial, sans-serif;
+	font-style:italic;
+	padding-top:3px;
+}
+.b-book-shelf_empty .bbs-search .bbs-search-example, .b-book-shelf_empty .bbs-search .bbs-search-example a {
+	color:#7f7f7f;
+}
+.b-book-shelf_empty .bbs-line {
+	height:20px;
+	background:url(http://assets.bookmate.ru/7034121126/framework/stylesheets/blocks/b-shadow/shadows.png) no-repeat center -40px;
+}
+.b-book-shelf_empty .bbs-more {
+	width:800px;
+	margin:20px auto 45px;
+	font-size:12px;
+	font-family:Helvetica, Arial, sans-serif;
+	line-height:19px;
+}
+.b-book-shelf_empty .bbs-more .l-column {
+	width:340px;
+	height:50px;
+}
+.b-book-shelf_empty .bbs-more .l-column_border {
+	width:400px;
+	border-right:1px solid #a19d99;
+}
+.b-book-shelf_empty .bbs-more, .b-book-shelf_empty .bbs-more a {
+	color:#7f7f7f;
+}
+.b-book-shelf_empty_loaded {
+	padding-bottom:90px;
+}
+.b-uploader {
+	min-height:450px;
+	position:relative;
+	line-height:21px;
+}
+.b-uploader .b-uploader-content {
+	background-color:#efeeec;
+	padding-top:60px;
+	padding-bottom:60px;
+	height:100%;
+	position:relative;
+	z-index:0;
+}
+.b-uploader #UploaderFlash {
+	width:1px;
+	height:1px;
+	left:0;
+	top:0;
+}
+.b-uploader-panel {
+	padding-top:10px;
+	height:38px;
+	position:relative;
+	background-color:white;
+}
+.b-uploader-panel ul {
+	text-align:center;
+}
+.b-uploader-panel ul li {
+	display:inline;
+	position:relative;
+	zoom:1;
+}
+.b-uploader-panel ul li div {
+	display:inline-block;
+	height:27px;
+	font-weight:bold;
+	padding:0 15px;
+	position:relative;
+}
+.b-uploader-panel ul li span {
+	display:inline-block;
+}
+.b-uploader-panel ul li .g-pseudo-link span {
+	top:.3em;
+}
+.b-uploader-panel ul li span:hover {
+	color:#6e2727;
+}
+.b-uploader-panel ul li.current i {
+	position:absolute;
+	width:16px;
+	height:8px;
+	left:50%;
+	bottom:-11px;
+	background:url(http://assets.bookmate.ru/6083045460/framework/plugins/b-uploader/stylesheets/sprite.png) no-repeat 0 -50px;
+	margin-left:-8px;
+}
+.b-uploader-panel ul li.current span {
+	border:0;
+	font-weight:bold;
+}
+.b-uploader-panel ul li.current span:hover {
+	color:black;
+}
+.b-uploader-panel .b-uploader-panel-left {
+	position:absolute;
+	left:0;
+	top:14px;
+	width:150px;
+	height:26px;
+}
+.b-uploader .b-uploader-file {
+	text-align:center;
+	position:relative;
+	z-index:2;
+	height:280px;
+}
+.b-uploader .b-uploader-file .icon {
+	width:115px;
+	height:70px;
+	margin:35px auto 15px;
+	background:url(http://assets.bookmate.ru/6083045460/framework/plugins/b-uploader/stylesheets/sprite.png) no-repeat -20px -50px;
+}
+.b-uploader .b-uploader-file .b-uploader-button {
+	height:32px;
+	margin-bottom:60px;
+}
+.b-uploader .b-uploader-file .b-uploader-button .b-uploader-alternate {
+	display:none;
+	width:260px;
+	margin:0 auto;
+	position:relative;
+	text-align:center;
+}
+.b-uploader .b-uploader-file .b-uploader-button .b-uploader-alternate input {
+	position:relative;
+	top:5px;
+	font-size:14px;
+	width:100%;
+	margin-bottom:20px;
+}
+.b-uploader .b-uploader-file .b-uploader-button .b-uploader-alternate .b-button_form {
+	position:absolute;
+	left:50%;
+	margin-left:-42px;
+	top:45px;
+}
+.b-uploader .b-uploader-file .button {
+	width:264px;
+	height:36px;
+	margin:0 auto;
+}
+.b-uploader .b-uploader-file .alternate {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+}
+.b-uploader .b-uploader-file .alternate .g-pseudo-link {
+	font-weight:bold;
+}
+.b-uploader .b-uploader-file .notice, .b-uploader .b-uploader-web .notice {
+	font-size:18px;
+	width:500px;
+	margin:0 auto 60px auto;
+	line-height:21px;
+	padding-top:25px;
+}
+.b-uploader .b-uploader-web {
+	text-align:center;
+	height:280px;
+}
+.b-uploader .b-uploader-web .formtastic {
+	margin-bottom:0;
+}
+.b-uploader .b-uploader-web .buw-string {
+	width:570px;
+	height:32px;
+	margin:0 auto 50px auto;
+	text-align:left;
+}
+.b-uploader .b-uploader-web .buw-string button {
+	position:relative;
+	top:-3px;
+}
+.b-uploader .b-uploader-web .buw-string ul {
+	float:left;
+	margin-right:10px;
+	position:relative;
+	top:-2px;
+}
+.b-uploader .b-uploader-web .buw-string ul li input {
+	width:420px;
+	font-size:22px;
+}
+.b-uploader .b-uploader-web .buw-string ul li p {
+	position:absolute;
+	top:-2.3em;
+	left:0;
+	font-weight:normal;
+}
+.b-uploader .b-uploader-list {
+	width:520px;
+	height:280px;
+	margin:0 auto;
+	background:#dcdbd6;
+	position:relative;
+	z-index:4;
+	opacity:0;
+}
+.b-uploader .b-uploader-list .b-uploader-list-shadow {
+	width:573px;
+	height:332px;
+	background:url(http://assets.bookmate.ru/6934671313/framework/plugins/b-uploader/stylesheets/list-bg.png) top left no-repeat;
+	position:absolute;
+	bottom:-42px;
+	right:-26px;
+}
+.b-uploader .b-uploader-list .b-uploader-list-files {
+	height:239px;
+	background:white;
+	position:relative;
+	overflow:auto;
+	overflow-x:hidden;
+	border-bottom:1px solid #c6c5c0;
+}
+.b-uploader .b-uploader-list .controls {
+	padding:6px 8px 0;
+	position:relative;
+}
+.b-uploader .b-uploader-list .controls .controls-left {
+	float:left;
+	position:relative;
+	z-index:3;
+}
+.b-uploader .b-uploader-list .controls .controls-right {
+	float:right;
+	position:relative;
+	z-index:3;
+}
+.b-uploader .b-uploader-list .controls .controls-info {
+	position:absolute;
+	left:0;
+	top:12px;
+	width:100%;
+	text-align:center;
+	font-size:13px;
+	font-weight:bold;
+	color:#373633;
+}
+.b-uploader .b-uploader-list .controls .controls-info span {
+	position:relative;
+	z-index:2;
+}
+.b-uploader .b-uploader-list .controls .controls-info span.shadow {
+	position:absolute;
+	left:0;
+	top:1px;
+	width:100%;
+	z-index:1;
+	color:white;
+}
+.b-uploader .b-uploader-list .controls .b-uploader-button {
+	display:none;
+}
+.b-uploader .b-uploader-list .b-uploader-list-files .bul-file {
+	height:30px;
+	font-size:13px;
+	position:relative;
+	overflow:hidden;
+}
+.b-uploader .b-uploader-list .b-uploader-list-files .bul-file .bul-file-border {
+	top:29px;
+	height:1px;
+	background:black;
+	opacity:.1;
+	filter:alpha(opacity=10);
+	width:100%;
+	position:absolute;
+	left:0;
+	z-index:1;
+}
+.b-uploader .b-uploader-list .b-uploader-list-files .bul-file .bul-file-name {
+	font-weight:bold;
+	position:absolute;
+	left:14px;
+	top:5px;
+	width:330px;
+	overflow:hidden;
+	white-space:nowrap;
+	z-index:2;
+}
+.b-uploader .b-uploader-list .b-uploader-list-files .bul-file .bul-file-size {
+	position:absolute;
+	top:5px;
+	left:385px;
+	width:80px;
+	text-align:right;
+	z-index:2;
+}
+.b-uploader .b-uploader-list .b-uploader-list-files .bul-file .bul-file-controls {
+	position:absolute;
+	top:5px;
+	right:14px;
+	z-index:2;
+}
+.b-uploader .b-uploader-list .b-uploader-list-files .bul-file .bul-file-controls .remove {
+	width:9px;
+	height:12px;
+	display:inline-block;
+	background:url(http://assets.bookmate.ru/6083045460/framework/plugins/b-uploader/stylesheets/sprite.png) no-repeat 0 -70px;
+	cursor:pointer;
+}
+.b-uploader .b-uploader-list .b-uploader-list-files .bul-file .success {
+	position:absolute;
+	width:10px;
+	height:8px;
+	background:url(http://assets.bookmate.ru/6083045460/framework/plugins/b-uploader/stylesheets/sprite.png) no-repeat 0 -90px;
+	display:none;
+}
+.b-uploader .b-uploader-list .b-uploader-list-files .bul-file .progress {
+	position:absolute;
+	left:0;
+	top:0;
+	height:30px;
+	background:#b8a9cb;
+	z-index:0;
+}
+.b-uploader-back a {
+	padding-left:1.2em;
+	text-decoration:none;
+	position:relative;
+}
+.b-uploader-back a .arrow {
+	position:absolute;
+	left:0;
+	bottom:-4px;
+}
+.b-uploader-back a .text {
+	text-decoration:underline;
+}
+.b-uploader .b-uploader-shadow {
+	background:url(http://assets.bookmate.ru/2723092638/framework/plugins/b-uploader/stylesheets/shadow.png) repeat;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:3;
+	display:none;
+	opacity:0;
+}
+.b-uploader_queue {
+	background:#606060;
+	color:#DFDFDF;
+	font-size:13px;
+	line-height:18px;
+}
+.b-uploader_queue .l-layout-block {
+	border:0;
+}
+.b-uploader_queue dl {
+	padding-top:20px;
+}
+.b-uploader_queue dl dt {
+	font-size:20px;
+	margin-bottom:10px;
+	color:#DFDFDF;
+	font-weight:bold;
+}
+.b-uploader_queue dl dd {
+	padding-bottom:25px;
+}
+.b-uploader_queue dl dd .b-file {
+	margin-bottom:15px;
+	color:#ddd;
+	font-size:12px;
+}
+.b-uploader_queue dl dd .b-file a {
+	color:white;
+}
+.b-uploader_queue dl dd .proccess, .b-uploader_queue dl dd .proccess a {
+	color:#ede288;
+}
+.b-uploader_queue dl dd .success, .b-uploader_queue dl dd .success a {
+	color:#6fd502;
+}
+.b-uploader_queue dl dd .error, .b-uploader_queue dl dd .error a {
+	color:#ff5d5d;
+}
+.b-uploader_queue dl dd .removed, .b-uploader_queue dl dd .removed a {
+	color:#afa6a6;
+}
+.b-contents {
+	border-top:1px solid #e9e9e9;
+	position:relative;
+	width:100%;
+	overflow:hidden;
+	zoom:1;
+}
+.b-contents, .b-contents a {
+	color:#444;
+}
+.b-contents li li {
+	padding-left:20px;
+}
+.b-contents .b-contents-chapter-title {
+	padding-bottom:1px;
+}
+.b-contents .b-contents-chapter-title div {
+	padding:6px 0 4px 12px;
+	position:relative;
+	cursor:pointer;
+	zoom:1;
+}
+.b-contents .b-contents-chapter-title div * {
+	display:inline;
+}
+.b-contents .b-contents-chapter-title div ins {
+	position:absolute;
+	width:9px;
+	height:9px;
+	background:url(http://assets.bookmate.ru/6900374365/framework/plugins/b-contents/stylesheets/sprite.gif) no-repeat -10px 0;
+	left:0;
+	top:8px;
+	cursor:pointer;
+	zoom:1;
+}
+.b-contents li i {
+	position:absolute;
+	border-bottom:1px solid #e9e9e9;
+	left:0;
+	width:1000px;
+}
+.b-contents span.auto {
+	position:absolute;
+	width:8px;
+	height:13px;
+	background:url(http://assets.bookmate.ru/6900374365/framework/plugins/b-contents/stylesheets/sprite.gif) no-repeat 0 0;
+	margin:-7px 0 0 5px;
+}
+.b-contents .b-contents-chapter-closed .b-contents-chapters {
+	display:none;
+}
+.b-contents .b-contents-chapter-closed .b-contents-chapter-title div ins {
+	background-position:-10px -10px;
+}
+.b-contents .b-contents-chapter-empty .b-contents-chapter-title div {
+	cursor:auto;
+}
+.b-contents .b-contents-chapter-empty .b-contents-chapter-title div ins {
+	display:none;
+}
+.b-search {
+	position:relative;
+	left:3px;
+	top:-3px;
+	margin-bottom:-6px;
+	width:100%;
+}
+.b-search, .b-search .b-search_container, .b-search .b-search_left, .b-search .b-search_right {
+	height:29px;
+}
+.b-search .b-search_left, .b-search .b-search_right {
+	background:url(http://assets.bookmate.ru/6917248964/framework/plugins/b-search/stylesheets/b-search_input.png) no-repeat left top;
+}
+.b-search .b-search_container {
+	margin-left:23px;
+	padding-right:22px;
+	position:relative;
+}
+.b-search .b-search_container .b-search_container {
+	padding:0;
+	margin:0;
+	width:100%;
+	position:static;
+}
+.b-search .b-search_input {
+	border:0!important;
+	background:url(http://assets.bookmate.ru/8661296096/framework/plugins/b-search/stylesheets/b-search_controls.gif) repeat-x 0 0;
+	font-size:11px;
+	position:relative;
+	z-index:2;
+	top:5px;
+	height:15px;
+	padding-top:3px;
+	padding-left:0;
+	margin:0!important;
+	width:100%!important;
+}
+.e-gecko-mac .b-search .b-search_input {
+	padding-top:2px;
+}
+.b-search .b-search_placeholder {
+	display:none;
+	position:absolute;
+	font-size:11px;
+	color:gray;
+	z-index:3;
+	top:8px;
+	left:1px;
+	font-family:"Lucida Grande", Arial, sans-serif;
+}
+.b-search .b-search_spinner {
+	display:none;
+	position:absolute;
+	right:9px;
+	top:9px;
+	z-index:4;
+	width:11px;
+	height:11px;
+	background:url(http://assets.bookmate.ru/7062691602/framework/plugins/b-search/stylesheets/b-search_spinner.gif) no-repeat 0 0;
+}
+.b-search .b-search_clear {
+	display:none;
+	position:absolute;
+	right:9px;
+	top:9px;
+	z-index:3;
+	width:11px;
+	height:11px;
+	background:url(http://assets.bookmate.ru/8661296096/framework/plugins/b-search/stylesheets/b-search_controls.gif) no-repeat 0 -38px;
+	cursor:pointer;
+	cursor:hand;
+}
+.b-search .b-search_clear_down {
+	background-position:-11px -38px;
+}
+.b-search .b-search_left {
+	position:absolute;
+	left:0;
+	top:0;
+	width:23px;
+}
+.b-search .b-search_right {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	background-position:right top;
+}
+.b-search-focus .b-search_left {
+	background-position:left -29px;
+}
+.b-search-focus .b-search_right {
+	background-position:right -29px;
+}
+.b-search-focus .b-search_input {
+	background-position:0 -19px;
+}
+.b-search-loading .b-search_spinner {
+	display:block;
+}
+.b-search-theme_gray .b-search .b-search_left, .b-search-theme_gray .b-search .b-search_right {
+	background-image:url(http://assets.bookmate.ru/1512283979/framework/plugins/b-search/stylesheets/b-search_input_gray.png);
+}
+.b-search-theme_gray .b-search .b-search_input, .b-search-theme_gray .b-search .b-search_clear {
+	background-image:url(http://assets.bookmate.ru/3871640121/framework/plugins/b-search/stylesheets/b-search_controls_gray.gif);
+}
+.b-quicksearch-results {
+	width:320px;
+	border:2px solid black;
+}
+.b-quicksearch-results a {
+	height:40px;
+	display:block;
+	width:100%;
+	position:relative;
+	overflow:hidden;
+	font-size:14px;
+	background:#e6e5e2;
+	text-decoration:none;
+	white-space:nowrap;
+	border-bottom:1px solid #d7d6d3;
+	line-height:20px;
+	cursor:pointer;
+}
+.b-quicksearch-results a.last {
+	border-bottom:0;
+}
+.b-quicksearch-results a strong {
+	display:block;
+	width:290px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	color:black;
+	position:relative;
+	left:15px;
+	top:4px;
+}
+.b-quicksearch-results a span {
+	display:block;
+	width:290px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	font-size:11px;
+	color:#7d7d7d;
+	position:relative;
+	left:15px;
+}
+.b-quicksearch-results a.selected {
+	background:black;
+	border-color:black;
+	color:white;
+}
+.b-quicksearch-results a.selected strong {
+	color:white;
+}
+.b-dropdown_out {
+	zoom:1;
+}
+.b-dropdown {
+	display:none;
+	left:0;
+	top:0;
+	border:1px solid #666;
+	background:white;
+	padding:15px;
+	float:left;
+}
+.b-dropdown h3 {
+	text-transform:none;
+	font-size:16px;
+	margin:0;
+	padding:0;
+	margin-bottom:10px;
+}
+.b-dropdown div {
+	float:left;
+}
+.b-dropdown p {
+	padding-bottom:10px;
+}
+.b-dropdown a {
+	text-decoration:underline;
+}
+.b-dropdown a:hover {
+	text-decoration:none;
+}
+.b-dropdown_wishlist {
+	width:210px;
+}
+.b-button, .b-button:link, .b-button:visited, .b-button:active {
+	position:relative;
+	display:inline-block;
+	zoom:1;
+	font-weight:bold;
+	font-size:12px;
+	line-height:15px;
+	font-family:Helvetica, Arial, sans-serif;
+	text-decoration:none;
+	background:transparent;
+	outline:none;
+	border:0;
+	padding:0;
+	margin:0;
+	vertical-align:middle;
+	text-align:left;
+	cursor:pointer;
+	width:auto;
+	overflow:visible;
+}
+.b-button:hover {
+	text-decoration:none;
+}
+.b-button::-moz-focus-inner {
+border:0;
+padding:0;
+margin:0;
+}
+.b-button_flex, .b-button_flex:active {
+	display:block;
+	width:100%;
+	text-align:center;
+}
+.b-button_flex-left, .b-button_flex-left:active {
+	text-align:left;
+}
+.b-button_center, .b-button_center:active {
+	text-align:center;
+}
+.b-button .b-button-form {
+	display:block;
+	height:28px;
+	position:relative;
+	padding:0 20px 0 0;
+	zoom:1;
+}
+.b-button_flex .b-button-form {
+	padding-right:5px;
+}
+.b-button .b-button-form .b-button-r {
+	position:absolute;
+	margin-left:100%;
+	left:-20px;
+	top:0;
+	background:url(http://assets.bookmate.ru/0017482655/framework/plugins/b-button/stylesheets/b-button.png) no-repeat right 0;
+	width:20px;
+	height:28px;
+}
+.b-button_flex .b-button-form .b-button-r {
+	left:-5px;
+	width:5px;
+}
+.b-button .b-button-form .b-button-value {
+	display:block;
+	height:28px;
+	background:url(http://assets.bookmate.ru/0017482655/framework/plugins/b-button/stylesheets/b-button.png) no-repeat 0 0;
+	white-space:nowrap;
+}
+.b-button .b-button-form .b-button-value .b-button-value-wrap {
+	display:block;
+	padding:7px 5px 0 25px;
+}
+.b-button_flex .b-button-form .b-button-value .b-button-value-wrap {
+	padding-left:5px;
+}
+.b-button .b-button-form .b-button-value .b-button-value-text {
+	position:relative;
+	display:block;
+	width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	text-shadow:white 0 1px 0;
+	color:black;
+	zoom:1;
+	width:auto;
+}
+.b-button .b-button_disabled .b-button-value .b-button-value-text {
+	text-shadow:#aaa 0 1px 0;
+	color:#555!important;
+}
+.b-button_blue .b-button-form .b-button-r, .b-button_blue .b-button-form .b-button-value {
+	background-image:url(http://assets.bookmate.ru/0784982961/framework/plugins/b-button/stylesheets/b-button.blue.png);
+}
+.b-button_blue .b-button_down .b-button-value .b-button-value-text {
+	text-shadow:#DDD 0 1px 0;
+}
+.b-button_black .b-button-form, .b-button_black .b-button-form .b-button-r, .b-button_black .b-button-form .b-button-value {
+	height:28px;
+}
+.b-button_black .b-button-form .b-button-r, .b-button_black .b-button-form .b-button-value {
+	background-image:url(http://assets.bookmate.ru/9051482592/framework/plugins/b-button/stylesheets/b-button.black.png);
+}
+.b-button_black .b-button-form .b-button-value .b-button-value-text {
+	color:white;
+	text-shadow:none;
+}
+.b-button_thin .b-button-form, .b-button_thin .b-button-form .b-button-r, .b-button_thin .b-button-form .b-button-value {
+	height:23px;
+}
+.b-button_thin .b-button-form .b-button-r, .b-button_thin .b-button-form .b-button-value {
+	background-image:url(http://assets.bookmate.ru/2758933020/framework/plugins/b-button/stylesheets/b-button.thin.png);
+}
+.b-button_thin .b-button-form .b-button-value .b-button-value-wrap {
+	padding-top:5px;
+}
+.b-button .b-button_hover .b-button-r {
+	background-position:right -30px;
+}
+.b-button .b-button_hover .b-button-value {
+	background-position:0 -30px;
+}
+.b-button .b-button_down .b-button-r {
+	background-position:right -60px;
+}
+.b-button .b-button_down .b-button-value {
+	background-position:0 -60px;
+}
+.b-button .b-button_down .b-button-value .b-button-value-text {
+	top:1px;
+}
+.b-button .b-button_disabled .b-button-r {
+	background-position:right -90px;
+}
+.b-button .b-button_disabled .b-button-value {
+	background-position:0 -90px;
+}
+.b-button_collapse-left, .b-button_collapse-right, .b-button_collapse-both {
+	display:inline;
+}
+.b-button_collapse-left .b-button-form .b-button-value, .b-button_collapse-both .b-button-form .b-button-value {
+	background-position:-500px 0!important;
+}
+.b-button_collapse-right .b-button-form .b-button-r, .b-button_collapse-both .b-button-form .b-button-r {
+	background-position:-495px 0!important;
+}
+.b-button_collapse-left .b-button_hover .b-button-value, .b-button_collapse-both .b-button_hover .b-button-value {
+	background-position:-500px -30px!important;
+}
+.b-button_collapse-right .b-button_hover .b-button-r, .b-button_collapse-both .b-button_hover .b-button-r {
+	background-position:-495px -30px!important;
+}
+.b-button_collapse-left .b-button_down .b-button-value, .b-button_collapse-both .b-button_down .b-button-value {
+	background-position:-500px -60px!important;
+}
+.b-button_collapse-right .b-button_down .b-button-r, .b-button_collapse-both .b-button_down .b-button-r {
+	background-position:-495px -60px!important;
+}
+.b-button_collapse-left .b-button_disabled .b-button-value, .b-button_collapse-both .b-button_disabled .b-button-value {
+	background-position:-500px -90px!important;
+}
+.b-button_collapse-right .b-button_disabled .b-button-r, .b-button_collapse-both .b-button_disabled .b-button-r {
+	background-position:-495px -90px!important;
+}
+.b-button_big .b-button-form, .b-button_big .b-button-form .b-button-r, .b-button_big .b-button-form .b-button-value {
+	height:36px;
+}
+.b-button_big .b-button-form .b-button-r, .b-button_big .b-button-form .b-button-value {
+	background-image:url(http://assets.bookmate.ru/9159186162/framework/plugins/b-button/stylesheets/b-button.blue.big.png);
+	font-size:15px;
+}
+.b-button_big .b-button-form .b-button-value .b-button-value-wrap {
+	padding-top:10px;
+}
+.b-button_big .b-button_hover .b-button-r {
+	background-position:right -38px;
+}
+.b-button_big .b-button_hover .b-button-value {
+	background-position:0 -38px;
+}
+.b-button_big .b-button_down .b-button-r {
+	background-position:right -76px;
+}
+.b-button_big .b-button_down .b-button-value {
+	background-position:0 -76px;
+}
+.b-button_big .b-button_down .b-button-value .b-button-value-text {
+	top:1px;
+}
+.b-button_icon .b-button-value .b-button-icon {
+	display:inline-block;
+	width:25px;
+	height:25px;
+	position:relative;
+	top:-5px;
+	margin:0 -7px;
+	background:url(http://assets.bookmate.ru/8414186757/framework/plugins/b-button/stylesheets/b-button.icons.png) no-repeat 25px 25px;
+}
+.b-button_icon-library-edit .b-button-value .b-button-icon {
+	background-position:0 0;
+}
+.b-button_icon-books-cover .b-button-value .b-button-icon {
+	background-position:-25px 0;
+}
+.b-button_icon-books-list .b-button-value .b-button-icon {
+	background-position:-50px 0;
+}
+.b-button_icon-trash .b-button-value .b-button-icon {
+	background-position:-75px 0;
+}
+.b-library {
+	width:100%;
+	overflow:hidden;
+	border-left:1px solid #dedede;
+	border-top:1px solid #dedede;
+	position:relative;
+}
+.b-library .b-library-navigation, .b-library .b-library-layout {
+	padding-bottom:32000px;
+	margin-bottom:-32000px;
+}
+.b-library .b-library-navigation {
+	width:200px;
+	float:left;
+}
+.b-library .b-library-layout {
+	width:790px;
+	float:left;
+	background:#dbdad5;
+	position:relative;
+	z-index:2;
+}
+.b-library .b-library-border {
+	height:1px;
+	background:#dedede;
+}
+.b-library .b-library-navigation ul {
+	padding:0 12px;
+}
+.b-library .b-library-navigation ul li.bln-subtitle {
+	padding:25px 10px 10px;
+	font-size:11px;
+	color:#464646;
+}
+.b-library .b-library-navigation ul li.bln-item {
+	cursor:pointer;
+	margin-bottom:5px;
+}
+.b-library .b-library-navigation ul li.bln-item span {
+	padding-left:10px;
+	height:21px;
+	position:relative;
+	display:block;
+	color:#464646;
+	font-weight:bold;
+}
+.b-library .b-library-navigation ul li.bln-item span i {
+	width:10px;
+	height:21px;
+	position:absolute;
+	left:0;
+	top:0;
+	background:url(http://assets.bookmate.ru/1512556683/framework/plugins/b-library/stylesheets/navigation.png) no-repeat left 25px;
+}
+.b-library .b-library-navigation ul li.bln-item span span {
+	padding-left:0;
+	padding-right:10px;
+	line-height:21px;
+	background:url(http://assets.bookmate.ru/1512556683/framework/plugins/b-library/stylesheets/navigation.png) no-repeat right 25px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	padding-right:30px;
+}
+.b-library .b-library-navigation ul li.bln-item ins {
+	position:absolute;
+	right:10px;
+	line-height:21px;
+	top:0;
+	text-decoration:none;
+	font-size:10px;
+	font-weight:normal;
+}
+.b-library .b-library-navigation ul li.bln-item-hover span i {
+	background-position:left -25px;
+}
+.b-library .b-library-navigation ul li.bln-item-hover span span {
+	background-position:right -25px;
+}
+.b-library .b-library-navigation ul li.bln-item-selected span {
+	color:black;
+	text-shadow:0 1px 1px white;
+}
+.b-library .b-library-navigation ul li.bln-item-selected span i {
+	background-position:left 0;
+}
+.b-library .b-library-navigation ul li.bln-item-selected span span {
+	background-position:right 0;
+}
+.b-library .b-library-layout .bll-header {
+	margin:0 1px;
+}
+.b-library .b-library-layout .bll-info, .b-library .b-library-layout .bll-navigation {
+	background:white;
+}
+.b-library .b-library-layout .bll-navigation {
+	padding:9px 15px 8px;
+	position:relative;
+}
+.b-library .b-library-layout .bll-navigation_collapsed {
+	padding:0;
+}
+.b-library .b-library-layout .bll-navigation .bll-navigation-shadow {
+	width:100%;
+	height:20px;
+	left:0;
+	top:0;
+	position:absolute;
+	background:url(http://assets.bookmate.ru/7073294554/framework/plugins/b-library/stylesheets/shadow.png) no-repeat center top;
+	margin-top:100%;
+}
+.b-library .b-library-layout .bll-navigation .bll-navigation_right {
+	float:right;
+	position:relative;
+	z-index:3;
+}
+.b-library .b-library-layout .bll-navigation ul {
+	position:relative;
+	z-index:2;
+	font-size:12px;
+}
+.b-library .b-library-layout .bll-navigation ul li {
+	display:inline-block;
+	margin-right:25px;
+	font-weight:bold;
+	position:relative;
+}
+.b-library .b-library-layout .bll-navigation .bll-navigation_right ul li {
+	margin-left:25px;
+	margin-right:0;
+}
+.b-library .b-library-layout .bll-navigation ul li ins {
+	font-style:italic;
+	color:#737373;
+	font-family:Georgia, serif;
+	font-weight:normal;
+	text-decoration:none;
+}
+.b-library .b-library-layout .bll-navigation ul li i {
+	position:absolute;
+	width:70px;
+	height:15px;
+	margin-left:50%;
+	left:-35px;
+	top:22px;
+	background:url(http://assets.bookmate.ru/9950745918/framework/plugins/b-library/stylesheets/corner.png) no-repeat 0 0;
+}
+.b-library .b-library-layout .bll-navigation ul li .b-search {
+	margin-top:-5px;
+	margin-bottom:-10px;
+	margin-left:2px;
+	font-weight:normal;
+	width:178px;
+}
+.b-library .b-library-layout .bll-info {
+	padding:12px 15px;
+}
+.b-library .b-library-layout .bll-info .bll-info-meta {
+	width:520px;
+	float:left;
+}
+.b-library .b-library-layout .bll-info .bll-info-controls {
+	float:right;
+	width:230px;
+	text-align:right;
+}
+.b-library .b-library-layout .bll-info .bll-info-controls .bll-info-controls-separator {
+	padding-left:14px;
+}
+.b-library .b-library-layout .bll-info .bll-info-meta h1 {
+	font-size:15px;
+	color:#464646;
+}
+.b-library .b-library-layout .bll-info .bll-info-meta p {
+	font-size:13px;
+	font-family:Times, times, serif;
+	color:#0f0f0f;
+	margin-top:8px;
+}
+.b-library .b-library-books {
+	padding-top:20px;
+}
+.b-billing {
+	line-height:21px;
+}
+.b-billing .g-pseudo-link {
+	text-decoration:none;
+}
+.b-billing h2 {
+	margin-bottom:4px;
+}
+.b-billing h3 {
+	font-size:18px;
+	margin-bottom:18px;
+	font-weight:normal;
+}
+.b-billing p {
+	margin-bottom:16px;
+}
+.b-billing .b-billing-caption {
+	padding-top:18px;
+}
+.b-billing small {
+	font-size:11px;
+	line-height:18px;
+}
+.b-billing-result h2 {
+	padding-bottom:20px;
+	margin-bottom:20px;
+	border-bottom:1px solid #d9d9d9;
+	width:80%;
+}
+.b-billing-back a {
+	margin-left:1em;
+	text-decoration:none;
+}
+.b-billing-back a .arrow {
+	position:absolute;
+	left:0;
+	margin-left:1em;
+}
+.b-billing-back a .text {
+	text-decoration:underline;
+}
+.b-billing-result dl {
+	padding-bottom:50px;
+	overflow:hidden;
+}
+.b-billing-result dt, .b-billing-result dd {
+	float:left;
+	margin-bottom:1em;
+}
+.b-billing-result dd {
+	clear:right;
+}
+.b-billing-result dt {
+	font-weight:bold;
+	width:9em;
+	clear:left;
+}
+.b-billing-success h2 {
+	color:#5c6e48;
+}
+.b-billing-failure h2 {
+	color:#c41f08;
+}
+.b-billing-failure dt {
+	width:6em;
+}
+.b-billing .b-billing-history {
+	width:80%;
+	margin:20px 0 50px 0;
+}
+.b-billing .b-billing-history th span {
+	font-weight:normal;
+}
+.b-billing .b-billing-history th {
+	padding-bottom:10px;
+}
+.b-billing .b-billing-history-year {
+	border-top:1px solid #d9d9d9;
+}
+.b-billing .b-billing-history td {
+	padding:10px 0 10px 0;
+}
+.b-billing .b-billing-history .b-billing-history-year td {
+	padding-top:20px;
+}
+.b-billing .b-billing-history .b-billing-history-price, .b-billing .b-billing-history .b-billing-history-year .b-billing-history-price {
+	color:#fff;
+	text-align:right;
+	padding-right:38px;
+	display:block;
+}
+.b-billing .b-billing-history .b-billing-history-price span {
+	color:#000;
+}
+.j-billing-tabs-content {
+	min-height:100px;
+}
+.b-billing-tabs-content-visible {
+	height:350px;
+}
+.b-billing .b-tabs {
+	margin:50px 0 25px 0;
+}
+.b-billing .b-tabs ul {
+	margin-bottom:0;
+	border:0;
+}
+.b-billing .b-tabs-selected ul {
+	border-bottom:1px solid #dfdfdf;
+}
+.b-billing .j-billing-tabs {
+	position:relative;
+	height:40px;
+	width:auto;
+}
+.b-billing .j-billing-tabs li {
+	margin-right:50px;
+}
+.b-billing .j-billing-tabs li.last {
+	margin-right:0;
+}
+.b-billing .j-billing-tabs input {
+	position:relative;
+	left:0;
+	margin:0 3px 0 0;
+	padding:0;
+	line-height:22px;
+	vertical-align:baseline;
+	top:-1px;
+}
+.b-billing .j-billing-tabs label {
+	background:none;
+	width:auto;
+	font-size:18px;
+	top:0;
+	text-align:left;
+	padding-left:4px;
+	display:inline-block;
+	line-height:22px;
+	vertical-align:baseline;
+	cursor:pointer;
+}
+.b-billing .j-billing-tabs .b-billing-icon, .b-billing .b-billing-icon {
+	position:relative;
+	width:100px;
+	height:30px;
+	background:url(http://assets.bookmate.ru/2754291477/framework/plugins/b-billing/stylesheets/billing.png) no-repeat -120px -110px;
+	display:inline-block;
+	margin-top:-13px;
+	top:9px;
+}
+.b-billing .j-billing-tabs .b-billing-icon-visa {
+	background-position:-120px -110px;
+	width:100px;
+}
+.b-billing .j-billing-tabs .b-billing-icon-paypal {
+	background-position:-230px -60px;
+	width:80px;
+	top:8px;
+}
+.b-billing .j-billing-tabs .b-billing-icon-qiwi {
+	background-position:-352px 0;
+	width:88px;
+	height:40px;
+	margin-top:-24px;
+	top:15px;
+}
+.b-billing .b-billing-icon-liqpay {
+	width:170px;
+	background-position:-120px -156px;
+	left:-2px;
+	margin-bottom:1em;
+}
+.b-billing .j-billing-tabs .line {
+	height:4px;
+	position:absolute;
+	left:0;
+	bottom:-1px;
+	width:134px;
+	background:black;
+}
+.b-billing .j-billing-tabs .line-sms {
+	left:0;
+	width:64px;
+	background-color:black;
+}
+.b-billing .j-billing-tabs .line-paypal {
+	left:248px;
+	width:96px;
+	background-color:#005574;
+}
+.b-billing .j-billing-tabs .line-qiwi {
+	left:380px;
+	width:112px;
+	background-color:#f5902a;
+}
+.b-billing .j-billing-tabs .line-visa {
+	left:94px;
+	width:114px;
+	background-color:#0066b2;
+}
+.b-billing .j-billing-tabs .line-promo {
+	left:594px;
+	width:122px;
+	background-color:black;
+}
+.b-billing .b-billing-cards-buttons {
+	margin-bottom:1em;
+}
+.b-billing .b-billing-visa .b-billing-data {
+	margin-left:94px;
+}
+.b-billing .b-billing-visa .b-billing-data .b-billing-icon {
+	float:none;
+}
+.b-billing .b-billing-paypal .b-billing-data {
+	margin-left:380px;
+	width:250px;
+}
+.b-billing .b-billing-qiwi .b-billing-data {
+	margin-left:248px;
+	width:300px;
+}
+.b-billing .b-billing-promo .b-billing-data {
+	margin-left:594px;
+	width:275px;
+}
+.b-billing .b-billing-terminal-phone {
+	position:relative;
+}
+.b-billing .b-billing-terminal-phone span {
+	position:absolute;
+	bottom:3px;
+	left:4px;
+	color:#939393;
+	font-size:18px;
+	display:inline-block;
+	position:absolute;
+}
+.b-billing .b-billing-terminal-phone input {
+	height:20px;
+	padding-left:26px;
+	font-size:18px;
+	font:18px Helvetica, Arial, sans-serif;
+}
+.b-billing .b-billing-terminal .button-to {
+	float:left;
+	margin-right:8px;
+}
+.b-billing .b-billing-terminal .amount {
+	padding-bottom:16px;
+}
+.b-billing .b-billing-terminal .amount input {
+	margin-right:6px;
+}
+.b-billing .b-billing-terminal .amount p {
+	margin-bottom:.5em;
+}
+.b-billing .b-billing-terminal .b-billing-terminal-success ol li {
+	list-style:decimal outside;
+}
+.b-billing .b-billing-terminal .b-billing-terminal-success ol {
+	padding-bottom:30px;
+	padding-left:1.6em;
+}
+.b-billing .b-billing-terminal .b-billing-terminal-success .actions .g-pseudo-link {
+	margin-left:20px;
+	text-decoration:none;
+}
+.b-billing .b-billing-promo input {
+	height:20px;
+	font-size:18px;
+	width:130px;
+	position:relative;
+	bottom:-4px;
+	margin-right:10px;
+}
+.b-billing .b-billing-attention {
+	text-align:center;
+	margin:220px 0;
+	font-size:18px;
+}
+.b-billing .b-billing-sms-status {
+	width:170px;
+	position:absolute;
+	left:400px;
+}
+.b-billing .b-billing-sms-status h2 {
+	font-size:14px;
+}
+.b-billing .b-billing-sms-status p {
+	padding-top:23px;
+	margin-top:14px;
+	background:url(http://assets.bookmate.ru/3891316794/framework/plugins/b-billing/stylesheets/loader.gif) top left no-repeat;
+}
+.b-notify {
+	background-color:#ffcc42;
+	line-height:27px;
+	text-align:center;
+	text-shadow:0 1px 0 rgba(255, 255, 255, 0.6);
+	position:relative;
+	z-index:0;
+	display:none;
+}
+.b-notify div {
+	position:relative;
+	overflow:hidden;
+	height:27px;
+}
+.b-notify .b-notify-close {
+	width:15px;
+	height:15px;
+	background:url(http://assets.bookmate.ru/5698965092/framework/plugins/b-notify/stylesheets/close.png) no-repeat 0 0;
+	position:absolute;
+	right:10px;
+	top:6px;
+	cursor:pointer;
+}
+.b-notify .b-notify-shadow {
+	width:100%;
+	position:absolute;
+	left:0;
+	top:100%;
+}
+.p-home h1.p-home-users {
+	text-align:center;
+	border-bottom:1px solid #d7d7d7;
+	padding:13px 0;
+}
+.p-home .p-home-button {
+	text-align:center;
+	margin:30px 0 15px;
+}
+.p-home .p-home-title {
+	height:515px;
+	background:url(http://assets.bookmate.ru/4343319800/framework/stylesheets/pages/p-home/reader.jpg) no-repeat 30px 60px;
+	position:relative;
+}
+.p-home .p-home-title .p-home-title-text {
+	width:300px;
+	position:absolute;
+	left:690px;
+	top:95px;
+}
+.p-home .p-home-title .p-home-title-text h1 {
+	line-height:36px;
+}
+.p-home .p-home-title .p-home-title-text p {
+	margin-top:8px;
+}
+.p-home .p-home-title-books {
+	height:145px;
+	position:relative;
+	padding-right:126px;
+	top:370px;
+	text-align:center;
+}
+.p-home .p-home-title-books .b-book {
+	margin:0 15px;
+}
+.p-home .p-home-title-books .p-home-title-books-text {
+	position:absolute;
+	left:800px;
+	top:35px;
+	width:140px;
+	text-align:left;
+}
+.p-home .p-home-title-books .p-home-title-books-text p {
+	font-size:11px;
+	font-family:Arial, sans-serif;
+	line-height:17px;
+}
+.p-home .p-home-title-books .p-home-title-books-text p strong {
+	font-size:14px;
+}
+.p-home .b-shelf {
+	margin-bottom:65px;
+}
+.p-home .p-home-preview {
+	margin-bottom:35px;
+}
+.p-home .p-home-preview h1 {
+	text-align:center;
+	padding-right:10px;
+}
+.p-home .p-home-preview .p-home-preview-image {
+	height:150px;
+	width:280px;
+	margin:0 auto;
+	background:url(http://assets.bookmate.ru/7532304927/framework/stylesheets/pages/p-features/home.jpg) no-repeat 280px 150px;
+}
+.p-home .p-home-preview .p-home-preview-action {
+	width:260px;
+	height:50px;
+	margin:0 auto;
+	text-align:center;
+}
+.p-home .p-home-preview .p-home-preview-action .b-search {
+	top:0;
+}
+.p-home .p-home-preview .p-home-preview-action .b-search .b-search_placeholder {
+	top:4px;
+}
+.p-home .p-home-preview .p-home-preview-book {
+	background-position:0 -350px;
+}
+.p-home .p-home-preview .p-home-preview-library {
+	background-position:-300px -350px;
+}
+.p-home .p-home-preview .p-home-preview-reader {
+	background-position:-600px -350px;
+}
+.p-home .p-home-response {
+	padding-top:20px;
+	margin-bottom:5px;
+}
+.p-home .p-home-response h1 {
+	margin-bottom:25px;
+	color:#474747;
+}
+.p-home .p-home-authors {
+	padding-top:20px;
+	margin-bottom:5px;
+	text-align:center;
+}
+.p-home .p-home-authors h1 {
+	margin-bottom:15px;
+	color:#474747;
+}
+.p-home .p-home-authors .p-home-authors-publishers {
+	height:60px;
+	background:url(http://assets.bookmate.ru/0207760242/framework/stylesheets/pages/p-home/publishers.gif) no-repeat center center;
+	margin:15px 0 20px;
+}
+.p-library .p-library-popular h1 {
+	padding:25px 0;
+}
+.p-library .p-library-popular .b-book {
+	text-align:center;
+	width:235px;
+	margin-bottom:40px;
+}
+.p-library .p-library-likebox {
+	margin-top:45px;
+}
+.p-library .p-library-actual {
+	margin-top:20px;
+	text-align:center;
+	border:1px solid #d8d8d8;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	-o-border-radius:6px;
+	-ms-border-radius:6px;
+	border-radius:6px;
+}
+.p-library .p-library-actual h1 {
+	font-size:18px;
+	padding:15px 0 30px;
+}
+.p-library .p-library-actual .b-book {
+	margin-bottom:15px;
+}
+.p-book {
+	padding:15px 0;
+}
+.p-book .b-book_folder_big {
+	height:270px;
+}
+.p-book .b-book_folder_big .b-book_folder-info {
+	display:none;
+}
+.p-book .p-book-state {
+	text-align:center;
+	color:#555;
+	width:205px;
+	padding-right:15px;
+	margin:0 auto;
+}
+.p-book .p-book-state p {
+	padding-top:10px;
+}
+.p-book .p-book-state .p-book-state-button .pbsb-layout {
+	display:inline;
+	position:relative;
+	zoom:1;
+}
+.p-book .p-book-state .p-book-state-button .b-button_form {
+	display:inline-block;
+	float:none;
+}
+.p-book .p-book-state .p-book-state-last {
+	font-size:11px;
+	padding-top:20px;
+	width:180px;
+	margin:0 auto;
+}
+.p-book .p-book-description {
+	line-height:21px;
+	color:#555;
+	padding-bottom:35px;
+}
+.p-book .p-book-description p {
+	display:inline;
+}
+.p-book .p-book-contents {
+	width:100%;
+	position:relative;
+	overflow:hidden;
+}
+.p-book .p-book-contents h3 {
+	font-size:15px;
+	margin-bottom:.3em;
+}
+.p-book .p-book-recommendation {
+	padding-bottom:35px;
+}
+.p-book .p-book-recommendation .b-buttom_form {
+	float:none;
+}
+.p-book .p-book-recommendation p {
+	font-size:13px;
+	color:#666;
+	line-height:18px;
+	padding-top:8px;
+}
+.p-book .p-book-download {
+	margin-bottom:1em;
+}
+.p-book .p-book-download h4 {
+	font-size:13px;
+	margin-bottom:.6em;
+}
+.p-book .l-column-full {
+	width:650px;
+}
+.p-book .l-x2 {
+	width:400px;
+}
+.p-book .l-column-right {
+	width:285px;
+}
+.p-book .b-sidebar .b-sidebar-store dd {
+	width:190px;
+}
+.p-book .p-book-state-system a {
+	font-size:11px;
+	color:#ccc;
+}
+.p-book .p-book-lc {
+	margin-bottom:30px;
+	text-align:center;
+	padding-right:15px;
+}
+.p-blank {
+	width:700px;
+	padding-top:20px;
+	font-size:13px;
+	line-height:21px;
+	color:#333;
+}
+.p-blank h1 {
+	margin:.5em 0 .5em 0;
+	line-height:40px;
+}
+.p-blank h3, .p-blank dl dt {
+	font-size:15px;
+	line-height:21px;
+	font-weight:bold;
+}
+.p-blank p {
+	margin-bottom:1em;
+}
+.p-blank p+ul {
+	margin-top:-1em!important;
+}
+.p-blank code {
+	display:block;
+	padding:10px 0;
+	color:black;
+}
+.p-blank dl dd {
+	margin:0 0 1em 0;
+}
+.p-public {
+	text-align:center;
+}
+.p-public .p-public-books .b-book {
+	width:190px;
+}
+.p-public .b-shelf {
+	margin-bottom:15px;
+}
+.p-public-note {
+	position:relative;
+	z-index:-1;
+	margin-bottom:30px;
+}
+.p-public-note p {
+	position:relative;
+	top:10px;
+	font-size:11px;
+	font-family:Helvetica, Arial, sans-serif;
+	color:#737373;
+	margin-bottom:0;
+}
+.p-public-note p .b-icons {
+	top:-2px;
+	position:relative;
+}
+.p-features p {
+	margin-bottom:1em;
+}
+.p-features .p-features-steps {
+	color:#635956;
+	font-size:13px;
+	line-height:21px;
+	margin:20px 0 15px;
+}
+.p-features .p-features-steps .pfs-step {
+	width:250px;
+	float:left;
+}
+.p-features .p-features-steps .pfs-step2 {
+	width:270px;
+}
+.p-features .p-features-steps .pfs-step4 {
+	width:210px;
+}
+.p-features .p-features-steps .pfs-step1, .p-features .p-features-steps .pfs-step2, .p-features .p-features-steps .pfs-step3 {
+	background:url(http://assets.bookmate.ru/2557074193/framework/stylesheets/pages/p-features/steps.gif) no-repeat right -55px;
+}
+.p-features .p-features-steps .pfs-step3 {
+	width:210px;
+	padding-left:50px;
+	background-position:left top;
+	height:34px;
+	padding-top:12px;
+	font-size:20px;
+}
+.p-features .p-features-how {
+	padding-top:20px;
+	margin-bottom:30px;
+}
+.p-features .p-features-how h1 {
+	color:black;
+	text-align:left;
+	margin-bottom:20px;
+}
+.p-features .p-features-how .l-column h1 {
+	color:black;
+	text-align:left;
+	margin-bottom:6px;
+}
+.p-features .p-features-how .p-features-how-image {
+	height:350px;
+	margin-bottom:20px;
+	background:url(http://assets.bookmate.ru/7532304927/framework/stylesheets/pages/p-features/home.jpg) no-repeat center top;
+}
+.p-features .p-features-what {
+	padding-top:20px;
+	margin-bottom:40px;
+}
+.p-features .p-features-what h1 {
+	color:black;
+	text-align:center;
+	margin-bottom:20px;
+}
+.p-features .p-features-what .l-column h1 {
+	color:black;
+	text-align:center;
+	margin-bottom:6px;
+}
+.p-features .p-features-what .p-features-what-image {
+	height:150px;
+	width:280px;
+	margin:0 auto;
+	background:url(http://assets.bookmate.ru/7532304927/framework/stylesheets/pages/p-features/home.jpg) no-repeat 280px 150px;
+}
+.p-features .p-features-what .p-features-what-book {
+	background-position:0 -350px;
+}
+.p-features .p-features-what .p-features-what-library {
+	background-position:-300px -350px;
+}
+.p-features .p-features-what .p-features-what-reader {
+	background-position:-600px -350px;
+}
+.p-features .p-features-what .p-features-what-friends {
+	background:url(http://assets.bookmate.ru/8452795256/framework/stylesheets/pages/p-features/about-friends.jpg) no-repeat 0 0;
+	height:200px;
+	position:relative;
+	top:-50px;
+	margin-bottom:-50px;
+}
+.p-features .p-features-computer-image {
+	height:400px;
+	background:url(http://assets.bookmate.ru/7199574054/framework/stylesheets/pages/p-features/desktop.jpg) no-repeat center top;
+}
+.p-features .p-features-computer-browsers {
+	height:40px;
+	width:220px;
+	background:url(http://assets.bookmate.ru/7199574054/framework/stylesheets/pages/p-features/desktop.jpg) no-repeat -750px -400px;
+	margin:10px 0;
+}
+.p-features .p-features-feature-image {
+	width:140px;
+	height:90px;
+	background:url(http://assets.bookmate.ru/7199574054/framework/stylesheets/pages/p-features/desktop.jpg) no-repeat 140px 90px;
+}
+.p-features .p-features-feature-bookmark {
+	background-position:0 -400px;
+}
+.p-features .p-features-feature-font {
+	background-position:-150px -400px;
+}
+.p-features .p-features-feature-keys {
+	background-position:-300px -400px;
+}
+.p-features .p-features-feature-settings {
+	background-position:-450px -400px;
+}
+.p-features .p-features-feature-citation {
+	background-position:-600px -400px;
+}
+.p-features .p-features-feature-disabled {
+	color:#9b9b9b;
+}
+.p-features .b-shelf {
+	margin-top:25px;
+	margin-bottom:60px;
+}
+.p-features .p-home-title-books {
+	top:0;
+}
+.p-features .p-features-mobile-image {
+	height:240px;
+	width:170px;
+	margin:0 auto;
+	background:url(http://assets.bookmate.ru/9067754145/framework/stylesheets/pages/p-features/mobile.jpg) no-repeat 170px 240px;
+}
+.p-features .p-features-mobile-android {
+	background-position:0 0;
+}
+.p-features .p-features-mobile-iphone {
+	background-position:-170px 0;
+}
+.p-features .p-features-mobile-symbian {
+	background-position:-340px 0;
+}
+.p-features .p-features-mobile-ipad {
+	margin-bottom:30px;
+}
+.p-features .p-features-mobile-ipad .p-features-mobile-image {
+	height:150px;
+	width:100%;
+	background-position:center -250px;
+}
+.p-features .p-features-mobile-android-phones {
+	width:205px;
+	height:30px;
+	background:url(http://assets.bookmate.ru/9067754145/framework/stylesheets/pages/p-features/mobile.jpg) no-repeat -550px 0;
+	margin-top:10px;
+}
+.p-features .p-features-mobile-nokia {
+	width:65px;
+	height:10px;
+	background:url(http://assets.bookmate.ru/9067754145/framework/stylesheets/pages/p-features/mobile.jpg) no-repeat -550px -40px;
+	margin-top:10px;
+}
+.p-invite {
+	position:relative;
+	width:780px;
+}
+.p-invite .p-invite-letter {
+	position:relative;
+	background:#f3f1ee url(http://assets.bookmate.ru/8171188855/framework/stylesheets/pages/p-invite/letter.jpg) top left no-repeat;
+	padding:25px 90px 30px 30px;
+	margin-bottom:110px;
+}
+.p-invite .p-invite-letter .p-invite-letter-layout {
+	position:relative;
+	z-index:2;
+}
+.p-invite .p-invite-letter h3 {
+	font-family:"Times New Roman", times, serif;
+	font-size:18px;
+	border-bottom:1px solid #d9d9d9;
+	padding-bottom:15px;
+	font-weight:normal;
+	margin-bottom:20px;
+	position:relative;
+}
+.p-invite .p-invite-letter .p-invite-stamp {
+	width:58px;
+	height:78px;
+	background:url(http://assets.bookmate.ru/0444344815/framework/stylesheets/pages/p-invite/stamp.jpg) 0 0 no-repeat;
+	display:block;
+	position:absolute;
+	right:-58px;
+	top:0;
+}
+.p-invite .p-invite-letter .p-invite-subj {
+	margin-bottom:6px;
+}
+.p-invite .p-invite-letter .p-invite-field {
+	position:relative;
+	width:495px;
+	margin-bottom:1em;
+}
+.p-invite .p-invite-letter .p-invite-subscribers {
+	margin-bottom:20px;
+}
+.p-invite .p-invite-letter .p-invite-field label {
+	display:block;
+	font-weight:bold;
+}
+.p-invite .p-invite-letter .p-invite-field input {
+	width:100%;
+}
+.p-invite .p-invite-letter .p-invite-field textarea {
+	width:475px;
+	padding:10px;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:13px;
+	line-height:22px;
+}
+.p-invite .p-invite-letter .p-invite-field .comment {
+	color:#686764;
+	width:170px;
+	font-size:11px;
+	position:absolute;
+	right:-200px;
+	bottom:0;
+	line-height:14px;
+	margin-bottom:-2px;
+}
+.p-invite-disabled {
+	width:100%;
+}
+.p-invite-disabled h3 {
+	text-align:center;
+	font-weight:normal;
+	margin:100px 0 130px 0;
+	background:url(http://assets.bookmate.ru/1920447414/framework/stylesheets/pages/p-invite/stamp-place.gif) center top no-repeat;
+	padding-top:100px;
+	font-size:18px;
+}
+.p-invite-sent p {
+	width:390px;
+}
+.p-invite-sent .p-invite-sent-subscribers {
+	width:80%;
+}
+.p-invite-sent .p-invite-sent-subscribers .b-user_list {
+	margin-bottom:30px;
+}
+div.p-payment p.p-payment-navigation {
+	font-family:Times, times, serif;
+	font-size:14px;
+	margin:-10px 0 40px;
+	line-height:16px;
+	color:#999;
+}
+div.p-payment p.p-payment-navigation a {
+	text-decoration:none;
+	color:white;
+}
+div.p-payment p.p-payment-navigation a:hover {
+	text-decoration:underline;
+}
+div.p-payment p.p-payment-navigation span {
+	font-size:32px;
+	color:white;
+}
+div.p-payment ul.p-payment-tabs {
+	border-bottom:1px solid #5c5c5c;
+	font-size:13px;
+	margin-bottom:40px;
+	text-shadow:black 0 -1px 0;
+}
+div.p-payment ul.p-payment-tabs li {
+	display:inline;
+	position:relative;
+	zoom:1;
+	color:#8a8a8a;
+}
+div.p-payment ul.p-payment-tabs li div {
+	border:1px solid #5c5c5c;
+	border-bottom:0;
+	display:inline-block;
+	padding:5px 25px;
+	cursor:pointer;
+	position:relative;
+	zoom:1;
+	background:#303030;
+}
+div.p-payment ul.p-payment-tabs li:hover div {
+	text-decoration:underline;
+	color:white;
+}
+div.p-payment ul.p-payment-tabs li, div.p-payment ul.p-payment-tabs li span {
+	color:#82817e;
+}
+div.p-payment ul.p-payment-tabs li span {
+	padding-left:12px;
+	font-weight:normal;
+}
+div.p-payment ul.p-payment-tabs li.current div {
+	color:white;
+	padding-bottom:6px;
+	margin-bottom:-1px;
+	cursor:auto;
+	font-weight:bold;
+}
+div.p-payment ul.p-payment-tabs li.current:hover div {
+	text-decoration:none;
+}
+div.p-payment .formtastic {
+	color:white;
+}
+div.p-payment .formtastic .formtastic-inputs {
+	border-color:#434343;
+	padding-bottom:10px;
+	margin-bottom:30px;
+}
+div.p-payment .formtastic fieldset .note {
+	float:right;
+	width:199px;
+	font-size:11px;
+	line-height:18px;
+	position:relative;
+	z-index:2;
+}
+div.p-payment .formtastic ol li label, div.p-payment .formtastic ol li span.label {
+	color:white;
+}
+div.p-payment .formtastic ol li label a {
+	text-decoration:none;
+}
+div.p-payment .formtastic ol li label a:hover {
+	text-decoration:underline;
+}
+div.p-payment .formtastic ol li.submit {
+	margin-top:30px;
+}
+div.p-payment .formtastic ol li .b-button table {
+	width:200px;
+}
+div.p-payment .formtastic ol li .b-button table .b-button-text {
+	text-align:center;
+}
+div.p-payment .formtastic ol li.text p {
+	padding-top:5px;
+	line-height:16px;
+}
+div.p-payment .formtastic ol li.text p span {
+	color:#a39b99;
+}
+div.p-payment .formtastic ol li.text p big {
+	font-size:36px;
+}
+div.p-payment .formtastic ol li.text p.times {
+	font-family:Times, times, serif;
+	padding-top:0;
+	position:relative;
+	top:-3px;
+	font-size:15px;
+}
+div.p-payment .p-payment-methods li {
+	width:150px;
+	height:60px;
+	float:left;
+	position:relative;
+	margin-bottom:10px;
+}
+div.p-payment .p-payment-methods li input {
+	position:relative;
+	top:22px;
+	margin:0;
+}
+div.p-payment .p-payment-methods li label {
+	width:100px;
+	height:60px;
+	position:absolute;
+	left:22px;
+	top:0;
+	background:url(http://assets.bookmate.ru/7092735166/framework/stylesheets/pages/p-payment/electro.png) no-repeat 200px 0;
+	cursor:pointer;
+}
+div.p-payment .p-payment-methods li label.paypal {
+	background-position:0 0;
+}
+div.p-payment .p-payment-methods li label.google {
+	background-position:-100px 0;
+}
+div.p-payment .p-payment-methods li label.qiwi {
+	background-position:-200px 0;
+}
+div.p-payment .p-payment-methods li label.webmoney {
+	background-position:-300px 0;
+}
+div.p-payment .p-payment-methods li label.ya {
+	background-position:-400px 0;
+}
+.p-book .p-book-search {
+	margin-bottom:1em;
+}
+.p-book .p-book-search h4 {
+	font-size:13px;
+	margin-bottom:.6em;
+}
+.p-book .p-book-search .p-book-search-more {
+	font-style:italic;
+	color:#666;
+	font-size:80%;
+	margin-top:.5em;
+}
+a.b-userpanel-authors-search {
+	padding-left:10px;
+	color:#999;
+}
+.formtastic .inline-errors {
+	color:red;
+	padding-bottom:15px;
+}
+.formtastic fieldset .inline-errors {
+	padding-bottom:0;
+}
+li.b-admin-link a {
+	color:#ddd!important;
+}
+.google-ad-search-rect {
+	margin-top:75px;
+}

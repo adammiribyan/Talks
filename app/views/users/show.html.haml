@@ -1,0 +1,15 @@
+- title "Параграфы"
+
+.columns
+  .column.column-x2
+    = render "layouts/sidebar"
+  .column.column-x3
+    %h1 Параграфы
+    %ul
+      - @posts.each do |post|
+        %li
+          = image_tag post.picture.url(:preview)
+          = link_to post.title, post_path(post)
+                    
+  .column.column-x1.column-last
+    = link_to "Новый параграф", new_post_path

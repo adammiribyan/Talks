@@ -1,0 +1,31 @@
+- title "Настройки аккаунта"
+
+%h1.form Настройки
+%span.head-note.block-inline Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+.b-settings-menu
+  %ul
+    %li
+      %a{:href => profile_settings_url} Профиль
+    %li.selected
+      Аккаунт
+      %ins
+.b-line.b-line-thin
+
+= simple_form_for @user, :url => account_settings_path do |f|
+  .columns
+    .column.halfsized.column-f-x2
+      %label.text.optional{:for => "username"} Имя пользователя
+      %span.username 
+        = @user.username
+      = f.input :email, :label => 'Электронная почта', :required => false
+      .input.password.optional
+        %label.password.optional{:for => "user_password"} Новый пароль
+        %input#user_password.password.optional{:name => "user[password]", :type => "text"}     
+        %span.password-trigger.show-pass
+          %span.show-pass
+            = image_tag "eye-open.gif", :height => 10, :width => 16
+          %span.hide-pass
+            = image_tag "eye-close.gif", :height => 10, :width => 16
+      = submit_button "Сохранить"
+      
+    .column.column-f-x1

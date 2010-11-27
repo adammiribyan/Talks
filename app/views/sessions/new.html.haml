@@ -1,0 +1,14 @@
+- title "Вход"
+
+= form_header "Вход на сайт"
+
+= simple_form_for :session, :url => session_path do |f|
+  .columns
+    .column.halfsized.column-f-x2
+      = f.input :email, :label => "Логин или электронная почта", :required => false
+      = f.input :password, :label => "Пароль", :as => :password, :hint => link_to("Потерялся?", new_password_path), :required => false
+      = f.input :remember_me, :as => :boolean, :label => "запомнить меня"
+      = submit_button "Войти"
+      
+    .column.column-f-x1
+    

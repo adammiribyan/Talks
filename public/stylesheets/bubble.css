@@ -1,0 +1,271 @@
+/* new Correct bubble */
+
+  .b-bubble {
+	overflow: hidden;
+	position: fixed;
+	z-index: 777;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+.b-bubble-under {
+	width: 100%;
+	height: 100%;
+	background: black;
+	z-index: 666;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.b-bubble,  .b-bubble-under {
+	-position: absolute;
+}
+.b-bubble-fixed {
+	-position: absolute;
+-top: expression(eval(document.documentElement.scrollTop + 0));
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.b-bubble .b_t {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+.b-bubble .b_t div {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	overflow: hidden;
+}
+.b-bubble .b_t div div {
+	background: url(skins/white/bubble_t.png) no-repeat left top;
+	-background-image: none;
+-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/bubble_t.png', sizingMethod=crop);
+	position: absolute;
+	right: auto;
+}
+.b-bubble .b_r {
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+}
+.b-bubble .b_r div {
+	position: absolute;
+	height: 100%;
+	right: 0;
+	overflow: hidden;
+}
+.b-bubble .b_r div div {
+	background: url(skins/white/bubble_r.png) no-repeat left top;
+	-background-image: none;
+-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/bubble_r.png', sizingMethod=crop);
+	position: absolute;
+	bottom: auto;
+}
+.b-bubble .b_b {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	overflow: hidden;
+}
+.b-bubble .b_b div {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	overflow: hidden;
+}
+.b-bubble .b_b div div {
+	background: url(skins/white/bubble_b.png) no-repeat right top;
+	-background-image: none;
+-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/bubble_b.png', sizingMethod=crop);
+	position: absolute;
+	right: 0;
+}
+.b-bubble .b_l {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+}
+.b-bubble .b_l div {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+}
+.b-bubble .b_l div div {
+	background: url(skins/white/bubble_l.png) no-repeat left bottom;
+	-background-image: none;
+-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/bubble_l.png', sizingMethod=crop);
+	position: absolute;
+	bottom: 0;
+}
+.b-bubble .b_t, .b-bubble .b_b {
+width: expression(this.parentNode.offsetWidth + "px");
+}
+.b-bubble .b_r, .b-bubble .b_l {
+height: expression(this.parentNode.offsetHeight + "px");
+}
+.b-bubble .b_t div div, .b-bubble .b_b div div {
+	width: 1000px;
+}
+.b-bubble .b_l div div, .b-bubble .b_r div div {
+	height: 1000px;
+}
+.b-bubble .b_t div, .b-bubble .b_t div div,  .b-bubble .b_b div, .b-bubble .b_b div div {
+	height: 86px;
+}
+.b-bubble .b_r div, .b-bubble .b_r div div,  .b-bubble .b_l div, .b-bubble .b_l div div {
+	width: 86px;
+}
+.b-bubble .b_c {
+	padding: 43px;
+}
+.b-bubble .b_t, .b-bubble .b_b {
+	height: 86px;
+} /* b_c[padding] + (b_content[height] div 2) but not more b_t div[height] */
+.b-bubble .b_r div div, .b-bubble .b_l {
+	top: 86px;
+}
+.b-bubble .b_r div, .b-bubble .b_l div {
+	bottom: 86px;
+}
+.b-bubble .b_r, .b-bubble .b_l {
+	width: 86px;
+} /* b_c[padding] + (b_content[width] div 2) but not more b_l div[width] */
+.b-bubble .b_t div, .b-bubble .b_b div {
+	right: 86px;
+}
+.b-bubble .b_t div div, .b-bubble .b_b {
+	left: 86px;
+}
+.b-bubble .b_content_out {
+	background-color: white;
+	padding: 0px;
+}
+.b-bubble .b_content_out .b_close {
+	background: url(skins/white/close.png) no-repeat;
+	cursor: pointer;
+	height: 19px;
+	position: absolute;
+	right: 53px;
+	top: 53px;
+	width: 19px;
+	z-index: 1;
+}
+.b-bubble .b_content {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.wh { background-color: white; }
+.gr { background-color: #51B89C; }
+
+.b-bubble-loading .b_content {
+	background: white url(skins/white/ajax-loader.gif) no-repeat center center;
+}
+.b-bubble-loading .b_content span {
+	position: absolute;
+	width: 90%;
+	left: 50%;
+	margin-left: -45%;
+	text-align: center;
+	color: gray;
+	font-size: 12px;
+	top: 100px;
+}
+.b-bubble-loading-success .b_content {
+	background: white url(skins/white/success.gif) no-repeat center center;
+}
+.b-bubble .b_r {
+-right: expression( this.parentNode.offsetWidth % 2 ? '-1px' : 0 ) !important;
+}
+.b-bubble .b_b {
+-bottom: expression( this.parentNode.offsetHeight % 2 ? '-1px' : 0 );
+}
+.b-bubble .b_b div div {
+-right: expression( this.parentNode.offsetWidth % 2 ? '-1px' : 0 );
+}
+.b-bubble .b_l div div {
+-bottom: expression( this.parentNode.offsetHeight % 2 ? '-1px' : 0 );
+}
+.b-bubble .b_b div {
+-bottom: expression( this.parentNode.offsetHeight % 2 ? '-1px' : 0 );
+}
+.b-bubble .b_b div {
+-bottom: expression( this.parentNode.offsetHeight % 2 ? '-1px' : 0 );
+}
+.b-bubble .b_r div {
+-right: expression( this.parentNode.offsetWidth % 2 ? '-1px' : 0 );
+}
+/* new Correct bubble (end) */
+
+/* Slideshow */
+
+  .b-bubble-slideshow {
+	top: 0;
+	position: fixed;
+	z-index: 888;
+}
+.b-bubble-slideshow .prev,  .b-bubble-slideshow .next {
+	width: 57px;
+	height: 33px;
+	background: url(skins/white/interface.png) no-repeat 0 0;
+	position: absolute;
+	left: -57px;
+	top: 0;
+	cursor: pointer;
+	cursor: hand;
+}
+.b-bubble-slideshow .next {
+	background-position: right 0;
+	left: 100%;
+}
+.b-bubble-slideshow .next-disabled {
+	background-position: -110px -50px;
+	cursor: auto;
+}
+.b-bubble-slideshow .prev-disabled {
+	background-position: -50px -50px;
+	cursor: auto;
+}
+.b-bubble-slideshow .title {
+	color: white;
+	font-family: Georgia, serif;
+	font-size: 14px;
+	text-align: center;
+	background: url(skins/white/interface.png) no-repeat center 0;
+	height: 23px;
+	padding-top: 10px;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+}
+img {
+	border: 0;
+}
+.bubble-slideshow {
+	background: black;
+	padding: 5px;
+	padding-bottom: 0;
+}
+.bubble-clear {
+	clear: both;
+	font-size: 0;
+	height: 0px;
+	overflow: hidden;
+	position: relative;
+}
+.bubble-slideshow a {
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}

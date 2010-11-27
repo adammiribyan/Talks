@@ -1,0 +1,220 @@
+<!DOCTYPE html> 
+<html lang="en-US"> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/ico" href="favicon.ico" /> 
+    <link href="/stylesheets/html.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css" />
+    <title>Talks</title>
+    <meta property="fb:admins" content="1250851700" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jcommon.js"></script>
+	<script type="text/javascript" src="/javascripts/round_picture.js"></script>
+    <script type="text/javascript" src="/javascripts/common.js"></script>
+    <script type="text/javascript" src="http://vkontakte.ru/js/api/openapi.js?10"></script>
+	<script type="text/javascript" src="http://vkontakte.ru/js/api/share.js?9"></script>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+      FB.init({appId: 'your app id', status: true, cookie: true,
+                 xfbml: true});
+      };
+      (function() {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol +
+          '//connect.facebook.net/ru_RU/all.js';
+        document.getElementById('fb-root').appendChild(e);
+      }());
+    </script>
+    
+	<div id="layout">
+    	<!-- HEADER -->
+        <div id="header">
+        	<div id="logo">
+            	<a href="/">
+                	<img alt="Talks" class="png" src="/images/logo_b.png" width="150" height="40">
+                </a>
+            </div>
+            <div id="search">
+            	<form class="form-search" action="/search">
+                	<div class="item">
+                    	<label class="form-label" for="">Поиск по сайту</label>
+                       	<div class="field">
+                            	<input type="text" name="query" />
+                        </div>
+                        <div class="corn corn-tl"></div>
+                        <div class="corn corn-tr"></div>
+                        <div class="corn corn-bl"></div>
+                        <div class="corn corn-br"></div>                        
+                    </div>
+                    <input class="magnifier" type="image" src="/images/search.png" />
+                </form>
+            </div>
+            <div id="social">
+                	Talks в <br />
+                    <a href="http://www.facebook.com/pages/Talks/162342890449495">
+                    	<img alt="Facebook" class="normal" src="/images/facebook.png" width="16" height="16" />
+                    	<img alt="Facebook" class="disabled" src="/images/facebook_disabled.png" width="16" height="16" />
+                    </a>
+                    <a href="http://flickr.com/">
+                        <img alt="Flickr" class="normal" src="/images/flickr.png" width="16" height="16" />
+                        <img alt="Flickr" class="disabled" src="/images/flickr_disabled.png" width="16" height="16" />
+                    </a>
+                    <a href="http://twitter.com/talks_news">
+                        <img alt="Twitter" class="normal" src="/images/twitter.png" width="16" height="16" />
+                        <img alt="Twitter" class="disabled" src="/images/twitter_disabled.png" width="16" height="16" />
+                    </a>
+                    <a href="http://vkontakte.ru/club20484089">
+                        <img alt="Vkontakte" class="normal" src="/images/vkontakte.png" width="16" height="16" />
+                        <img alt="Vkontakte" class="disabled" src="/images/vkontakte_disabled.png" width="16" height="16" />
+                    </a>
+            </div>
+            <div class="button-add">
+              <a class="button block-inline button-icon button-icon-add-plus" href="/posts/new">
+                <div class="bg">
+                  <i class="l"></i>
+                  <i class="r"></i>
+                </div>
+                <i class="icon"></i>
+                <span class="button-text">Новый параграф</span>
+              </a>
+            </div>
+            <div id="user-bar">
+            	<ul class="login-links">
+                	<li><a href="/">Вход</a></li>
+                	<li><a href="/">Регистрация</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- CONTENT -->
+        <div id="content">
+            <div class="columns">
+                <div class="column column-x2">
+                	<div class="side-bar">
+                    	<div class="name">
+                        	<div class="item photo">
+                                <span class="round_picture" style="width: 50px; height: 50px;">
+                                    <img src="/images/532_w50_h50.jpg" width="50" height="50" />
+                                </span>
+                            </div>
+                            <div class="item info">
+                            	<strong>Роберт Стэдлер</strong><small class="age">36</small><br /><small>Paris, France</small>
+                            </div>
+                        </div>
+						<hr />
+ 						<div class="about">
+                        	<strong>О себе</strong>
+                            <p>Учился в Европейском институте дизайна в Милане, а затем в школе дизайна ENSCI / Les Ateliers в Париже.</p>
+                        </div>
+                        <hr />
+                        <div class="accounts">
+                        	<strong>Аккаунты</strong>
+                            <ul class="list">
+                            	<li class="item">
+                                	<div class="profile facebook">
+                                    	<i class="icon"></i>
+                                        <div class="service">Facebook</div>
+                                        <a class="id" href="http://www.facebook.com/">robert-532</a>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                	<div class="profile twitter">
+                                    	<i class="icon"></i>
+                                        <div class="service">Twitter</div>
+                                        <a class="id" href="http://www.facebook.com/">robertstadler</a>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                	<div class="profile gtalk">
+                                    	<i class="icon"></i>
+                                        <div class="service">Google Talk</div>
+                                        <a class="id" href="http://www.facebook.com/">robertstadler</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column column-x3">    
+                	<div class="post">
+                    	<h1 class="sub">§ 30. Пират</h1>
+                        <div class="sub-header">
+                        	<div class="date">2 ноября 2010</div>
+                            <div class="separator">•</div>
+                            <div class="share">
+                                <div class="twitter">
+                                    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+                                    <a class="twitter-share-button" data-count="horizontal" data-text="§ 30. Пират" data-via="talks_news" href="http://twitter.com/share">Tweet</a>	
+                                </div>
+                                <div class="facebook">
+                                    <a name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php?t=§ 30. Пират">Опубликовать</a>
+                                    <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+                                </div>
+                                <div class="vkontakte">
+                                    <script type="text/javascript">
+                                    <!--
+                                    document.write(VK.Share.button({
+                                      url: 'http://adammiribyan.com/talks/my-pirate.html',
+                                      title: '§ 30. Пират',
+                                      description: '— Давай скажи, скажи!..',
+                                      image: 'http://adammiribyan.com/images/m_74839275_pirate.jpg',					  
+                                      noparse: true
+                                    },
+                                    {
+                                        text: 'Поделиться',
+                                        type: 'button'
+                                    }));
+                                    -->
+                                    </script>
+                                </div>
+                            </div>                     
+                        </div>
+                        <div class="picture">
+                        	<img src="http://adammiribyan.com/images/m_74839275_pirate.jpg" width="550" height="370" />
+                            <span class="author">Иллюстрация Адары</span>
+                        </div>
+                        <div class="audio">
+<object height="23" width="200"><param name="movie" value="http://www.weborama.ru/flash/widget/playerwidget2.swf"><param name="wmode" value="transparent"><param name="FlashVars" value="id=54ea1da4606cae35f013398cc40c8f37&type=audio&limit=1"><embed height="23" width="200" flashvars="id=54ea1da4606cae35f013398cc40c8f37&type=audio&limit=1" wmode="transparent" type="application/x-shockwave-flash" src="http://www.weborama.ru/flash/widget/playerwidget2.swf"/></object>
+                        </div>
+                        <div class="quote">
+                        	<!-- Ванильное небо -->
+                            <p>— Давай скажи, скажи!<br />
+                            — Скажу в следующей жизни, когда мы оба станем котами.</p>
+                        </div>              
+                    </div>    
+                    
+                    
+                </div>
+                <div class="column column-x1 column-last"></div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <div id="footer">
+        	<div class="copyright">
+            	<i class="logo-small"></i>
+                <p>© 2010 Talks, in pair with <a href="http://julieibragimova.com/">you-know-who</a>.<br />
+Использование материалов Talks разрешено только при наличии активной ссылки на источник.<br />
+Все права на картинки, музыку и тексты принадлежат их авторам.</p>
+            </div>
+            <div class="links">
+            	<ul>
+                	<li><a href="/">О проекте</a></li>
+                    <li><a href="/">Владельцам</a></li>
+                    <li><a href="/">Правила</a></li>
+                    <li><a href="/">Помощь</a></li>
+                </ul>
+            </div>
+            <div class="others">
+            	<div class="rss"><a href="/">RSS<i></i></a></div>
+                <div class="counter"><img src="/images/counter.gif" width="88" height="15" /></div>
+            </div>
+            <div class="cat">
+            	<img alt="Serious Cat" src="/images/cat-01.jpg" width="210" height="70" />
+            </div>
+		</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+- title "Смена пароля"
+
+= form_header "Восстановление пароля"
+
+= simple_form_for(:user,
+            :url  => user_password_path(@user, :token => @user.confirmation_token),
+            :html => { :method => :put }) do |f|
+  .columns
+    .column.halfsized.column-f-x2
+      = f.input :password, :as => :password, :label => "Пароль", :required => false
+      = f.input :password_confirmation, :as => :password, :label => "Повторите пароль", :required => false
+      = submit_button "Сменить пароль"
+    
+    .column.column-f-x1

@@ -1,0 +1,15 @@
+!!!
+%html{:lang => "en-US"}
+  %head
+    = render "layouts/meta"    
+  %body    
+    #layout
+      #header
+        = render "layouts/header"
+    
+      #content
+        = render "layouts/flashes"
+        = yield    
+          
+      #footer
+        = render "layouts/footer"

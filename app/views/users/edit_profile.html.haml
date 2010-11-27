@@ -1,0 +1,46 @@
+- title "Настройки профиля"
+
+%h1.form Настройки
+%span.head-note.block-inline Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+.b-settings-menu
+  %ul
+    %li.selected
+      Профиль
+      %ins
+    %li
+      %a{:href => account_settings_url} Аккаунт
+.b-line.b-line-thin
+
+= simple_form_for @user, :url => profile_settings_path, :html => { :multipart => true } do |f|
+  .columns
+    .column.column-f-x2
+      = f.input :fullname, :label => 'Имя и фамилия'
+      = f.input :city, :label => 'Город'      
+      = f.input :about, :label => 'О себе', :hint => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    .column.column-f-x1
+      = f.input :picture, :as => :file, :label => 'Фотография'
+      .b-userpic
+        = image_tag @user.picture.url(:big)
+      %hr/
+      = f.input :birthday, :as => :date, :start_year => Date.today.year - 90,
+                                :end_year => Date.today.year - 6,
+                                :order => [:day, :month, :year], :label => 'Дата рождения'
+      = f.input :gender, :as => :radio, :collection => { 'мужской' => 'm', 'женский' => 'f' }, :label => 'Пол'
+    .column.column-f-x0.contacts
+      %hr/
+      %label.text.optional{:for => "profile_contacts"} Вы в интернете
+      = f.input :homepage, :label => false, :wrapper_class => 'input homepage'
+      = f.input :facebook, :label => false, :wrapper_class => 'input facebook'
+      = f.input :flickr, :label => false, :wrapper_class => 'input flickr'
+      = f.input :formspring, :label => false, :wrapper_class => 'input formspring'
+      = f.input :icq, :label => false, :wrapper_class => 'input icq'
+      = f.input :lastfm, :label => false, :wrapper_class => 'input lastfm' 
+      = f.input :livejournal, :label => false, :wrapper_class => 'input livejournal'
+      = f.input :skype, :label => false, :wrapper_class => 'input skype'
+      = f.input :tumblr, :label => false, :wrapper_class => 'input tumblr'
+      = f.input :twitter, :label => false, :wrapper_class => 'input twitter'        
+      = f.input :vkontakte, :label => false, :wrapper_class => 'input vkontakte'    
+      = f.input :youtube, :label => false, :wrapper_class => 'input youtube'      
+      = f.input :id, :as => :hidden
+  .g-block.b-button
+    = submit_button "Сохранить"

@@ -1,4 +1,18 @@
-Talks::Application.routes.draw do
+Talks::Application.routes.draw do  
+
+  resources :users, :shallow => true do
+    resources :posts
+  end
+
+  resources :pages  
+
+  match "/settings/profile" => "users#update_profile", :via => :put, :as => :profile_settings
+  match "/settings/account" => "users#update_account", :via => :put, :as => :account_settings
+
+  match "/settings/profile" => "users#edit_profile", :as => :profile_settings
+  match "/settings/account" => "users#edit_account", :as => :account_settings
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

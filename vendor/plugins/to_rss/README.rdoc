@@ -1,0 +1,51 @@
+= to_rss()
+
+To start use it you must install plugin
+
+  script/plugin install git://github.com/over/to_rss.git
+
+Easiest way to generate RSS:
+
+  @posts = Post.all
+  render :rss => @posts.to_rss {|feed, item| feed[:link] = polymorphic_url(item) }
+
+And add link to RSS in your <head></head>
+
+  <%= rss_link_tag "RSS", posts_url(:format => :xml) %>
+
+Plugin searches title of feed item in these fields:
+
+  title, name, lead, heading
+
+And description in following:
+
+  description, body, contents
+
+Also you can define own values of these RSS attributes. Check out examples of usage:
+
+  render :rss => @posts.to_rss do |feed, item| 
+    feed[:title] = "#{item.title}: #{item.description.first(10)}..."
+    feed[:description] = render_to_string(:partial => "posts/to_rss", :object => item)
+    feed[:link] = polymorphic_url(item)
+    feed[:author] = "#{item.user.name}"
+  end
+
+The only required attribute is feed[:link]
+	
+Also, you can customize feed properties:
+
+# config/environment.rb
+  ToRss::Config.feed[:title] = "The best channel you have ever seen"
+  ToRss::Config.feed[:link] = "http://tandp.ru"
+  ToRss::Config.feed[:description] = "Feed of posts"
+
+
+Also, you can rewrite it in controller:
+
+  render :rss => @posts.to_rss(:feed_title => "Overwritten title", :feed_link => "http://google.com", :feed_description => "Zhopa123") do |feed, item| 
+    feed[:title] = "#{item.title}: #{item.description.first(10)}..."
+    feed[:description] = render_to_string(:partial => "posts/to_rss", :object => item)
+    feed[:link] = polymorphic_url(item)
+  end
+
+Copyright (c) 2009 Mikhail Tabunov, released under the MIT license
