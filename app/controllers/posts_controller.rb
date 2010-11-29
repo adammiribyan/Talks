@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   
-  before_filter :authenticate
+  before_filter :authenticate, :except => [:index, :show]
   before_filter :show_picture_preview, :only => [:edit, :update]
   before_filter :set_the_user, :except => [:edit, :update, :show]
  

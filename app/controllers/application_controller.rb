@@ -10,4 +10,9 @@ class ApplicationController < ActionController::Base
     I18n.locale = "ru"
   end
   
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "Access denied."
+    redirect_to root_url
+  end
+  
 end

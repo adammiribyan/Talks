@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101122142843) do
+ActiveRecord::Schema.define(:version => 20101129134751) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(:version => 20101122142843) do
     t.boolean  "email_confirmed",                     :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "role",                                :default => 0
+    t.string   "role",                                :default => "0"
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"

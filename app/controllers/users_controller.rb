@@ -34,20 +34,7 @@ class UsersController < Clearance::UsersController
     render :template => "/posts/index"
   end
   
-  def create
-    @user = ::User.new params[:user]
-    
-    # Assigning the user role to all new users
-    @user.user = true
-    
-    if @user.save
-      flash_notice_after_create
-      redirect_to(url_after_create)
-    else
-      render :template => 'users/new'
-    end
-  end
-  
+
   private
     
     def set_the_user

@@ -1,6 +1,4 @@
-﻿= link_to "Новый параграф", new_user_post_path
-
-%table
+﻿%table
   %tr
     %th Title
     %th Body
@@ -9,8 +7,12 @@
     %th
 - @posts.each do |post|
   %tr
-    %td= post.title
+    %td= link_to post.title, post
     %td= post.conversation + '<br />' + post.note
-    %td= link_to 'Show', post
-    %td= link_to 'Edit', edit_post_path(post)
-    %td= link_to 'Destroy', post, :confirm => 'Вы уверены?', :method => :delete
+    - if can? :update, @post
+      %td= link_to 'Edit', edit_post_path(post)
+    - if can? :destroy, @post
+      %td= link_to 'Destroy', post, :confirm => 'Вы уверены?', :method => :delete
+      
+- if can? :create, @post
+  = link_to "Новый параграф", new_user_post_path(current_user)
