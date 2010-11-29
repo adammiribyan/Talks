@@ -914,3 +914,9 @@ body {
 	cursor: pointer;
 	display: inline;
 }
+
+.b-new-post-link {
+	float: right;
+	margin-top: 15px;
+	font-size: 12px;
+}

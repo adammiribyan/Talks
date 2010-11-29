@@ -13,6 +13,3 @@
       %td= link_to 'Edit', edit_post_path(post)
     - if can? :destroy, @post
       %td= link_to 'Destroy', post, :confirm => 'Вы уверены?', :method => :delete
-      
-- if can? :create, @post
-  = link_to "Новый параграф", new_user_post_path(current_user)

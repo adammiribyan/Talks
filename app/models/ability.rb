@@ -5,19 +5,18 @@ class Ability
   def initialize(user)
     user ||= User.new
     
-    if user.role == "admin"
-      can :manage, :all
-    else
-      can :read, :all
-      
-      if user.role == "author"
+    case user.role.to_s
+      when "admin"
+        can :manage, :all
+      when "author"
+        can :read, :all
         can :create, Post
         can :update, Post do |post|
           post.try(:user) == user
         end
-      end
-      
-    end
+      else
+        can :read, :all
+    end    
   end
   
 end

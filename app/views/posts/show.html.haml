@@ -1,0 +1,16 @@
+.columns
+  .column.column-x2
+    = render '/layouts/sidebar'
+    
+  .column.column-x3
+    %h1
+      = @post.title
+    %div
+      = image_tag @post.picture.url(:normal)
+    %div
+      = @post.conversation.markdown.typography.html_safe
+      
+    - if can? :update, @post
+      = link_to 'Редактировать', edit_post_path(@post)
+              
+  .column.column-x1.column-last

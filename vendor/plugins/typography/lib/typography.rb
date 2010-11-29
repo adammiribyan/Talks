@@ -19,7 +19,7 @@ class String
     #mdash
     str.gsub!(/--/, '&mdash;')
     str.gsub!(/(\w|;|,)\s+(—|–|-)\s*(\w)/, '\1&nbsp;&mdash; \3')
-    str.gsub!(/\s+&mdash;/, '&nbsp;&mdash;')
+    #str.gsub!(/\s+&mdash;/, '&nbsp;&mdash;')
 
     #nobr
     #around dash-separated words (что-то)

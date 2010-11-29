@@ -38,3 +38,7 @@
         = link_to 'Вход', "#", :onclick => "bubble.show('remote:/wizard/login.js', { event: event, bg: 'white', from: this, message: 'Загружаем...' });  return false;"
       %li
         = link_to 'Регистрация', sign_up_path
+        
+  - if can? :create, Post
+    .b-new-post-link
+      = link_to_unless_current 'Новый параграф', new_user_post_path(current_user)

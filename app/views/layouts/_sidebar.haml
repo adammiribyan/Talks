@@ -2,16 +2,20 @@
   .name
     .item.photo
       %span.round_picture{:style => "width: 50px; height: 50px;"}
-        %img{:height => "50", :src => "/images/532_w50_h50.jpg", :width => "50"}/
+        = image_tag current_user.picture.url(:normal), :width => 50, :height => 50
     .item.info
-      %strong Роберт Стэдлер
-      %small.age 36
+      %strong
+        = current_user.fullname
+      %small.age
+        = age current_user.birthday
       %br/
-      %small Paris, France
+      %small
+        = current_user.city 
   %hr/
   .about
     %strong О себе
-    %p Учился в Европейском институте дизайна в Милане, а затем в школе дизайна ENSCI / Les Ateliers в Париже.
+    %p
+      = current_user.about
   %hr/
   .accounts
     %strong Аккаунты
