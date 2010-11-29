@@ -13,6 +13,6 @@ class Post < ActiveRecord::Base
   validates :conversation, :presence => true
   validates :note, :length => { :maximum => 200 }
   validates :picture_author_name, :presence => true
-  validates :song, :presence => true
-  
+  validates :song, :presence => true 
+ 
 end

@@ -9,7 +9,7 @@
 
 <p>
   <b>Body:</b>
-  <%= @post.conversation %>
+  <%= @post.conversation.markdown.html_safe %>
 </p>
 
 <p>
@@ -18,5 +18,5 @@
 </p>
 
 <% if can? :update, @post %>
-	<%= link_to 'Edit', edit_post_path(@post) %> |
+	<%= link_to 'Edit', edit_post_path(@post) %>
 <% end %>

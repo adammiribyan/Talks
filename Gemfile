@@ -8,6 +8,7 @@ gem 'simple_form'
 gem 'clearance', :git => 'git://github.com/adammiribyan/clearance.git', :branch => 'username'
 gem 'russian'
 gem 'cancan'
+gem 'rdiscount'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
