@@ -46,12 +46,4 @@ module ApplicationHelper
      </a>".html_safe
   end
   
-  def current_user_email
-		if signed_in?
-			current_user.email
-		else
-			nil
-		end
-	end
-  
 end

@@ -4,8 +4,8 @@ class Post < ActiveRecord::Base
   
   has_attached_file :picture,
                     :styles => { :normal  => "550x370#", 
-                               :preview => "275x185#",
-                               :small   => "137x93#"},
+                                 :preview => "275x185#",
+                                 :small   => "137x93#" },
                     :url => "/assets/:class-:attachment/:id/:basename-:style.:extension",
                     :path => ":rails_root/public/assets/:class-:attachment/:id/:basename-:style.:extension"
   
