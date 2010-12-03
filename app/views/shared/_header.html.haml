@@ -1,0 +1,44 @@
+#logo
+  = link_to_unless_current (image_tag "logo_b.png", :alt => "Talks", :height => 40, :width => 150 ), root_path
+#search
+  %form.form-search{:action => "/search"}
+    .item
+      %label.form-label{:for => ""} Поиск по сайту
+      .field
+        %input{:name => "query", :type => "text"}/
+      .corn.corn-tl
+      .corn.corn-tr
+      .corn.corn-bl
+      .corn.corn-br
+    %input.magnifier{:src => "/images/search.png", :type => "image"}/
+#social
+  Talks в
+  %br/
+  = social_button('Facebook', 'http://www.facebook.com/pages/Talks/162342890449495', 'facebook')
+  = social_button('Flickr', 'http://flickr.com/', 'flickr')
+  = social_button('Twitter', 'http://twitter.com/talks_news', 'twitter')
+  = social_button('Vkontakte', 'http://vkontakte.ru/club20484089', 'vkontakte')
+#user-bar
+  - if signed_in?
+    %ul.login-links
+      %li.username
+        .b-user
+          %a{:href => user_posts_path(current_user)}
+            = current_user.username
+            %span.round_picture{:style => "width: 25; height: 25"}
+              = image_tag current_user.picture.url(:small), :width => 25, :height => 25
+      - if params[:action] == "edit_account" || params[:action] == "edit_profile"
+        %li Настройки
+      - else
+        %li= link_to 'Настройки', profile_settings_path
+      %li= link_to 'Выйти', sign_out_path, :method => :delete
+  - else
+    %ul.login-links
+      %li
+        = link_to 'Вход', "#", :onclick => "bubble.show('remote:/wizard/login.js', { event: event, bg: 'white', from: this, message: 'Загружаем...' });  return false;"
+      %li
+        = link_to 'Регистрация', sign_up_path
+        
+  - if can? :create, Post
+    .b-new-post-link
+      = link_to_unless_current 'Новый параграф', new_user_post_path(current_user)

@@ -1,15 +1,15 @@
 !!!
 %html{:lang => "en-US"}
   %head
-    = render "layouts/meta"    
+    = render "shared/meta"    
   %body    
     #layout
       #header
-        = render "layouts/header"
+        = render "shared/header"
     
       #content
-        = render "layouts/flashes"
+        = render "shared/flashes"
         = yield    
           
       #footer
-        = render "layouts/footer"
+        = render "shared/footer"

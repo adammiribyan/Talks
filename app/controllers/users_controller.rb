@@ -1,9 +1,7 @@
 class UsersController < Clearance::UsersController
   
   before_filter :set_the_user, :only => [:edit_account, :edit_profile, :update_account, :update_profile]
-  before_filter :authenticate, :only => [:edit_account, :edit_profile]
-  
-  
+  before_filter :authenticate, :only => [:edit_account, :edit_profile]  
   
   def edit_account
   end
