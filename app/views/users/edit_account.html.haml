@@ -26,9 +26,10 @@
             = image_tag "eye-open.gif", :height => 10, :width => 16
           %span.hide-pass
             = image_tag "eye-close.gif", :height => 10, :width => 16
-      .input.role.optional
-        %label.text.optional{:for => "role"} Роль
-        = f.collection_select :role, User::ROLES, :to_s, :humanize
+      - if can? :assign_roles, @user
+        .input.role.optional
+          %label.text.optional{:for => "role"} Роль
+          = f.collection_select :role, User::ROLES, :to_s, :humanize
       = submit_button "Сохранить"
       
     .column.column-f-x1

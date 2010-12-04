@@ -9,7 +9,7 @@
   %tr
     %td= link_to post.title, post
     %td= post.conversation + '<br />' + post.note
-    - if can? :update, @post
+    - if can? :update, Post
       %td= link_to 'Edit', edit_post_path(post)
     - if can? :destroy, @post
       %td= link_to 'Destroy', post, :confirm => 'Вы уверены?', :method => :delete

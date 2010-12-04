@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_filter :set_the_user, :except => [:edit, :update, :show]
   
   load_and_authorize_resource :user
-  load_and_authorize_resource :post, :through => :user, :shallow => true
+  load_and_authorize_resource :post, :through => :user, :shallow => true  
  
   def index
     #@posts = @user.posts.all
@@ -32,6 +32,8 @@ class PostsController < ApplicationController
   end
 
   def update
+    authorize! :assign_featured, @post if params[:post][:assign_featured]
+    
     #@post = Post.find(params[:id])
     @post.update_attributes(params[:post])
     respond_with(@post)

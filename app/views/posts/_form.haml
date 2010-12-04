@@ -10,7 +10,10 @@
       = f.input :place, :label => 'Место', :hint => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       = submit_button "Сохранить"
       
-    .column.column-f-x1      
+    .column.column-f-x1
+      - if can? :assgn_featured, @post      
+        = f.input :featured, :label => 'Фичер', :hint => 'Будет на главной странице до тех пор, пока его место не займет другой.'
+        %hr/
       = f.input :picture, :as => :file, :label => 'Картинка', :required => true
       - if @show_picture_preview
         .b-picture-preview

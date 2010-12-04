@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101129134751) do
+ActiveRecord::Schema.define(:version => 20101204000250) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20101129134751) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.string   "picture_author_name"
+    t.boolean  "featured"
   end
 
   create_table "profiles", :force => true do |t|

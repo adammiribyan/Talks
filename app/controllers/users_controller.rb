@@ -10,6 +10,8 @@ class UsersController < Clearance::UsersController
   end
 
   def update_account
+    authorize! :assign_roles, @user if params[:user][:assign_roles]
+    
     if @user.update_attributes(params[:user])
       redirect_to account_settings_path, :notice => "Account saved."
     else
