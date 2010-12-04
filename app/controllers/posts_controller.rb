@@ -49,7 +49,7 @@ class PostsController < ApplicationController
   private
   
       def set_the_user
-        @user = User.find_by_username(params[:user_id])
+        @user = current_user
       end
     
       def show_picture_preview

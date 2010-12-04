@@ -5,13 +5,13 @@
 .b-settings-menu
   %ul
     %li
-      %a{:href => profile_settings_url} Профиль
+      %a{:href => profile_settings_user_url} Профиль
     %li.selected
       Аккаунт
       %ins
 .b-line.b-line-thin
 
-= simple_form_for @user, :url => account_settings_path do |f|
+= simple_form_for @user, :url => account_settings_user_path do |f|
   .columns
     .column.halfsized.column-f-x2
       %label.text.optional{:for => "username"} Имя пользователя

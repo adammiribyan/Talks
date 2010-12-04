@@ -1,9 +1,14 @@
 class Ability
   
   include CanCan::Ability
-    
+  
   def initialize(user)
-    user ||= User.new
+    alias_action :update, :to => :edit_profile
+    alias_action :update, :to => :edit_account
+    alias_action :update, :to => :update_profile
+    alias_action :update, :to => :update_account
+    
+    user ||= User.new   
     
     case user.role.to_s
       when "admin"
@@ -15,6 +20,9 @@ class Ability
         can :create, Post
         can :update, Post do |post|
           post.try(:user) == user
+        end
+        can :update, User do |author|
+          author == user
         end
       else
         can :read, :all

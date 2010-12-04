@@ -4,24 +4,29 @@ class UsersController < Clearance::UsersController
   before_filter :authenticate, :only => [:edit_account, :edit_profile]  
   
   def edit_account
+    authorize! :update, @user
   end
   
   def edit_profile
+    authorize! :update, @user
   end
 
   def update_account
+    authorize! :update, @user
     authorize! :assign_roles, @user if params[:user][:assign_roles]
     
     if @user.update_attributes(params[:user])
-      redirect_to account_settings_path, :notice => "Account saved."
+      redirect_to account_settings_user_path, :notice => "Account saved."
     else
       render :template => 'users/edit_account'
     end
   end
   
   def update_profile
+    authorize! :update, @user
+    
     if @user.update_attributes(params[:user])
-      redirect_to profile_settings_path, :notice => "Profile saved."
+      redirect_to profile_settings_user_path, :notice => "Profile saved."
     else
       render :template => 'users/edit_profile'
     end
@@ -38,7 +43,7 @@ class UsersController < Clearance::UsersController
   private
     
     def set_the_user
-      @user = current_user
+      @user = User.find_by_username(params[:id])
     end    
   
 end

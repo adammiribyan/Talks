@@ -30,7 +30,7 @@
       - if params[:action] == "edit_account" || params[:action] == "edit_profile"
         %li Настройки
       - else
-        %li= link_to 'Настройки', profile_settings_path
+        %li= link_to 'Настройки', profile_settings_user_path(current_user)
       %li= link_to 'Выйти', sign_out_path, :method => :delete
   - else
     %ul.login-links
