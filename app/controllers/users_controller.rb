@@ -24,7 +24,7 @@ class UsersController < Clearance::UsersController
   
   def update_profile
     authorize! :update, @user
-    
+
     if @user.update_attributes(params[:user])
       redirect_to profile_settings_user_path, :notice => "Profile saved."
     else

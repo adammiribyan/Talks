@@ -8,25 +8,27 @@ class Ability
     alias_action :update, :to => :update_profile
     alias_action :update, :to => :update_account
     
-    user ||= User.new   
+    user ||= User.new
     
-    case user.role.to_s
-      when "admin"
-        can :manage, :all
-        can :assign_featured, Post
-        can :assign_roled, User
-      when "author"
-        can :read, :all
-        can :create, Post
-        can :update, Post do |post|
-          post.try(:user) == user
-        end
-        can :update, User do |author|
-          author == user
-        end
-      else
-        can :read, :all
-    end    
+    if user.is? :admin
+      can :manage, :all
+      can :assign_featured, Post
+      can :assign_roled, User
+    else
+      can :read, :all 
+    end
+    
+    if user.is? :author
+      can :read, :all
+      can :create, Post
+      can :update, Post do |post|
+        post.try(:user) == user
+      end
+      can :update, User do |author|
+        author == user
+      end
+    end
+    
   end
   
 end

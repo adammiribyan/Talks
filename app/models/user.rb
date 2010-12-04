@@ -1,7 +1,21 @@
 class User < ActiveRecord::Base
   include Clearance::User
   
-  ROLES = %w[admin author]
+  ROLES = %w[admin moderator author banned]
+  
+  def roles=(roles)
+    self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.sum
+  end
+  
+  def roles
+    ROLES.reject do |r|
+      ((roles_mask || 0) & 2**ROLES.index(r)).zero?
+    end
+  end
+  
+  def is?(role)
+    roles.include?(role.to_s)
+  end
   
   has_many :posts
   has_contacts :all
@@ -13,7 +27,7 @@ class User < ActiveRecord::Base
                     :url => "/assets/:class-:attachment/:id/:basename-:style.:extension",
                     :path => ":rails_root/public/assets/:class-:attachment/:id/:basename-:style.:extension"
   
-  attr_accessible :username, :email, :password, :picture, :fullname, :firstname, :lastname, :city, :about, :birthday, :gender, :homepage, :facebook, :flickr, :formspring, :icq, :lastfm, :livejournal, :skype, :tumblr, :twitter, :vkontakte, :youtube, :role
+  attr_accessible :username, :email, :password, :picture, :fullname, :firstname, :lastname, :city, :about, :birthday, :gender, :homepage, :facebook, :flickr, :formspring, :icq, :lastfm, :livejournal, :skype, :tumblr, :twitter, :vkontakte, :youtube, :roles
 
   
   validates :username, :presence => true, :uniqueness => true
