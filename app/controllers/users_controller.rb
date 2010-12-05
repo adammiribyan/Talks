@@ -39,6 +39,12 @@ class UsersController < Clearance::UsersController
     render :template => "/posts/index"
   end
   
+  # In case of requesting:
+  # http://localhost:3000/users/:user/settings/
+  def redirect_to_settings
+    redirect_to profile_settings_user_path(@user)
+  end
+  
 
   private
     
