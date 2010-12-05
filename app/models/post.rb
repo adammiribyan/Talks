@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
 
   belongs_to :user
+  has_many :votes
+  has_many :users, :through => :votes
   
   has_attached_file :picture,
                     :styles => { :normal  => "550x370#", 

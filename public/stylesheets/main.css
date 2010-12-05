@@ -531,6 +531,8 @@ body {
     zoom: 1;
 }
 
+.column-full { width: 970px; }
+
 .column-x1 { width: 170px; }
 .column-x2 { width: 250px; }
 .column-x3 { width: 550px; }

@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   end
   
   has_many :posts
+  has_many :votes
   has_contacts :all
   
   has_attached_file :picture, 
