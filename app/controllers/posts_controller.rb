@@ -1,7 +1,7 @@
 class PostsController < ApplicationController 
   
   before_filter :authenticate, :except => [:index, :show]
-  before_filter :show_picture_preview, :only => [:edit, :update]
+  before_filter :show_picture_preview, :show_additional_details, :only => [:edit, :update]  
   before_filter :set_the_user, :except => [:edit, :update, :show]
   
   load_and_authorize_resource :user
@@ -54,6 +54,10 @@ class PostsController < ApplicationController
     
       def show_picture_preview
         @show_picture_preview = true
+      end
+    
+      def show_additional_details
+        @show_additional_details = true
       end
   
 end

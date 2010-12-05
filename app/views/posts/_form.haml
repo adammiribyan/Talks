@@ -5,20 +5,33 @@
       = char_counter_for 'post_title', 100  
       = f.input :conversation, :label => 'Диалог'
       %hr/
+      
       = f.input :note, :as => :string, :label => 'Примечание', :hint => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
       = char_counter_for 'post_note', 200
       = f.input :place, :label => 'Место', :hint => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      
       = submit_button "Сохранить"
       
     .column.column-f-x1
       - if can? :assgn_featured, @post      
         = f.input :featured, :label => 'Фичер', :hint => 'Будет на главной странице до тех пор, пока его место не займет другой.'
         %hr/
+        
+      - if (can? :obtain_additional_details, @post) and (@show_additional_details)
+        .input.optional
+          %span.hint
+            Параграф написал
+            = link_to @post.user.username, @post.user
+            = I18n.l @post.created_at.to_time
+        %hr/
+        
       = f.input :picture, :as => :file, :label => 'Картинка', :required => true
       - if @show_picture_preview
         .b-picture-preview
           = image_tag @post.picture.url(:preview)
+          
       = f.input :picture_author_name, :label => 'Автор изображения'
       = f.input :picture_author_link, :as => :url, :label => 'Ссылка на автора изображения'
       %hr/
+      
       = f.input :song, :as => :text, :label => 'Песня', :hint => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'

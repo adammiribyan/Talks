@@ -11,9 +11,10 @@ class Ability
     user ||= User.new
     
     if user.is? :admin
-      can :manage, :all
+      can :manage, :all      
       can :assign_featured, Post
       can :assign_roled, User
+      can :obtain_additional_details, Post
     else
       can :read, :all 
     end
@@ -26,6 +27,13 @@ class Ability
       end
       can :update, User do |author|
         author == user
+      end
+    end
+    
+    if user.is? :moderator
+      can :update, Post
+      can :obtain_additional_details, Post do |post|
+        post.try(:user) != user
       end
     end
     
