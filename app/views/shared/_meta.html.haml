@@ -3,8 +3,9 @@
   Talks
   = yield (:title) || "Погладьте кошку"
 = stylesheet_link_tag :all
-= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"
-= javascript_include_tag "jquery/jquery.rails",
+= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js",
+                         "http://www.weborama.ru/inline/weborama.inline.js",
+                         "jquery/jquery.rails",
                          "jquery/jquery.color", 
                          "jquery/jquery.dependClass", 
                          "jquery/jquery.easing", 
@@ -14,6 +15,6 @@
                          "jcommon", 
                          "common", 
                          "round_picture",
-                         "application"
-                       
+                         "application.jquery"
+                                                
 = csrf_meta_tag

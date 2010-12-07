@@ -1,0 +1,27 @@
+- if can? :obtain_additional_details, Post
+  .admin-pane-switcher
+  
+  .admin-pane-wrap{:style => "overflow-x: visible; overflow-y: visible; display: none;"}
+    .admin-pane
+      
+      .admin-logo
+        = image_tag "logo_w.png", :alt => "Logo"
+        .logo-text
+          %span Talks
+          %span Редакция
+          
+      %ul.admin-categories
+        %li.posts-category Параграфы
+        %li Разные штуки
+        
+      %ul.category-items
+        %li= link_to 'Опубликованные', root_url
+        %li= link_to 'Фичеры', root_url
+        %li= link_to  'Авторы', root_url      
+        %li.new= link_to  'Жалобы', root_url
+        %li= link_to  'Статистика', root_url
+        
+      %ul.category-items
+        %li= link_to  'Рассылки', root_url
+        %li= link_to  'Члены команды', root_url
+        %li.new= link_to  'Баннеры', root_url

@@ -1,38 +1,3 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-
-Event.observe(document, 'dom:loaded', function() { 
-    new AdminPane(); 
-}); 
-
-var AdminPane = Class.create({ 
-   initialize: function(){ 
-        if ($$('.admin-pane-wrap')[0]){ 
-            this.adminPaneWrap = $$('.admin-pane-wrap')[0]; 
-            this.adminPaneSwitcher = $$('.admin-pane-switcher')[0]; 
-     
-            this.adminPaneWrap.setOpacity('0.9'); 
-            this.adminPaneWrap.setStyle({height :document.body.clientHeight + 'px'}); 
-            this.adminPaneWrap.observe('click', this.toggle.bind(this)); 
-            this.adminPaneSwitcher.observe('click', this.toggle.bind(this)); 
-            this.off = true; 
-        } 
-    }, 
-    toggle: function(e){ 
-        if (this.off)        { 
-            this.adminPaneWrap.blindDown(); 
-            this.off = false; 
-        } 
-        else 
-        { 
-            this.adminPaneWrap.dropOut();
-			// this.adminPaneWrap.blindUp(); 
-            this.off = true; 
-        } 
-    } 
-});
-
-
 $(document).ready(function(){	
 	$('.password-trigger').click(function() {
 	    // get current input

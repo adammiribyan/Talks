@@ -9,6 +9,8 @@
       = image_tag @post.picture.url(:normal)
     %div
       = @post.conversation.markdown.typography.html_safe
+    %div
+      = link_to @post.song_title, @post.song_link
       
     - if can? :update, @post
       = link_to 'Редактировать', edit_post_path(@post)

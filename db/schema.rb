@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101205051416) do
+ActiveRecord::Schema.define(:version => 20101205080735) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20101205051416) do
     t.string   "url"
     t.string   "picture"
     t.string   "picture_author_link"
-    t.string   "song"
     t.text     "conversation"
     t.text     "note"
     t.string   "place"
@@ -37,6 +36,8 @@ ActiveRecord::Schema.define(:version => 20101205051416) do
     t.datetime "picture_updated_at"
     t.string   "picture_author_name"
     t.boolean  "featured"
+    t.string   "song_title"
+    t.string   "song_link"
   end
 
   create_table "profiles", :force => true do |t|
