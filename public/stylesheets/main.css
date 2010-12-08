@@ -193,7 +193,7 @@ body {
 	left: -3px;
 	padding: 0 3px;
 	position: relative;	
-	top: 8px;
+	top: 9px;
 	width: 100%;
 	z-index: 99;
 }
@@ -539,6 +539,7 @@ body {
 
 .column2-x1 { width: 255px; text-align: right; }
 .column2-x2 { width: 705px; margin-right: 10px; }
+.column2-x1 div { float: right; margin-bottom: 20px; }
 
 .column-f-x2 { width: 590px; margin-right: 60px; }
 .column-f-x1 { width: 320px; }
@@ -911,7 +912,7 @@ body {
 .password-trigger .hide-pass {
 	left: 6px;
 	position: absolute;
-	top: -9px;
+	top: 13px;
 }
 
 .show-pass .show-pass, 
@@ -941,13 +942,14 @@ body {
 }
 
 .posts .header h3 {
-	color: #555555;
-	font-family: Arial, sans-serif;
-	font-size: 11px;
+	border-bottom: 1px solid #0E0E0E;
+	color: #0E0E0E;
+	font: normal normal italic 18px/20px Helvetica, sans-serif;
 	letter-spacing: normal;
 	line-height: 14px;
-	margin-bottom: 10px;
-	text-transform: none;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
 }
 
 .mediumFeature {
@@ -976,13 +978,13 @@ body {
 
 
 .mediumFeature h2 {
-	font-size: 16px;
+	font-size: 17px;
 	line-height: 18px;
 }
 
 .postPreview h2 {
-	font-size: 12px;
-	line-height: 14px;
+	font-size: 14px;
+	line-height: 16px;
 	margin: 0px 0px 3px 0px !important;
 }
 
@@ -1052,7 +1054,24 @@ body {
 }
 
 .header .data .author {	
-	text-decoration: underline;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	color: #0E0E0E;
+	font: italic normal bold 12px/normal Georgia;
+	text-transform: capitalize;
+}
+
+.header .data .author:link {
+	text-decoration: none;
+}
+
+.header .data .author:hover {
+	color: #51b98c;
+	text-decoration: underline;	
+}
+
+.cat-separator {
+	margin-bottom: 30px;
+	margin-top: -10px;
+	position: relative;
+	text-align: center;
+	width: 100%;
 }

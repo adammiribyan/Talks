@@ -282,9 +282,9 @@ h2 {
 }
 
 h3 {
-	font-size: 130%;
+	/* font-size: 130%;
 	margin: 0 0 -.45em;
-	padding: .8em 0 .4em;
+	padding: .8em 0 .4em; */
 }
 
 h4 {

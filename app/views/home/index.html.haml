@@ -15,23 +15,42 @@
     .posts
       .header
         %h3 Последние параграфы
-      - @posts.each do |post|
+      - @latest_posts.each do |post|
         .postPreview
           .image
             = link_to image_tag(post.picture.url(:preview), :class => "rc4"), post
           .text
             .header
-              %span.data
-                = link_to post.user.username, post.user, :class => 'author'
               %h2
                 = link_to post.title, post
               %span.data
+                = succeed "," do
+                  = link_to post.user.username, post.user, :class => 'author'
+                = I18n.l post.created_at.to_date
+            .description
+              = truncate post.conversation, :length => 80, :separator => ' '
+    
+              
+    .posts
+      .header
+        %h3 Популярные параграфы
+      - @popular_posts.each do |post|
+        .postPreview
+          .image
+            = link_to image_tag(post.picture.url(:preview), :class => "rc4"), post
+          .text
+            .header
+              %h2
+                = link_to post.title, post
+              %span.data
+                = succeed "," do
+                  = link_to post.user.username, post.user, :class => 'author'
                 = I18n.l post.created_at.to_date
             .description
               = truncate post.conversation, :length => 80, :separator => ' '
             
   .column.column2-x1.column-last
-    = image_tag 'banner-1.jpg'
     %br
-    %br
+    = render '/shared/facebook'
+    = render '/shared/vkontakte'
     = image_tag 'banner-3.jpg'
