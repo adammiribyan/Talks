@@ -13,7 +13,7 @@
 ru:
   date:
     formats:
-      default: "%d.%m.%Y"
+      default: "%e %B %Y"
       short: "%d %b"
       long: "%d %B %Y"
 

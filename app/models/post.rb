@@ -4,9 +4,12 @@ class Post < ActiveRecord::Base
   has_many :votes
   has_many :users, :through => :votes
   
+  scope :featured, :conditions => { :featured => true } # TODO: would be better to use is_featured
+  
   has_attached_file :picture,
-                    :styles => { :normal  => "550x370#", 
-                                 :preview => "275x185#",
+                    :styles => { :normal  => "550x370#",
+                                 :featured => "330x222#",
+                                 :preview => "150x101#",
                                  :small   => "137x93#" },
                     :url => "/assets/:class-:attachment/:id/:basename-:style.:extension",
                     :path => ":rails_root/public/assets/:class-:attachment/:id/:basename-:style.:extension"

@@ -537,6 +537,9 @@ body {
 .column-x2 { width: 250px; }
 .column-x3 { width: 550px; }
 
+.column2-x1 { width: 255px; text-align: right; }
+.column2-x2 { width: 705px; margin-right: 10px; }
+
 .column-f-x2 { width: 590px; margin-right: 60px; }
 .column-f-x1 { width: 320px; }
 .column-f-x0 { clear: both; width: 100%; }
@@ -921,4 +924,135 @@ body {
 	float: right;
 	margin-top: 15px;
 	font-size: 12px;
+}
+
+
+.features,
+.posts {
+	display: inline-block;
+	margin-bottom: 15px;
+	position: relative;
+	width: 100%;
+	zoom: 1;
+}
+
+.posts .header {
+	width: 100%;
+}
+
+.posts .header h3 {
+	color: #555555;
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	letter-spacing: normal;
+	line-height: 14px;
+	margin-bottom: 10px;
+	text-transform: none;
+}
+
+.mediumFeature {
+	display: inline-block;
+	font-size: 12px;
+	margin: 0px 0px 30px 0px;
+	position: relative;
+	vertical-align: top;
+	width: 330px;
+	zoom: 1;
+}
+
+.mediumFeature:last-child {
+	margin-left: 20px !important;
+}
+
+.mediumFeature .image {
+	padding: 0;
+	margin: 0;
+}
+
+.mediumFeature .data {
+	display: inline-block;
+	margin: 3px 0px 12px 0px;
+}
+
+
+.mediumFeature h2 {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.postPreview h2 {
+	font-size: 12px;
+	line-height: 14px;
+	margin: 0px 0px 3px 0px !important;
+}
+
+.postPreview h2 a:link,
+.mediumFeature h2 a:link {	
+	text-decoration: none;
+}
+
+.postPreview h2 a:hover,
+.mediumFeature h2 a:hover {	
+	text-decoration: underline;
+}
+
+.features h2, 
+.posts h2 {
+	color: black;	
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.postPreview {
+	display: inline-block;
+	font-size: 0px;
+	letter-spacing: -1px;
+	margin: 0px 20px 20px 0px;
+	position: relative;
+	width: 330px;
+	zoom: 1;
+}
+
+
+.postPreview .image {
+	height: 101px;
+	margin: 0px 10px 16px 0px;
+	overflow: hidden;
+	position: relative;
+	width: 150px;
+}
+
+.postPreview .text {
+	width: 170px; 
+}
+
+.postPreview .image,
+.postPreview .text {
+	display: inline-block;
+	font-size: 12px;
+	letter-spacing: normal;	
+	zoom: 1;
+}
+
+.postPreview .description {
+	font: normal italic normal 12px/14px Georgia, serif;
+	margin-top: 9px;
+}
+
+.mediumFeature .header,
+.postPreview .header {
+	margin-top: -3px;
+}
+
+
+.header .data {
+	color: #555;
+	font: normal normal normal 10px/14px Arial, sans-serif;
+}
+
+.header .data .author {	
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }

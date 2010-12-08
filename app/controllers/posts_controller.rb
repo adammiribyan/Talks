@@ -2,13 +2,12 @@ class PostsController < ApplicationController
   
   before_filter :authenticate, :except => [:index, :show]
   before_filter :show_picture_preview, :show_additional_details, :only => [:edit, :update]  
-  before_filter :set_the_user, :except => [:edit, :update, :show]
+  before_filter :set_the_user, :except => [:index, :edit, :update, :show]
   
-  load_and_authorize_resource :user
+  load_and_authorize_resource :user, :find_by => :username
   load_and_authorize_resource :post, :through => :user, :shallow => true  
  
-  def index
-    #@posts = @user.posts.all
+  def index    
     respond_with(@posts)
   end
 
@@ -49,7 +48,7 @@ class PostsController < ApplicationController
   private
   
       def set_the_user
-        @user = current_user
+        @user = User.find_by_username(params[:id])
       end
     
       def show_picture_preview

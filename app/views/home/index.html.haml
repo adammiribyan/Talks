@@ -1,5 +1,37 @@
 .columns
-  .column.column-full.column-last
-    %h1 Ahoj, přatele!
+  .column.column2-x2
+    .features
+      - @features.each do |feature|
+        .mediumFeature
+          .header
+            %h2= link_to feature.title, feature
+            %span.data
+              = succeed "," do
+                = link_to feature.user.username, feature.user, :class => 'author'
+              = I18n.l feature.created_at.to_date
+          .image
+            = link_to image_tag(feature.picture.url(:featured), :class => "rc4"), feature
+      
+    .posts
+      .header
+        %h3 Последние параграфы
+      - @posts.each do |post|
+        .postPreview
+          .image
+            = link_to image_tag(post.picture.url(:preview), :class => "rc4"), post
+          .text
+            .header
+              %span.data
+                = link_to post.user.username, post.user, :class => 'author'
+              %h2
+                = link_to post.title, post
+              %span.data
+                = I18n.l post.created_at.to_date
+            .description
+              = truncate post.conversation, :length => 80, :separator => ' '
+            
+  .column.column2-x1.column-last
+    = image_tag 'banner-1.jpg'
     %br
-    = link_to 'Interpol: The Scale', 'http://www.weborama.ru/#/music/Interpol/Our_Love_To_Admire/The_Scale/'
+    %br
+    = image_tag 'banner-3.jpg'

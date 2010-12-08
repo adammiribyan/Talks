@@ -1,0 +1,230 @@
+<!DOCTYPE html> 
+<html lang="en-US"> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/ico" href="favicon.ico" /> 
+    <link href="/stylesheets/html.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css" />
+    <title>Talks</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jcommon.js"></script>
+	<script type="text/javascript" src="/javascripts/round_picture.js"></script>
+    <script type="text/javascript" src="/javascripts/common.js"></script>
+</head>
+
+<body>
+	<div id="layout">
+    	<!-- HEADER -->
+        <div id="header">
+        	<div id="logo">
+            	<a href="/">
+                	<img alt="Talks" class="png" src="/images/logo_b.png" width="150" height="40">
+                </a>
+            </div>
+            <div id="search">
+            	<form class="form-search" action="/search">
+                	<div class="item">
+                    	<label class="form-label" for="">Поиск по сайту</label>
+                       	<div class="field">
+                            	<input type="text" name="query" />
+                        </div>
+                        <div class="corn corn-tl"></div>
+                        <div class="corn corn-tr"></div>
+                        <div class="corn corn-bl"></div>
+                        <div class="corn corn-br"></div>                        
+                    </div>
+                    <input class="magnifier" type="image" src="/images/search.png" />
+                </form>
+            </div>
+            <div id="social">
+                	Talks в <br />
+                    <a href="http://www.facebook.com/pages/Talks/162342890449495">
+                    	<img alt="Facebook" class="normal" src="/images/facebook.png" width="16" height="16" />
+                    	<img alt="Facebook" class="disabled" src="/images/facebook_disabled.png" width="16" height="16" />
+                    </a>
+                    <a href="http://flickr.com/">
+                        <img alt="Flickr" class="normal" src="/images/flickr.png" width="16" height="16" />
+                        <img alt="Flickr" class="disabled" src="/images/flickr_disabled.png" width="16" height="16" />
+                    </a>
+                    <a href="http://twitter.com/talks_news">
+                        <img alt="Twitter" class="normal" src="/images/twitter.png" width="16" height="16" />
+                        <img alt="Twitter" class="disabled" src="/images/twitter_disabled.png" width="16" height="16" />
+                    </a>
+                    <a href="http://vkontakte.ru/club20484089">
+                        <img alt="Vkontakte" class="normal" src="/images/vkontakte.png" width="16" height="16" />
+                        <img alt="Vkontakte" class="disabled" src="/images/vkontakte_disabled.png" width="16" height="16" />
+                    </a>
+            </div>
+            <div id="user-bar">
+            	<ul class="login-links">
+                	<li><a href="/">Вход</a></li>
+                	<li><a href="/">Регистрация</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- CONTENT -->
+        <div id="content">
+            <div class="columns">
+                <div class="column column2-x2">
+                	<div class="features">
+                    
+                    	<div class="mediumFeature">
+                        	<div class="header">
+                            	<h2>§ 30. Пират</h2>
+                                <span class="data"><a class="author" href="#">James Hamilton</a>,&nbsp;5 ноября 2010</span>
+                            </div>
+                            <div class="image"><img src="/images/feature-proto.jpg" height="222" width="330" /></div>
+                        </div>
+                        
+                        <div class="mediumFeature last">
+                        	<div class="header">
+                            	<h2>§ 12. Катарсис</h2>
+                                <span class="data"><a class="author" href="#">James Hamilton</a>,&nbsp;5 ноября 2010</span>
+                            </div>
+                            <div class="image"><img src="/images/feature-proto.jpg" height="222" width="330" /></div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="posts">
+                   		<div class="header">
+                        	<h3>Последние параграфы</h3>
+                        </div>
+                    
+                        <div class="postPreview">
+                        	<div class="image"><img src="/images/small-post-proto.jpg" height="101" width="150" /></div>
+                            <div class="text">
+                            	<div class="header">
+                                	<span class="data"><a href="#" class="author">James Hamilton</a></span>
+                                    <h2>§ 10. Память на кассету</h2>
+                                    <span class="data">16 мая 2009</span>
+                                </div>
+                                <div class="description">— Я хочу помнить тебя, когда ты уйдешь, а я женюсь на блондинке, очень богатой.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="postPreview">
+                        	<div class="image"><img src="/images/small-post-proto.jpg" height="101" width="150" /></div>
+                            <div class="text">
+                            	<div class="header">
+                                	<span class="data"><a href="#" class="author">James Hamilton</a></span>
+                                    <h2>§ 10. Память на кассету</h2>
+                                    <span class="data">16 мая 2009</span>
+                                </div>
+                                <div class="description">— Я хочу помнить тебя, когда ты уйдешь, а я женюсь на блондинке, очень богатой.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="postPreview">
+                        	<div class="image"><img src="/images/small-post-proto.jpg" height="101" width="150" /></div>
+                            <div class="text">
+                            	<div class="header">
+                                	<span class="data"><a href="#" class="author">James Hamilton</a></span>
+                                    <h2>§ 10. Память на кассету</h2>
+                                    <span class="data">16 мая 2009</span>
+                                </div>
+                                <div class="description">— Я хочу помнить тебя, когда ты уйдешь, а я женюсь на блондинке, очень богатой.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="postPreview">
+                        	<div class="image"><img src="/images/small-post-proto.jpg" height="101" width="150" /></div>
+                            <div class="text">
+                            	<div class="header">
+                                	<span class="data"><a href="#" class="author">James Hamilton</a></span>
+                                    <h2>§ 10. Память на кассету</h2>
+                                    <span class="data">16 мая 2009</span>
+                                </div>
+                                <div class="description">— Я хочу помнить тебя, когда ты уйдешь, а я женюсь на блондинке, очень богатой.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="posts">
+                    	<div class="header">
+                        	<h3>Популярные параграфы</h3>
+                        </div>
+                                            
+                        <div class="postPreview">
+                        	<div class="image"><img src="/images/small-post-proto.jpg" height="101" width="150" /></div>
+                            <div class="text">
+                            	<div class="header">
+                                	<span class="data"><a href="#" class="author">James Hamilton</a></span>
+                                    <h2>§ 10. Память на кассету</h2>
+                                    <span class="data">16 мая 2009</span>
+                                </div>
+                                <div class="description">— Я хочу помнить тебя, когда ты уйдешь, а я женюсь на блондинке, очень богатой.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="postPreview">
+                        	<div class="image"><img src="/images/small-post-proto.jpg" height="101" width="150" /></div>
+                            <div class="text">
+                            	<div class="header">
+                                	<span class="data"><a href="#" class="author">James Hamilton</a></span>
+                                    <h2>§ 10. Память на кассету</h2>
+                                    <span class="data">16 мая 2009</span>
+                                </div>
+                                <div class="description">— Я хочу помнить тебя, когда ты уйдешь, а я женюсь на блондинке, очень богатой.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="postPreview">
+                        	<div class="image"><img src="/images/small-post-proto.jpg" height="101" width="150" /></div>
+                            <div class="text">
+                            	<div class="header">
+                                	<span class="data"><a href="#" class="author">James Hamilton</a></span>
+                                    <h2>§ 10. Память на кассету</h2>
+                                    <span class="data">16 мая 2009</span>
+                                </div>
+                                <div class="description">— Я хочу помнить тебя, когда ты уйдешь, а я женюсь на блондинке, очень богатой.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="postPreview">
+                        	<div class="image"><img src="/images/small-post-proto.jpg" height="101" width="150" /></div>
+                            <div class="text">
+                            	<div class="header">
+                                	<span class="data"><a href="#" class="author">James Hamilton</a></span>
+                                    <h2>§ 10. Память на кассету</h2>
+                                    <span class="data">16 мая 2009</span>
+                                </div>
+                                <div class="description">— Я хочу помнить тебя, когда ты уйдешь, а я женюсь на блондинке, очень богатой.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="column column2-x1 column-last">
+                	<img src="/images/banner-1.jpg" height="322" width="234" /><br /><br />                    
+                    <img src="/images/banner-2.jpg" height="322" width="234" /><br /><br />                    
+                    <img src="/images/banner-3.jpg" height="322" width="234" />
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <div id="footer">
+        	<div class="copyright">
+            	<i class="logo-small"></i>
+                <p>© 2010 Talks, in pair with <a href="http://julieibragimova.com/">you-know-who</a>.<br />
+Использование материалов Talks разрешено только при наличии активной ссылки на источник.<br />
+Все права на картинки, музыку и тексты принадлежат их авторам.</p>
+            </div>
+            <div class="links">
+            	<ul>
+                	<li><a href="/">О проекте</a></li>
+                    <li><a href="/">Владельцам</a></li>
+                    <li><a href="/">Правила</a></li>
+                    <li><a href="/">Помощь</a></li>
+                </ul>
+            </div>
+            <div class="others">
+            	<div class="rss"><a href="/">RSS<i></i></a></div>
+                <div class="counter"><img src="/images/counter.gif" width="88" height="15" /></div>
+            </div>
+            <div class="cat">
+            	<img alt="Serious Cat" src="/images/cat-01.jpg" width="210" height="70" />
+            </div>
+		</div>
+    </div>
+</body>
+</html>
