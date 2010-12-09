@@ -695,6 +695,10 @@ small {
 	padding-bottom: 8px;
 }
 
+.simple_form label span {
+        font-weight: normal;
+}
+
 .simple_form label.collection_radio,
 .simple_form .boolean label {
 	display: inline;

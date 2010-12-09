@@ -1,7 +1,15 @@
 = simple_form_for(@invite) do |f|
-  .inputs
-    = f.input :email, :label => 'Кому'
-    = f.input :body
+  .columns
+    .column.column-f-x2
+      = f.input :email, :label => 'Кому:'
+      = f.input :body, :label => invite_letter_subject
+      %p
+        %strong Мои параграфы: 
+        = user_posts_url(current_user)  
+        %br
+        %strong Начни писать свои: 
+        = sign_up_url     
+        %br
+        %br   
 
-  .actions
-    = submit_button 'Отправить приглашение'
+      = submit_button 'Отправить приглашение'
