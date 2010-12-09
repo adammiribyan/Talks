@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101205080735) do
+ActiveRecord::Schema.define(:version => 20101209074435) do
+
+  create_table "invites", :force => true do |t|
+    t.string   "email"
+    t.text     "body"
+    t.string   "token"
+    t.integer  "sender_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -81,6 +90,8 @@ ActiveRecord::Schema.define(:version => 20101205080735) do
     t.text     "about"
     t.text     "contacts"
     t.integer  "roles_mask"
+    t.integer  "invite_id"
+    t.integer  "invites_limit"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

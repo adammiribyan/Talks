@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :votes
   has_contacts :all
+  has_many :sent_invites, :class_name => 'Invite', :foreign_key => 'sender_id'
+  belongs_to :invite
   
   has_attached_file :picture, 
                     :styles => { :big     => "88x88#",
@@ -34,6 +36,8 @@ class User < ActiveRecord::Base
   validates :username, :presence => true, :uniqueness => true
   validates :email, :presence => true, :uniqueness => true, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
   validates :password, :presence => true, :on => :create
+  
+  before_create :set_invites_limit
   
   def to_param
     username
@@ -53,4 +57,10 @@ class User < ActiveRecord::Base
     self.firstname = split.first
     self.lastname = split.last
   end
+  
+  private
+    
+    def set_invites_limit
+      self.invites_limit = 5
+    end
 end

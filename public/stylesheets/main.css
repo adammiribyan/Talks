@@ -236,6 +236,7 @@ body {
 #user-bar ul.login-links li {
 	display: inline-block;
 	font-size: 12px;	
+	font-weight: normal;
 	margin-left: 5px;
 	zoom: 1;
 }
@@ -246,7 +247,6 @@ body {
 
 #user-bar ul.login-links li a {
 	color: black;
-	font-weight: bold;
 	text-decoration: underline;
 }
 
@@ -923,6 +923,7 @@ body {
 
 .b-new-post-link {
 	float: right;
+	font-weight: bold;
 	margin-top: 15px;
 	font-size: 12px;
 }

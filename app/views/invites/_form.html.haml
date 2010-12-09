@@ -1,0 +1,7 @@
+= simple_form_for(@invite) do |f|
+  .inputs
+    = f.input :email, :label => 'Кому'
+    = f.input :body
+
+  .actions
+    = submit_button 'Отправить приглашение'

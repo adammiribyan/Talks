@@ -1,4 +1,7 @@
 Talks::Application.routes.draw do
+  resources :invites, :only => [:new, :create]
+  resources :pages
+
   resources :users, :shallow => true do
     resources :posts 
     member do
@@ -8,9 +11,7 @@ Talks::Application.routes.draw do
       put "/settings/profile" => "users#update_profile", :as => :profile_settings
       put "/settings/account" => "users#update_account", :as => :account_settings
     end
-  end
-  
-  resources :pages
+  end 
   
   root :to => "home#index"
 end
