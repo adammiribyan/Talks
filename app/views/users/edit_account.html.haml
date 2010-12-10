@@ -11,7 +11,7 @@
       %ins
 .b-line.b-line-thin
 
-= simple_form_for @user, :url => account_settings_user_path do |f|
+= simple_form_for @user, :url => account_settings_user_path(@user) do |f|
   .columns
     .column.halfsized.column-f-x2
       %label.text.optional{:for => "username"} Логин

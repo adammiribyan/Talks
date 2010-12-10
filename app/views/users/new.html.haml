@@ -5,6 +5,7 @@
 = simple_form_for @user do |f|
   .columns
     .column.halfsized.column-f-x2
+      = f.input :invite_token, :as => :hidden
       = f.input :username, :label => "Логин", :hint => "Можно использовать только английские буквы и цифры.", :required => false
       = f.input :email, :label => "Электронная почта", :required => false
       .input.password.optional

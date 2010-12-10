@@ -233,6 +233,10 @@ body {
 	top: 97px;
 }
 
+#user-bar ul.login-links li.signing {
+	font-weight: bold;
+}
+
 #user-bar ul.login-links li {
 	display: inline-block;
 	font-size: 12px;	
@@ -1073,6 +1077,20 @@ body {
 	margin-bottom: 30px;
 	margin-top: -10px;
 	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.b-invite-required {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}
+
+.b-invite-required span {
+	display: block;
+	font: normal normal italic 22px/23px Georgia, serif;
+	margin: 0px 0 20px 0px;
 	text-align: center;
 	width: 100%;
 }

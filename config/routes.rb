@@ -14,4 +14,7 @@ Talks::Application.routes.draw do
   end 
   
   root :to => "home#index"
+  
+  # For beta invitations only
+  match 'signup/:invite_token'  => 'clearance/users#new', :as => 'sign_up'
 end

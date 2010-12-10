@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class User < ActiveRecord::Base
   include Clearance::User
   
@@ -30,14 +32,17 @@ class User < ActiveRecord::Base
                     :url => "/assets/:class-:attachment/:id/:basename-:style.:extension",
                     :path => ":rails_root/public/assets/:class-:attachment/:id/:basename-:style.:extension"
   
-  attr_accessible :username, :email, :password, :picture, :fullname, :firstname, :lastname, :city, :about, :birthday, :gender, :homepage, :facebook, :flickr, :formspring, :icq, :lastfm, :livejournal, :skype, :tumblr, :twitter, :vkontakte, :youtube, :roles
+  attr_accessible :username, :email, :password, :picture, :fullname, :firstname, :lastname, :city, :about, :birthday, :gender, :homepage, :facebook, :flickr, :formspring, :icq, :lastfm, :livejournal, :skype, :tumblr, :twitter, :vkontakte, :youtube, :roles, :invite_token
 
   
   validates :username, :presence => true, :uniqueness => true
   validates :email, :presence => true, :uniqueness => true, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
   validates :password, :presence => true, :on => :create
   
-  before_create :set_invites_limit
+  # Beta invitations only
+  validates :invite_id, :presence => true, :uniqueness => true
+  
+  before_create :set_invites_limit, :set_default_roles
   
   def to_param
     username
@@ -58,9 +63,22 @@ class User < ActiveRecord::Base
     self.lastname = split.last
   end
   
+  def invite_token()
+    invite.token if invite
+  end
+  
+  def invite_token=(token)
+    self.invite = Invite.find_by_token(token)
+  end
+  
   private
     
     def set_invites_limit
       self.invites_limit = 5
+    end
+  
+    def set_default_roles
+      # 4 is for "author" role
+      self.roles_mask = 4
     end
 end

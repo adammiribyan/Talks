@@ -432,6 +432,10 @@ small {
 	color: #888;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 .comment {
 	background: #f5f5f5;
 	font-size: 90%;

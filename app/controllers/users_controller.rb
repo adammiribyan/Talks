@@ -1,7 +1,11 @@
 class UsersController < Clearance::UsersController
   
   before_filter :set_the_user, :only => [:edit_account, :edit_profile, :update_account, :update_profile]
-  before_filter :authenticate, :only => [:edit_account, :edit_profile]  
+  before_filter :authenticate, :only => [:edit_account, :edit_profile]
+  
+  def new
+    render '/shared/facebook'
+  end
   
   def edit_account
     authorize! :update, @user
@@ -50,6 +54,5 @@ class UsersController < Clearance::UsersController
     
     def set_the_user
       @user = User.find_by_username(params[:id])
-    end    
-  
+    end
 end
