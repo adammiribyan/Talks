@@ -14,7 +14,7 @@
 = simple_form_for @user, :url => account_settings_user_path do |f|
   .columns
     .column.halfsized.column-f-x2
-      %label.text.optional{:for => "username"} Имя пользователя
+      %label.text.optional{:for => "username"} Логин
       %span.username 
         = @user.username
       = f.input :email, :label => 'Электронная почта', :required => false

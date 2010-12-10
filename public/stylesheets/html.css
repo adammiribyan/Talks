@@ -563,9 +563,18 @@ small {
  * Simple Form
  */
 .simple_form {
-	font: normal normal bold 12px/14px Arial, sans-serif;
+	font: normal normal normal 12px/14px Arial, sans-serif;
 	letter-spacing: normal;
 	position: relative;
+}
+
+.simple_form label {	
+	vertical-align: baseline;
+}
+
+.simple_form p {
+	font-size: 13px;
+	line-height: 18px;
 }
 
 .simple_form textarea { height: 148px; }

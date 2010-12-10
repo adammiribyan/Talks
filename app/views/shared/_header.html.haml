@@ -31,7 +31,7 @@
         %li Настройки
       - else
         %li= link_to 'Настройки', profile_settings_user_path(current_user)
-      %li= link_to_unless_current 'Пригласить друзей' + ' (' + current_user.invites_limit.to_s  + ')', new_invite_path
+      %li= link_to_unless_current 'Пригласить друзей', new_invite_path
       %li= link_to 'Выйти', sign_out_path, :method => :delete
   - else
     %ul.login-links

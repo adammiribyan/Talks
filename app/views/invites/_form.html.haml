@@ -1,8 +1,8 @@
 = simple_form_for(@invite) do |f|
   .columns
     .column.column-f-x2
-      = f.input :email, :label => 'Кому:'
-      = f.input :body, :label => invite_letter_subject
+      = f.input :email, :label => 'Кому:', :hint => 'Адрес электронной почты.'
+      = f.input :body, :label => invite_letter_subject, :input_html => { :value => "Привет!\n\nПриглашаю тебя воспользоваться сервисом Bookmate — это книжный клуб, где можно читать электронные книги в один клик: свои собственные, книги друзей и из библиотеки клуба." }
       %p
         %strong Мои параграфы: 
         = user_posts_url(current_user)  
@@ -10,6 +10,6 @@
         %strong Начни писать свои: 
         = sign_up_url     
         %br
-        %br   
+        %br
 
       = submit_button 'Отправить приглашение'
