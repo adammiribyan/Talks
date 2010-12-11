@@ -351,6 +351,7 @@ body {
 
 #content .side-bar .name small.age {
 	margin-left: .7em;
+	vertical-align: baseline;
 }
 
 #content .side-bar .about,

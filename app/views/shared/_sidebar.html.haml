@@ -2,36 +2,41 @@
   .name
     .item.photo
       %span.round_picture{:style => "width: 50px; height: 50px;"}
-        TODO
+        = image_tag @post.user.picture.url(:normal), :width => 50, :height => 50
     .item.info
       %strong
-        TODO
+        = @post.user.fullname ? @post.user.fullname : @post.user.username
       %small.age
-        age current_user.birthday
+        = age @post.user.birthday
       %br/
       %small
-        TODO 
-  %hr/
-  .about
-    %strong О себе
-    %p
-      TODO
-  %hr/
-  .accounts
-    %strong Аккаунты
-    %ul.list
-      %li.item
-        .profile.facebook
-          %i.icon
-          .service Facebook
-          %a.id{:href => "http://www.facebook.com/"} robert-532
-      %li.item
-        .profile.twitter
-          %i.icon
-          .service Twitter
-          %a.id{:href => "http://www.facebook.com/"} robertstadler
-      %li.item
-        .profile.gtalk
-          %i.icon
-          .service Google Talk
-          %a.id{:href => "http://www.facebook.com/"} robertstadler
+        = @post.user.city 
+        
+  - unless @post.user.about.empty?
+    %hr/
+    .about
+      %strong О себе
+      %p
+        = @post.user.about
+    %hr/
+    
+  - unless @post.user.contacts.empty?
+    .accounts
+      %strong Аккаунты
+      %ul.list
+        
+        - unless @post.user.facebook.empty?
+          %li.item
+            .profile.facebook
+              %i.icon
+              .service Facebook
+              %a.id{:href => @post.user.facebook_link}
+                = @post.user.facebook
+              
+        - unless @post.user.twitter.empty?
+          %li.item
+            .profile.twitter
+              %i.icon
+              .service Twitter
+              %a.id{:href => @post.user.twitter_link}
+                = @post.user.twitter

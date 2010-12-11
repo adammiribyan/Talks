@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/adammiribyan/clearance.git
-  revision: 4ca2758
+  revision: aced245
   branch: username
   specs:
     clearance (0.9.0.rc9)

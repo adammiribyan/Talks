@@ -2,13 +2,15 @@
   .columns
     .column.column-f-x2
       = f.input :email, :label => 'Кому:', :hint => 'Адрес электронной почты.'
-      = f.input :body, :label => invite_letter_subject, :input_html => { :value => "Привет!\n\nПриглашаю тебя воспользоваться сервисом Bookmate — это книжный клуб, где можно читать электронные книги в один клик: свои собственные, книги друзей и из библиотеки клуба." }
+      = f.input :body, :label => "Тема: <span>" + invite_letter_subject(current_user) + "</span>", :input_html => { :value => t('invites.body') }
       %p
-        %strong Мои параграфы: 
-        = user_posts_url(current_user)  
+        %strong 
+          = t('invites.my_posts_label') 
+        = user_posts_url(current_user)
         %br
-        %strong Начни писать свои: 
-        = sign_up_url     
+        %strong
+          = t('invites.make_yours_label')
+        = sign_up_url 
         %br
         %br
 

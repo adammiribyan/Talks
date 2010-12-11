@@ -1,0 +1,19 @@
+= simple_format t('invites.body')
+%br
+= t('invites.my_posts_label')
+= link_to(user_posts_url(@invite.sender), user_posts_url(@invite.sender))
+%br
+%br
+= t('invites.make_yours_label')
+= link_to(sign_up_url(@invite.token), sign_up_url(@invite.token))
+%br
+%br
+%br
+Talks
+%br
+________________________
+%br
+%br
+= link_to(root_url, root_url)
+|
+= mail_to("feedback@t-a-l-k-s.com")

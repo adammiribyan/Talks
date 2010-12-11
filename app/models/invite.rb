@@ -20,7 +20,7 @@ class Invite < ActiveRecord::Base
   
     def sender_has_invites
       unless sender.invites_limit > 0
-        errors.add_to_base 'Вы использовали все приглашения, которые у вас были.'
+        errors.add :base, 'Вы использовали все приглашения, которые у вас были.'
       end
     end
   

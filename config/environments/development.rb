@@ -28,7 +28,7 @@ Talks::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'baci.lindsaar.net',
+    :domain               => 't-a-l-k-s.com',
     :user_name            => 'adam.miribyan',
     :password             => 'god.love.sex.',
     :authentication       => 'plain',

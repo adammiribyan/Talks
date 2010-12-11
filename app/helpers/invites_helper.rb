@@ -2,15 +2,15 @@
 
 module InvitesHelper
   
-  def invite_letter_subject
-    if current_user
-      if current_user.firstname.nil? or current_user.firstname.empty?
-        name = current_user.username
+  def invite_letter_subject(user)
+    if user
+      if user.firstname.nil? or user.firstname.empty?
+        name = user.username
       else
-        name = current_user.fullname
+        name = user.fullname
       end
       
-      return "Тема: <span>#{name.to_s} приглашает вас на Talks</span>"
+      return t('invites.subject', :sender => name.to_s)
     end
   end
   

@@ -208,3 +208,11 @@ ru:
       words_connector: ", "
       two_words_connector: " и "
       last_word_connector: " и "
+      
+  
+  invites:
+      subject: "%{sender} приглашает вас на Talks"
+      body: "Привет!\n\nПриглашаю тебя воспользоваться сервисом Bookmate — это книжный клуб, где можно читать электронные книги в один клик: свои собственные, книги друзей и из библиотеки клуба."
+      my_posts_label: "Мои параграфы:"
+      make_yours_label: "Начни писать свои:"
+          

@@ -10,6 +10,7 @@ class InvitesController < ApplicationController
     @invite.sender = current_user
     
     if @invite.save
+      UserMailer.invitation(@invite).deliver
       flash[:notice] = "Приглашение успешно отправлено."
       redirect_to root_url
     else
