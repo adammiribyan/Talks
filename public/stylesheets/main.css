@@ -381,6 +381,14 @@ body {
 	top: 50%;
 }
 
+#content .side-bar .accounts .item .homepage .icon {
+	background: url("/images/homepage.png") no-repeat;
+	height: 16px;
+	margin-top: -8px;
+	width: 16px;
+	
+}
+
 #content .side-bar .accounts .item .facebook .icon {
 	background: url("/images/facebook.png") no-repeat;
 	height: 16px;
@@ -389,8 +397,78 @@ body {
 	
 }
 
+#content .side-bar .accounts .item .flickr .icon {
+	background: url("/images/social/flickr.gif") no-repeat;
+	height: 16px;
+	margin-top: -12px;
+	width: 16px;
+	
+}
+
+#content .side-bar .accounts .item .formspring .icon {
+	background: url("/images/social/formspring.png") no-repeat;
+	height: 16px;
+	margin-top: -8px;
+	width: 16px;
+	
+}
+
+#content .side-bar .accounts .item .icq .icon {
+	background: url("/images/social/icq.gif") no-repeat;
+	height: 16px;
+	margin-top: -8px;
+	width: 16px;
+	
+}
+
+#content .side-bar .accounts .item .lastfm .icon {
+	background: url("/images/social/lastfm.gif") no-repeat;
+	height: 20px;
+	margin-top: -10px;
+	width: 16px;
+	
+}
+
+#content .side-bar .accounts .item .livejournal .icon {
+	background: url("/images/social/livejournal.gif") no-repeat;
+	height: 16px;
+	margin-top: -8px;
+	width: 16px;
+	
+}
+
+#content .side-bar .accounts .item .skype .icon {
+	background: url("/images/social/skype.gif") no-repeat;
+	height: 16px;
+	margin-top: -8px;
+	width: 16px;
+	
+}
+
+#content .side-bar .accounts .item .tumblr .icon {
+	background: url("/images/social/tumblr.png") no-repeat;
+	height: 16px;
+	margin-top: -8px;
+	width: 16px;
+	
+}
+
 #content .side-bar .accounts .item .twitter .icon {
-	background: url("/images/twitter.png") no-repeat;
+	background: url("/images/social/newtwitter.png") no-repeat;
+	height: 16px;
+	margin-top: -8px;
+	width: 16px;
+}
+
+#content .side-bar .accounts .item .vkontakte .icon {
+	background: url("/images/social/vkontakte.png") no-repeat;
+	height: 16px;
+	margin-top: -8px;
+	width: 16px;
+}
+
+#content .side-bar .accounts .item .youtube .icon {
+	background: url("/images/social/youtube.gif") no-repeat;
 	height: 16px;
 	margin-top: -8px;
 	width: 16px;

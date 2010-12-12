@@ -14,6 +14,7 @@ class Ability
       can :manage, :all      
       can :assign_featured, Post
       can :assign_roled, User
+      can :assign_invites, User
       can :obtain_additional_details, Post
     else
       can :read, :all 

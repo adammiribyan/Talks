@@ -26,6 +26,10 @@
             = image_tag "eye-open.gif", :height => 10, :width => 16
           %span.hide-pass
             = image_tag "eye-close.gif", :height => 10, :width => 16
+            
+      - if can? :assign_invites, @user
+        = f.input :invites_limit, :label => 'Приглашения'
+        
       - if can? :assign_roles, @user   
         .input.optional    
           %label.boolean.optional{:for => "user[roles][]"} Roles
