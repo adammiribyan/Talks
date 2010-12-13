@@ -19,6 +19,7 @@
       %p
         = @post.user.about
 
+  - unless @post.user.username.empty?
     %hr/ 
     .accounts
       %ul.list

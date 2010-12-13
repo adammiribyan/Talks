@@ -2,17 +2,34 @@
   .column.column-x2
     = render '/shared/sidebar'
     
-  .column.column-x3
-    %h1
-      = @post.title
-    %div
-      = image_tag @post.picture.url(:normal)
-    %div
-      = @post.conversation.markdown.typography.html_safe
-    %div
-      = link_to @post.song_title, @post.song_link
+  .column.column-x4
+     
+    .p-post
+      .l-column.l-column-full
+        .p-post-header
+          %h1= @post.title 
+          %span.p-post-date= I18n.l @post.created_at.to_date
+        .p-post-picture
+          = image_tag(@post.picture.url(:normal))
+          .p-post-picture-author
+            - unless @post.picture_author_link.empty?
+              = link_to @post.picture_author_name, @post.picture_author_link
+            - else
+              = @post.picture_author_name
+        - unless @post.song_link.empty?
+          .p-post-song          
+            = link_to @post.song_title, @post.song_link
+        .p-post-quote
+          = @post.conversation.markdown.typography.html_safe
+        .b-share
+          .b-share-facebook_like
+          .b-share-others
+      .l-column-right
+        .b-footnotes
+          .p-post-notes
+            notenotenotenotenote.
+          .p-post-place
+      .clear
       
     - if can? :update, @post
       = link_to 'Редактировать', edit_post_path(@post)
-              
-  .column.column-x1.column-last
