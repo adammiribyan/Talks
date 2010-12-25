@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101209074435) do
+ActiveRecord::Schema.define(:version => 20101225221703) do
 
   create_table "invites", :force => true do |t|
     t.string   "email"
@@ -34,8 +34,6 @@ ActiveRecord::Schema.define(:version => 20101209074435) do
     t.string   "picture"
     t.string   "picture_author_link"
     t.text     "conversation"
-    t.text     "note"
-    t.string   "place"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

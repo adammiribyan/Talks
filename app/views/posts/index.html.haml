@@ -8,7 +8,7 @@
 - @posts.each do |post|
   %tr
     %td= link_to post.title, post
-    %td= post.conversation + '<br />' + post.note
+    %td= post.conversation
     - if can? :update, Post
       %td= link_to 'Edit', edit_post_path(post)
     - if can? :destroy, @post
