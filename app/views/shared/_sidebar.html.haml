@@ -2,120 +2,120 @@
   .name
     .item.photo
       %span.round_picture{:style => "width: 50px; height: 50px;"}
-        = image_tag @post.user.picture.url(:normal), :width => 50, :height => 50
+        = image_tag @user.picture.url(:normal), :width => 50, :height => 50
     .item.info
       %strong
-        = @post.user.fullname ? @post.user.fullname : @post.user.username
+        = @user.fullname ? @user.fullname : @user.username
       %small.age
-        = age @post.user.birthday
+        = age @user.birthday
       %br/
       %small
-        = @post.user.city 
+        = @user.city
         
-  - unless @post.user.about.empty?
+  - unless @user.about.empty?
     %hr/
     .about
       %strong О себе
       %p
-        = @post.user.about
+        = @user.about
 
-  - unless @post.user.username.empty?
+  - unless @user.username.empty?
     %hr/ 
     .accounts
       %ul.list
         
-        - unless @post.user.homepage.empty?
+        - unless @user.homepage.empty?
           %li.item
             .profile.homepage
               %i.icon
               .service Сайт
-              %a.id{:href => @post.user.homepage_link}
-                = @post.user.homepage
+              %a.id{:href => @user.homepage_link}
+                = @user.homepage
                 
-        - unless @post.user.facebook.empty?
+        - unless @user.facebook.empty?
           %li.item
             .profile.facebook
               %i.icon
               .service Facebook
-              %a.id{:href => @post.user.facebook_link}
-                = @post.user.facebook
+              %a.id{:href => @user.facebook_link}
+                = @user.facebook
                 
-        - unless @post.user.flickr.empty?
+        - unless @user.flickr.empty?
           %li.item
             .profile.flickr
               %i.icon
               .service Flickr
-              %a.id{:href => @post.user.flickr_link}
-                = @post.user.flickr
+              %a.id{:href => @user.flickr_link}
+                = @user.flickr
                 
-        - unless @post.user.formspring.empty?
+        - unless @user.formspring.empty?
           %li.item
             .profile.formspring
               %i.icon
               .service Formspring
-              %a.id{:href => @post.user.formspring_link}
-                = @post.user.formspring
+              %a.id{:href => @user.formspring_link}
+                = @user.formspring
                 
-        - unless @post.user.icq.empty?
+        - unless @user.icq.empty?
           %li.item
             .profile.icq
               %i.icon
               .service ICQ
-              %a.id{:href => @post.user.icq_link}
-                = @post.user.icq
+              %a.id{:href => @user.icq_link}
+                = @user.icq
                 
-        - unless @post.user.lastfm.empty?
+        - unless @user.lastfm.empty?
           %li.item
             .profile.lastfm
               %i.icon
               .service Last.fm
-              %a.id{:href => @post.user.lastfm_link}
-                = @post.user.lastfm
+              %a.id{:href => @user.lastfm_link}
+                = @user.lastfm
                 
-        - unless @post.user.livejournal.empty?
+        - unless @user.livejournal.empty?
           %li.item
             .profile.livejournal
               %i.icon
               .service LiveJouranl
-              %a.id{:href => @post.user.livejournal_link}
-                = @post.user.livejournal
+              %a.id{:href => @user.livejournal_link}
+                = @user.livejournal
                 
-        - unless @post.user.skype.empty?
+        - unless @user.skype.empty?
           %li.item
             .profile.skype
               %i.icon
               .service Skype
-              %a.id{:href => @post.user.skype_link}
-                = @post.user.skype
+              %a.id{:href => @user.skype_link}
+                = @user.skype
         
-        - unless @post.user.tumblr.empty?
+        - unless @user.tumblr.empty?
           %li.item
             .profile.tumblr
               %i.icon
               .service Tumblr
-              %a.id{:href => @post.user.tumblr_link}
-                = @post.user.tumblr
+              %a.id{:href => @user.tumblr_link}
+                = @user.tumblr
               
-        - unless @post.user.twitter.empty?
+        - unless @user.twitter.empty?
           %li.item
             .profile.twitter
               %i.icon
               .service Twitter
-              %a.id{:href => @post.user.twitter_link}
-                = @post.user.twitter
+              %a.id{:href => @user.twitter_link}
+                = @user.twitter
                 
-        - unless @post.user.vkontakte.empty?
+        - unless @user.vkontakte.empty?
           %li.item
             .profile.vkontakte
               %i.icon
               .service ВКонтакте
-              %a.id{:href => @post.user.vkontakte_link}
-                = @post.user.vkontakte
+              %a.id{:href => @user.vkontakte_link}
+                = @user.vkontakte
                 
-        - unless @post.user.youtube.empty?
+        - unless @user.youtube.empty?
           %li.item
             .profile.youtube
               %i.icon
               .service YouTube
-              %a.id{:href => @post.user.youtube_link}
-                = @post.user.youtube
+              %a.id{:href => @user.youtube_link}
+                = @user.youtube

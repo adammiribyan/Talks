@@ -1237,3 +1237,59 @@ body {
 	text-align: center;
 	width: 100%;
 }
+
+.b-formatting-hints {		
+	background: #f5f5ea;
+	height: 100%;
+	margin-bottom: 20px;
+	padding: 15px;	
+}
+
+.b-formatting-hints p {
+	font-size: 12px;
+	line-height: normal !important;
+}
+
+.b-formatting-hints .g-left,
+.b-formatting-hints .g-right {
+	display: inline-block;
+	font-size: 12px;
+	letter-spacing: normal;
+	width: 45%;
+	zoom: 1;
+}
+
+.b-formatting-hints .g-left div,
+.b-formatting-hints .g-right div {
+	margin-bottom: 15px;
+}
+
+.b-formatting-hints h4 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.b-func-buttons {
+	font: normal normal normal 12px/15px Arial, Helvetica, sans-serif;
+	float: right;
+	position: relative;
+	top: 110px;
+}
+
+.b-func-buttons a {
+	/* padding-bottom: 10px; */
+}
+
+.b-func-button-destroy:link,
+.b-func-button-destroy:hover,
+.b-func-button-destroy:visited {
+	color: red;	
+}
+
+.b-func-button-edit:link,
+.b-func-button-edit:hover,
+.b-func-button-edit:visited {
+	color: #060;
+}

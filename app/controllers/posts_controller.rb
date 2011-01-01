@@ -2,7 +2,8 @@ class PostsController < ApplicationController
   
   before_filter :authenticate, :except => [:index, :show]
   before_filter :show_picture_preview, :show_additional_details, :only => [:edit, :update]  
-  before_filter :set_the_user, :except => [:index, :edit, :update, :show]
+  before_filter :set_the_user_to_posts, :except => [:edit, :update, :show]
+  before_filter :set_the_user_to_post, :only => :show
   
   load_and_authorize_resource :user, :find_by => :username
   load_and_authorize_resource :post, :through => :user, :shallow => true  
@@ -47,8 +48,12 @@ class PostsController < ApplicationController
   
   private
   
-      def set_the_user
+      def set_the_user_to_posts
         @user = User.find_by_username(params[:id])
+      end
+      
+      def set_the_user_to_post
+        @user = Post.find_by_id(params[:id]).user
       end
     
       def show_picture_preview

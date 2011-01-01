@@ -41,6 +41,7 @@ class UsersController < Clearance::UsersController
   # В след. версиях -- профиль пользователя.
   def show
     @posts = User.find_by_username(params[:id]).posts.find(:all)
+    @user = User.find_by_username(params[:id])
     render :template => "/posts/index"
   end
   

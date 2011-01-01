@@ -16,8 +16,7 @@ class Post < ActiveRecord::Base
   
   validates :title, :presence => true, :length => { :maximum => 100 }         
   validates :conversation, :presence => true
-  validates :note, :length => { :maximum => 200 }
   validates :picture_author_name, :presence => true
-  validates :song_title, :song_link, :presence => true 
+  validates :song_code, :presence => true 
  
 end

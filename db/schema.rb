@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101225221703) do
+ActiveRecord::Schema.define(:version => 20110101160151) do
 
   create_table "invites", :force => true do |t|
     t.string   "email"
@@ -43,8 +43,7 @@ ActiveRecord::Schema.define(:version => 20101225221703) do
     t.datetime "picture_updated_at"
     t.string   "picture_author_name"
     t.boolean  "featured"
-    t.string   "song_title"
-    t.string   "song_link"
+    t.text     "song_code"
   end
 
   create_table "profiles", :force => true do |t|

@@ -16,16 +16,19 @@
               = link_to @post.picture_author_name, @post.picture_author_link
             - else
               = @post.picture_author_name
-        - unless @post.song_link.empty?
+        - unless @post.song_code.empty?
           .p-post-song          
-            = link_to @post.song_title, @post.song_link
+            = @post.song_code.html_safe
         .p-post-quote
           = @post.conversation.markdown.typography.html_safe
         .b-share
           .b-share-facebook_like
           .b-share-others
       .l-column-right
+        .b-func-buttons  
+          - if can? :update, @post
+            = link_to 'Редактировать', edit_post_path(@post), :class => 'b-func-button-edit'
+            %br
+          - if can? :destroy, @post
+            = link_to 'Удалить', @post, :confirm => 'Вы уверены?', :method => :delete, :class => 'b-func-button-destroy'
       .clear
-      
-    - if can? :update, @post
-      = link_to 'Редактировать', edit_post_path(@post)
