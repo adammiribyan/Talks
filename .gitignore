@@ -7,4 +7,6 @@ tmp/**/*
 doc/api
 doc/app
 Gemfile
+Gemfile.lock
 config/database.yml
+public/assets
