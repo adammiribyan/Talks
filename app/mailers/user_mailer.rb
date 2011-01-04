@@ -1,6 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "noreply@t-a-l-k-s.com"
-  default_url_options[:host] = "localhost:3000"
+  default :from => "noreply@t-a-l-k-s.com"  
   
   def invitation(invite)
     @invite = invite
