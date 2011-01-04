@@ -24,6 +24,17 @@ namespace :deploy do
   task :restart, :roles => :app do
     run "touch #{current_path}/tmp/restart.txt"
   end 
+  
+  desc "Symlink shared configs and folders on each release."
+  task :symlink_shared do
+    run "ln -nfs #{shared_path}/config/database.yml #{current_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/assets #{current_path}/public/assets"
+  end
+  
+  desc "Sync the public/assets directory."
+  task :assets do
+    system "rsync -vr --exclude='.DS_Store' public/assets adam@t-a-l-k-s.com:#{shared_path}/"
+  end  
 end
 
 desc "Remote console on the production appserver"
@@ -35,9 +46,4 @@ task :console, :roles => :app do
     print data
     channel.send_data(input = $stdin.gets) if data =~ /^(>|\?)>/
   end
-end  
-
-
-task :after_symlink, :roles => [:web, :app] do
-  run "perl -i -pe \"s/# ENV\\['RAILS_ENV'\\] \\|\\|= 'production'/ENV['RAILS_ENV'] ||= 'production'/\" #{current_path}/config/environment.rb"
 end

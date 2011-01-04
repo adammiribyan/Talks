@@ -9,7 +9,7 @@
         %h3 
           Все параграфы пользователя
           %strong
-            = @posts.first.user.username
+            = @user.username
       - @posts.each do |post|
         .postPreview
           .image

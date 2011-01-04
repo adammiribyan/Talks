@@ -6,13 +6,14 @@
     .item.info
       %strong
         = @user.fullname ? @user.fullname : @user.username
-      %small.age
-        = age @user.birthday
+      - unless @user.birthday.nil?  
+        %small.age
+          = age @user.birthday
       %br/
       %small
         = @user.city
         
-  - unless @user.about.empty?
+  - unless @user.about.nil? or @user.about.empty?
     %hr/
     .about
       %strong О себе
@@ -24,7 +25,7 @@
     .accounts
       %ul.list
         
-        - unless @user.homepage.empty?
+        - unless @user.homepage.nil? or @user.homepage.empty?
           %li.item
             .profile.homepage
               %i.icon
@@ -32,7 +33,7 @@
               %a.id{:href => @user.homepage_link}
                 = @user.homepage
                 
-        - unless @user.facebook.empty?
+        - unless @user.facebook.nil? or @user.facebook.empty?
           %li.item
             .profile.facebook
               %i.icon
@@ -40,7 +41,7 @@
               %a.id{:href => @user.facebook_link}
                 = @user.facebook
                 
-        - unless @user.flickr.empty?
+        - unless @user.flickr.nil? or @user.flickr.empty?
           %li.item
             .profile.flickr
               %i.icon
@@ -48,7 +49,7 @@
               %a.id{:href => @user.flickr_link}
                 = @user.flickr
                 
-        - unless @user.formspring.empty?
+        - unless @user.formspring.nil? or @user.formspring.empty?
           %li.item
             .profile.formspring
               %i.icon
@@ -56,7 +57,7 @@
               %a.id{:href => @user.formspring_link}
                 = @user.formspring
                 
-        - unless @user.icq.empty?
+        - unless @user.icq.nil? or @user.icq.empty?
           %li.item
             .profile.icq
               %i.icon
@@ -64,7 +65,7 @@
               %a.id{:href => @user.icq_link}
                 = @user.icq
                 
-        - unless @user.lastfm.empty?
+        - unless @user.lastfm.nil? or @user.lastfm.empty?
           %li.item
             .profile.lastfm
               %i.icon
@@ -72,7 +73,7 @@
               %a.id{:href => @user.lastfm_link}
                 = @user.lastfm
                 
-        - unless @user.livejournal.empty?
+        - unless @user.livejournal.nil? or @user.livejournal.empty?
           %li.item
             .profile.livejournal
               %i.icon
@@ -80,7 +81,7 @@
               %a.id{:href => @user.livejournal_link}
                 = @user.livejournal
                 
-        - unless @user.skype.empty?
+        - unless @user.skype.nil? or @user.skype.empty?
           %li.item
             .profile.skype
               %i.icon
@@ -88,7 +89,7 @@
               %a.id{:href => @user.skype_link}
                 = @user.skype
         
-        - unless @user.tumblr.empty?
+        - unless @user.tumblr.nil? or @user.tumblr.empty?
           %li.item
             .profile.tumblr
               %i.icon
@@ -96,7 +97,7 @@
               %a.id{:href => @user.tumblr_link}
                 = @user.tumblr
               
-        - unless @user.twitter.empty?
+        - unless @user.twitter.nil? or @user.twitter.empty?
           %li.item
             .profile.twitter
               %i.icon
@@ -104,7 +105,7 @@
               %a.id{:href => @user.twitter_link}
                 = @user.twitter
                 
-        - unless @user.vkontakte.empty?
+        - unless @user.vkontakte.nil? or @user.vkontakte.empty?
           %li.item
             .profile.vkontakte
               %i.icon
@@ -112,7 +113,7 @@
               %a.id{:href => @user.vkontakte_link}
                 = @user.vkontakte
                 
-        - unless @user.youtube.empty?
+        - unless @user.youtube.nil? or @user.youtube.empty?
           %li.item
             .profile.youtube
               %i.icon
