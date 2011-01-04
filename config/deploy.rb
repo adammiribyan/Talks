@@ -37,6 +37,19 @@ namespace :deploy do
   end  
 end
 
+namespace(:customs) do
+  task :config, :roles => :app do
+    run <<-CMD
+      ln -nfs #{shared_path}/system/database.yml #{release_path}/config/database.yml
+    CMD
+  end
+  task :symlink, :roles => :app do
+    run <<-CMD
+      ln -nfs #{shared_path}/system/assets #{release_path}/public/assets
+    CMD
+  end
+end
+
 desc "Remote console on the production appserver"
 task :console, :roles => :app do
   input = ''
@@ -48,4 +61,6 @@ task :console, :roles => :app do
   end
 end
 
-after "deploy:update_code", "deploy:symlink_shared"
+after "deploy:update_code", "customs:config"
+after "deploy:symlink","customs:symlink"
+after "deploy", "deploy:cleanup"
