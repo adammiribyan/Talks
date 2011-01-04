@@ -40,7 +40,7 @@ class UsersController < Clearance::UsersController
   # Пока что, данным методом выводим все посты, созданные пользователем.
   # В след. версиях -- профиль пользователя.
   def show
-    @posts = User.find_by_username(params[:id]).posts.find(:all)
+    @posts = User.find_by_username(params[:id]).posts.find(:all, :order => 'created_at desc')
     @user = User.find_by_username(params[:id])
     render :template => "/posts/index"
   end
