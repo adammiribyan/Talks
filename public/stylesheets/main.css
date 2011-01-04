@@ -1293,3 +1293,7 @@ body {
 .b-func-button-edit:visited {
 	color: #060;
 }
+
+.round_picture {
+	position: static !important;
+}

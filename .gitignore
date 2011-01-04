@@ -6,3 +6,5 @@ log/*.log
 tmp/**/*
 doc/api
 doc/app
+Gemfile
+config/database.yml
