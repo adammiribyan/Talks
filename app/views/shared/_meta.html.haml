@@ -20,3 +20,7 @@
                                                 
 = csrf_meta_tag
 %meta{:name => 'yandex-verification', :content => '448837f81d93d532'}
+
+- if params[:action] == "show"
+  - unless @post.nil?
+    %link{:rel => "image_src", :href => "#{request.protocol}#{request.host}#{@post.picture.url(:normal)}"}

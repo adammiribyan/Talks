@@ -12,7 +12,7 @@
           %h1= @post.title 
           %span.p-post-date= I18n.l @post.created_at.to_date
         .p-post-picture
-          = image_tag(@post.picture.url(:normal), :height => 370, :width => 550, :rel => "image_src")
+          = image_tag(@post.picture.url(:normal))
           .p-post-picture-author
             - unless @post.picture_author_link.empty?
               = link_to @post.picture_author_name, @post.picture_author_link
@@ -36,9 +36,8 @@
               %script{:src => "http://static.ak.fbcdn.net/connect.php/js/FB.Share", :type => "text/javascript"}            
             .vkontakte              
               %script{:type => "text/javascript", :src => "http://vkontakte.ru/js/api/share.js?9", :charset => "windows-1251"}
-              %script{:type => "text/javascript"}
-                /
-                  = "document.write(VK.Share.button(false, {type: \"button\", text: \"Поделиться\", image: \"#{request.protocol + request.host + @post.picture.url(:normal)}\"}));".html_safe
+              :javascript
+                document.write(VK.Share.button(false, {type: "button", text: "Поделиться"}));
                                 
           .clear          
           .b-share-facebook_like
