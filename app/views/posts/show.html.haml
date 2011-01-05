@@ -12,7 +12,7 @@
           %h1= @post.title 
           %span.p-post-date= I18n.l @post.created_at.to_date
         .p-post-picture
-          = image_tag(@post.picture.url(:normal), :height => 370, :width => 550)
+          = image_tag(@post.picture.url(:normal), :height => 370, :width => 550, :rel => "image_src")
           .p-post-picture-author
             - unless @post.picture_author_link.empty?
               = link_to @post.picture_author_name, @post.picture_author_link
