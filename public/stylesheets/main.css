@@ -1304,7 +1304,8 @@ body {
 .b-formatting-hints .g-right { width: 40% }
 
 .b-formatting-hints .g-left div,
-.b-formatting-hints .g-right div {
+.b-formatting-hints .g-right div,
+.b-formatting-hints .g-center div {
 	margin-bottom: 15px;
 }
 
