@@ -677,6 +677,46 @@ body {
 	padding-left: 10px;
 }
 
+.p-post .b-share {
+    margin: .67em 0 1em 0;
+    white-space: nowrap;
+    z-index: 99;
+}
+
+.p-post .b-share .facebook,
+.p-post .b-share .vkontakte,
+.p-post .b-share .vklike {
+    float: left;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.p-post .b-share .vkontakte {
+    margin-bottom: -1px;
+    position: relative;
+}
+
+.p-post .b-share .vklike {
+    display: inline-block;
+    float: left;    
+    position: relative;
+}
+
+.p-post .b-share .twitter {
+    display: inline-block;
+    float: left;    
+    position: relative;
+    /*top: 4px;*/
+}
+
+.p-post .b-share .facebook {
+    height: 30px;
+    margin-right: 18px;
+    position: relative;
+    top: 1px;   
+}
+
+
 .column-full { width: 970px; }
 
 .column-x1 { width: 170px; }

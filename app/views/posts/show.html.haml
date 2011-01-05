@@ -23,9 +23,27 @@
             = @post.song_code.html_safe
         .p-post-quote
           = @post.conversation.markdown.typography.html_safe
-        .b-share
-          .b-share-facebook_like
+        %hr
+        .b-share          
           .b-share-others
+            
+            .twitter
+              %script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
+              %a{:class => "twitter-share-button", :href => "http://twitter.com/share", :data => {:count => "horizontal", :text => @post.title, :via => "talks_news"}} Tweet
+            .facebook
+              %a{:name => "fb_share", :type => "button_count", :href => "http://www.facebook.com/sharer.php?t=#{@post.title}"} Опубликовать
+              %script{:src => "http://static.ak.fbcdn.net/connect.php/js/FB.Share", :type => "text/javascript"}            
+            .vkontakte
+              :javascript
+                document.write(VK.Share.button(false,{type: "button", text: "Поделиться"}));
+                                
+          .clear          
+          .b-share-facebook_like
+            %script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+            \<fb:like href="              
+            = request.url            
+            \" show_faces="true" width="450" font="arial"></fb:like>  
+            
       .l-column-right
         .b-func-buttons  
           - if can? :update, @post
