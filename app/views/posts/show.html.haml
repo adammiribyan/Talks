@@ -35,8 +35,8 @@
               %a{:name => "fb_share", :type => "button_count", :href => "http://www.facebook.com/sharer.php?t=#{@post.title}"} Опубликовать
               %script{:src => "http://static.ak.fbcdn.net/connect.php/js/FB.Share", :type => "text/javascript"}            
             .vkontakte
-              :javascript
-                document.write(VK.Share.button(false,{type: "button", text: "Поделиться"}));
+              %script{:type => "text/javascript"}
+                = "document.write(VK.Share.button(false,{type: \"button\", text: \"Поделиться\", image: \"#{request.protocol + request.host + @post.picture.url(:normal)}\"}));".html_safe
                                 
           .clear          
           .b-share-facebook_like
