@@ -36,7 +36,7 @@
               %script{:src => "http://static.ak.fbcdn.net/connect.php/js/FB.Share", :type => "text/javascript"}            
             .vkontakte
               %script{:type => "text/javascript"}
-                = "document.write(VK.Share.button(false,{type: \"button\", text: \"Поделиться\", image: \"#{request.protocol + request.host + @post.picture.url(:normal)}\"}));".html_safe
+                = "document.write(VK.Share.button({type: \"button\", text: \"Поделиться\", image: \"#{request.protocol + request.host + @post.picture.url(:normal)}\"}));".html_safe
                                 
           .clear          
           .b-share-facebook_like
