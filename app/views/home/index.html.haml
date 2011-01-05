@@ -28,7 +28,7 @@
                   = link_to post.user.username, post.user, :class => 'author'
                 = I18n.l post.created_at.to_date
             .description
-              = truncate post.conversation.markdown.typography.html_safe, :length => 80, :separator => ' '
+              = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe
     
               
     .posts
@@ -47,7 +47,7 @@
                   = link_to post.user.username, post.user, :class => 'author'
                 = I18n.l post.created_at.to_date
             .description
-              = truncate post.conversation.markdown.typography.html_safe, :length => 80, :separator => ' '
+              = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe
             
   .column.column2-x1.column-last
     %br
