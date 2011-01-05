@@ -1291,13 +1291,17 @@ body {
 }
 
 .b-formatting-hints .g-left,
-.b-formatting-hints .g-right {
+.b-formatting-hints .g-right,
+.b-formatting-hints .g-center {
 	display: inline-block;
 	font-size: 12px;
 	letter-spacing: normal;
-	width: 45%;
 	zoom: 1;
 }
+
+.b-formatting-hints .g-left { width: 33%; }
+.b-formatting-hints .g-center { width: 23%; margin-left: 10px;}
+.b-formatting-hints .g-right { width: 40% }
 
 .b-formatting-hints .g-left div,
 .b-formatting-hints .g-right div {
