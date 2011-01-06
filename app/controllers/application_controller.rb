@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  
+  helper_method :applicants_count
 
   respond_to :html
 
@@ -15,6 +17,14 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
   
-  $applicants = Applicant.all # For beta only
+  def applicants_count
+    @count = Applicant.all.count
+
+    if @count > 0
+      "(#{@count.to_s})"
+    else
+      ""
+    end
+  end
   
 end

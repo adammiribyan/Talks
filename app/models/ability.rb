@@ -37,7 +37,6 @@ class Ability
       can :obtain_additional_details, Post do |post|
         post.try(:user) != user
       end
-      can :read, Applicant # For beta only
     end
     
   end
