@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   
-  helper_method :applicants_count
+  helper_method :applicants_count # For beta only
 
   respond_to :html
 
