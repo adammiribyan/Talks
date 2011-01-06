@@ -1,23 +1,10 @@
-<h1>Listing applicants</h1>
+<h1>В ожидании приглашения</h1>
 
-<table>
-  <tr>
-    <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table cellspacing="10" style="margin-top: 20px">
 <% @applicants.each do |applicant| %>
   <tr>
-    <td><%= applicant.email %></td>
-    <td><%= link_to 'Show', applicant %></td>
-    <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
+    <td width="350px"><%= applicant.email %></td>
     <td><%= link_to 'Destroy', applicant, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Applicant', new_applicant_path %>

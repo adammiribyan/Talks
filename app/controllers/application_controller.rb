@@ -15,4 +15,6 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
   
+  $applicants = Applicant.all # For beta only
+  
 end

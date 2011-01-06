@@ -23,16 +23,22 @@
       %li.username
         .b-user
           %a{:href => user_posts_path(current_user)}
-            = current_user.username            
+            = current_user.username
             %span.round_picture{:style => "width: 25; height: 25"}
-              = image_tag current_user.picture.url(:small), :width => 25, :height => 25      
+              = image_tag current_user.picture.url(:small), :width => 25, :height => 25               
       - if params[:action] == "edit_account" || params[:action] == "edit_profile"
         %li Настройки
       - else
         %li= link_to 'Настройки', profile_settings_user_path(current_user)
+        
+      - if can? :manage, Applicant
+        %li
+          = link_to_unless_current "Заявки", applicants_path
+          %span= applicants_count($applicants)
+        
       - if current_user.invites_limit > 0
         %li= link_to_unless_current 'Пригласить друзей', new_invite_path
-      %li= link_to 'Выйти', sign_out_path, :method => :delete
+      %li= link_to 'Выйти', sign_out_path, :method => :delete      
   - else
     %ul.login-links
       %li.signing
