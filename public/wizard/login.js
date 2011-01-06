@@ -9,7 +9,8 @@
 		<div class="b-form">
 			<div class="input string">
 				<label class="string required" for="session_login">Логин или электронная почта</label>
-				<input class="string optional" id="session_login" name="session[email]" type="text" />
+				<input class="string optional" id="session_login" name="session[email]" type="text" autofocus />
+				<script type="text/javascript">$('#session_login').focus();</script>
 			</div>
 			<div class="input password">
 				<label class="string required" for="session_password">Пароль</label>

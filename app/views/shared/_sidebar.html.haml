@@ -4,8 +4,12 @@
       %span.round_picture{:style => "width: 50px; height: 50px;"}
         = link_to(image_tag(@user.picture.url(:normal), :width => 50, :height => 50), user_posts_path(@user))
     .item.info
-      %strong
-        = @user.fullname ? @user.fullname : @user.username
+      %strong        
+        - unless @user.firstname.nil? or @user.firstname.empty?
+          = @user.fullname
+        - else
+          = @user.username
+          
       - unless @user.birthday.nil?  
         %small.age
           = age @user.birthday

@@ -664,7 +664,7 @@ body {
 }
 
 .p-post-quote {
-	font: normal normal normal 12px/14px 'Courier New', Courier, serif; 
+	font: normal normal normal 13px/15px 'Courier New', Courier, serif; 
 	margin-bottom: 20px;
 }
 
@@ -678,7 +678,7 @@ body {
 }
 
 .p-post .b-share {
-    margin: 1.67em 0 1em 0;
+    margin: 40px 0 1em 0;
     white-space: nowrap;
     z-index: 99;
 }
@@ -1308,6 +1308,10 @@ body {
 .b-formatting-hints .g-right div,
 .b-formatting-hints .g-center div {
 	margin-bottom: 15px;
+}
+
+.b-formatting-hints .g-right div {
+	line-height: 15px;
 }
 
 .b-formatting-hints h4 {

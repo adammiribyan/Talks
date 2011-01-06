@@ -218,7 +218,7 @@ ru:
   
   applicants:
       applicant_added_notice: "Ваш адрес успешно сохранен, ожидайте приглашения в ближайшем будущем."
-      what_to_do_html: "А пока можете почитать наши <a href='http://t-a-l-k-s.com'>параграфы</a>."
+      what_to_do_html: "А пока, можете почитать наши <a href='http://t-a-l-k-s.com'>параграфы</a>."
   
   settings:
       profile:
