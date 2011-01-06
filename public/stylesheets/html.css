@@ -794,6 +794,14 @@ textarea {
 	width: 200px;
 }
 
+.centered {
+	text-align: center;
+}
+
+.b-applicant-form { 
+	margin-top: 40px; 
+}
+
 /**
  * Admin Pane
  */
@@ -856,4 +864,3 @@ div.admin-pane {
 	li {
 		list-style: none;
 	}
- */

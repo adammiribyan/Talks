@@ -1,9 +1,23 @@
 - title "Регистрация"
 
 .columns
-  .column.column-f-x2.b-invite-required   
-    %span 
-      В настоящий момент регистрация доступна
-      %br
-      только по приглашениям
-    = image_tag 'registration-closed.jpg', :width => 320, :height => 320
+  .column.column-f-x2.b-invite-required-wrapper
+    .b-invite-required   
+      %span 
+        В настоящий момент регистрация доступна
+        %br
+        только по приглашению,
+      = image_tag 'registration-closed.jpg', :width => 320, :height => 320
+      
+      %span
+        которое вы можете получить, отправив
+        %br
+        нам свой адрес.
+          
+    %hr      
+    = simple_form_for(@applicant, :remote => true) do |f|
+      .halfsized.centered.b-applicant-form
+        #flash_notice
+        = f.input :email, :label => "Электропочта", :required => false
+        
+        = submit_button 'Отправить', true

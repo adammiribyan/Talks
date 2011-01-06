@@ -1266,14 +1266,15 @@ body {
 
 .b-invite-required {
 	margin: 0 auto;
+	padding-bottom: 20px;
 	text-align: center;
-	width: 100%;
+	width: 100%;		
 }
 
 .b-invite-required span {
 	display: block;
 	font: normal normal italic 22px/23px Georgia, serif;
-	margin: 0px 0 20px 0px;
+	margin: 20px 0 20px 0px;
 	text-align: center;
 	width: 100%;
 }
@@ -1341,4 +1342,16 @@ body {
 
 .round_picture {
 	position: static !important;
+}
+
+.b-invite-required-wrapper {
+	width: 100%;
+}
+
+.b-applicant-notice {
+	background-color: #F5F5EA;
+	display: inline-block;
+	font: normal normal normal 16px/18px Arial, Helvetica, sans-serif;
+	margin-bottom: 10px;
+	padding: 5px 10px;
 }

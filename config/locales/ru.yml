@@ -216,6 +216,10 @@ ru:
       my_posts_label: "Мои параграфы:"
       make_yours_label: "Начни писать свои:"
   
+  applicants:
+      applicant_added_notice: "Ваш адрес успешно сохранен, ожидайте приглашения в ближайшем будущем."
+      what_to_do_html: "А пока можете почитать наши <a href='http://t-a-l-k-s.com'>параграфы</a>."
+  
   settings:
       profile:
           about_hint: "Пара слов о себе."

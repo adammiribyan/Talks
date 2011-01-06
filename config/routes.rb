@@ -1,4 +1,7 @@
 Talks::Application.routes.draw do
+
+  resources :applicants
+
   resources :invites, :only => [:new, :create]
   resources :pages
 

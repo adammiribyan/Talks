@@ -17,7 +17,8 @@ class Ability
       can :assign_invites, User
       can :obtain_additional_details, Post
     else
-      can :read, :all 
+      can :read, [Post, User]      
+      can :create, Applicant # For beta only
     end
     
     if user.is? :author
@@ -36,6 +37,7 @@ class Ability
       can :obtain_additional_details, Post do |post|
         post.try(:user) != user
       end
+      can :read, Applicant # For beta only
     end
     
   end

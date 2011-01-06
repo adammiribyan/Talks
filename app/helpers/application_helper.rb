@@ -27,16 +27,28 @@ module ApplicationHelper
       </a>".html_safe
   end
   
-  def submit_button (name)
-    "<a class='button block-inline submit-form' href='#'>
-      <div class='bg'>
-        <i class='l'></i>
-        <i class='r'></i>
-      </div>
-      <i class='icon'></i>
-      <span class='button-text'>#{name}</span>
-    </a>
-    <input name='commit' style='display: none;' type='submit' value='#{name}' />".html_safe
+  def submit_button (name, remote = false)
+    if remote
+      "<a class='button block-inline submit-form' href='#'>
+        <div class='bg'>
+          <i class='l'></i>
+          <i class='r'></i>
+        </div>
+        <i class='icon'></i>
+        <span class='button-text'>#{name}</span>
+      </a>
+      <input name='commit' style='display: none;' data-remote='true' type='submit' value='#{name}' />".html_safe
+    else
+      "<a class='button block-inline submit-form' href='#'>
+        <div class='bg'>
+          <i class='l'></i>
+          <i class='r'></i>
+        </div>
+        <i class='icon'></i>
+        <span class='button-text'>#{name}</span>
+      </a>
+      <input name='commit' style='display: none;' type='submit' value='#{name}' />".html_safe
+    end
   end
   
   def social_button(alt, url, img, size = 16)
