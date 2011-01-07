@@ -10,9 +10,10 @@
         - else
           = @user.username
           
-      - unless @user.birthday.nil?  
-        %small.age
-          = age @user.birthday
+      - unless @user.birthday.nil? or @user.about.empty?
+        - if @user.show_age 
+          %small.age
+            = age @user.birthday
       %br/
       %small
         = @user.city

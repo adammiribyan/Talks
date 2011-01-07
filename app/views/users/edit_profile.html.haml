@@ -25,6 +25,7 @@
       = f.input :birthday, :as => :date, :start_year => Date.today.year - 90,
                                 :end_year => Date.today.year - 6,
                                 :order => [:day, :month, :year], :label => 'Дата рождения'
+      = f.input :show_age, :label => 'Показывать возраст другим пользователям'
       = f.input :gender, :as => :radio, :collection => { 'мужской' => 'm', 'женский' => 'f' }, :label => 'Пол'
     .column.column-f-x0.contacts
       %hr/

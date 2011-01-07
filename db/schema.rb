@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110105223249) do
+ActiveRecord::Schema.define(:version => 20110107135443) do
 
   create_table "applicants", :force => true do |t|
     t.string   "email"
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(:version => 20110105223249) do
     t.integer  "roles_mask"
     t.integer  "invite_id"
     t.integer  "invites_limit"
+    t.boolean  "show_age"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
