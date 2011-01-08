@@ -1,7 +1,8 @@
+# coding: utf-8
 module ApplicationHelper
   
-  def title(page_title, separator = " / ")
-    content_for(:title) {separator + page_title }
+  def title(page_title)
+    content_for(:title) { "#{page_title} — " }
   end
   
   def form_header(title, hint = " ")
