@@ -673,8 +673,13 @@ body {
 .p-post-picture,
 .p-post-song,
 .p-post-quote,
+.p-post-comments
 .p-post .b-share {
 	padding-left: 10px;
+}
+
+.p-post-comments h3 {
+	margin: 30px 0px 20px 0px;
 }
 
 .p-post .b-share {

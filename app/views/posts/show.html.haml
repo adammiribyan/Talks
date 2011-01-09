@@ -26,22 +26,20 @@
         
         .b-share 
           %hr         
-          .b-share-others
-            
+          .b-share-others            
             .twitter
               %script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
               %a{:class => "twitter-share-button", :href => "http://twitter.com/share", :data => {:count => "horizontal", :text => @post.title, :via => "talks_news"}} Tweet
-            .facebook
-              %a{:name => "fb_share", :type => "button_count", :href => "http://www.facebook.com/sharer.php?t=#{@post.title}"} Опубликовать
-              %script{:src => "http://static.ak.fbcdn.net/connect.php/js/FB.Share", :type => "text/javascript"}            
-            .vkontakte              
-              %script{:type => "text/javascript", :src => "http://vkontakte.ru/js/api/share.js?9", :charset => "windows-1251"}
+            .facebook              
+              \<fb:share-button  layout="standart" type="button_count" href="
+              = request.url
+              \" </fb:share-button>     
+            .vkontakte            
+              #vk_like
               :javascript
-                document.write(VK.Share.button(false, {type: "button", text: "Поделиться"}));
-                                
+                VK.Widgets.Like("vk_like", {type: "mini"});                                
           .clear          
           .b-share-facebook_like
-            %script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
             \<fb:like href="              
             = request.url            
             \" show_faces="true" width="450" font="arial"></fb:like>  
@@ -53,4 +51,8 @@
             %br
           - if can? :destroy, @post
             = link_to 'Удалить', @post, :confirm => 'Вы уверены?', :method => :delete, :class => 'b-func-button-destroy'
+      .clear
+      .p-post-comments
+        %h3 Комментарии
+        = "<fb:comments xid='#{@string_id}' numposts='10' width='550' reverse='true' css='http://anton.gladkoborodov.com/stylesheets/facebook.css?500917'></fb:comments>".html_safe
       .clear
