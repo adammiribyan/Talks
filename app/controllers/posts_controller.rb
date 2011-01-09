@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class PostsController < ApplicationController 
   
   before_filter :authenticate, :except => [:index, :show]
@@ -19,6 +21,7 @@ class PostsController < ApplicationController
 
   def new    
     #@post = @user.posts.new
+    @post.title = "§ #{@user.posts.count.to_i + 1}. " # Adding paragraphe sign
     respond_with(@post)
   end
 
@@ -27,7 +30,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = @user.posts.create(params[:post])
+    @post = @user.posts.new(params[:post])    
+    @post.title = @post.title.strip.chomp(".") # Formatting post title
+    @post.save    
     respond_with(@post)
   end
 
