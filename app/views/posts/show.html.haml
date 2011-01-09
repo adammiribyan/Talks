@@ -31,9 +31,7 @@
               %script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
               %a{:class => "twitter-share-button", :href => "http://twitter.com/share", :data => {:count => "horizontal", :text => @post.title, :via => "talks_news"}} Tweet
             .facebook              
-              \<fb:share-button  layout="standart" type="button_count" href="
-              = request.url
-              \" </fb:share-button>     
+              = "<fb:share-button layout='standart' type='button_count' href='#{request.url}'></fb:share-button>".html_safe  
             .vkontakte            
               #vk_like
               :javascript
