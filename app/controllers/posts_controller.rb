@@ -14,13 +14,23 @@ class PostsController < ApplicationController
   def index    
     respond_with(@posts)
   end
-  
+    
   def recent
     @posts = Post.all :order => 'created_at desc'
     
     respond_with(@posts) do |format|
       format.rss { render :layout => false }
     end
+  end
+  
+  def comments_count    
+    # Сам код для получения кол-ва комментариев
+    session = ::Facebook.session
+    data = session.fql_query("select count from comments_info where xid='post_#{params[:id]}' and app_id='#{Facebook::CONFIG[:app_id]}'")
+    
+    # Вернет массив, вида ["your_post_xid", 123], ["your_post_2_xid", 12331] и т.д.
+    # Соответственно нужно кешировать в базе xid поста на фейсбуке
+    @comments_data = data
   end
 
   def show
@@ -68,7 +78,9 @@ class PostsController < ApplicationController
       end
       
       def set_the_user_to_post
-        @user = Post.find_by_id(params[:id]).user
+        unless params[:id].empty? or params[:id].nil?
+          @user = Post.find_by_id(params[:id]).user
+        end
       end
     
       def show_picture_preview

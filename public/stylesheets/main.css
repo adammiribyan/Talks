@@ -679,6 +679,7 @@ body {
 }
 
 .p-post-comments h3 {
+	font-weight: bold;
 	margin: 30px 0px 20px 0px;
 }
 
