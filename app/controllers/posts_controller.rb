@@ -23,14 +23,13 @@ class PostsController < ApplicationController
     end
   end
   
-  def comments_count    
-    # Сам код для получения кол-ва комментариев
+  def comments_count
     session = ::Facebook.session
-    data = session.fql_query("select count from comments_info where xid='post_#{params[:id]}' and app_id='#{Facebook::CONFIG[:app_id]}'")
+    @data = session.fql_query("select count from comments_info where xid='post_#{params[:id]}' and app_id='#{Facebook::CONFIG[:app_id]}'")
     
-    # Вернет массив, вида ["your_post_xid", 123], ["your_post_2_xid", 12331] и т.д.
-    # Соответственно нужно кешировать в базе xid поста на фейсбуке
-    @comments_data = data
+    respond_with(@posts) do |format|
+      format.js { render :layout => false }
+    end
   end
 
   def show
