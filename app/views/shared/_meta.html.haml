@@ -19,6 +19,7 @@
                                                 
 = csrf_meta_tag
 %meta{:name => 'yandex-verification', :content => '448837f81d93d532'}
+%link{:rel => "alternate", :type => "application/rss+xml", :title => t("feed.new_posts"), :href => recent_posts_path(:format => :rss)} 
 
 - if params[:action] == "show"
   - unless @post.nil?

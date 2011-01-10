@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   
   helper_method :applicants_count # For beta only
 
-  respond_to :html
+  respond_to :html, :rss
 
   include Clearance::Authentication
 

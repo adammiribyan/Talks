@@ -13,7 +13,7 @@ class Ability
     if user.is? :admin
       can :manage, :all      
       can :assign_featured, Post
-      can :assign_roled, User
+      can :assign_roles, User
       can :assign_invites, User
       can :obtain_additional_details, Post
     else
@@ -22,7 +22,7 @@ class Ability
     end
     
     if user.is? :author
-      can :read, :all
+      can :read, [Post, User]
       can :create, Post
       can :update, Post do |post|
         post.try(:user) == user

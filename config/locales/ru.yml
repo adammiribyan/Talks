@@ -226,3 +226,6 @@ ru:
   
   post:
       song_code_hint_html: "Сюда вставляете код понравившейся песни с <a href='http://prostopleer.com'>Простоплеера</a> или <a href='http://weborama.ru'>Веборамы</a>."
+      
+  feed:
+      new_posts: "Новые параграфы"

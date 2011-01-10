@@ -2,16 +2,25 @@
 
 class PostsController < ApplicationController 
   
-  before_filter :authenticate, :except => [:index, :show]
+  before_filter :authenticate, :except => [:index, :show, :recent]
   before_filter :show_picture_preview, :show_additional_details, :only => [:edit, :update]  
-  before_filter :set_the_user_to_posts, :except => [:edit, :update, :show]
+  before_filter :set_the_user_to_posts, :except => [:edit, :update, :show, :recent]
   before_filter :set_the_user_to_post, :only => :show
   
   load_and_authorize_resource :user, :find_by => :username
-  load_and_authorize_resource :post, :through => :user, :shallow => true  
+  load_and_authorize_resource :post, :through => :user, :shallow => true, :except => :recent
+  
  
   def index    
     respond_with(@posts)
+  end
+  
+  def recent
+    @posts = Post.all :order => 'created_at desc'
+    
+    respond_with(@posts) do |format|
+      format.rss { render :layout => false }
+    end
   end
 
   def show
