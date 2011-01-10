@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   
   def comments_count
     session = ::Facebook.session
-    @data = session.fql_query("select count from comments_info where xid='post_#{params[:id]}' and app_id='#{Facebook::CONFIG[:app_id]}'")
+    @data = session.fql_query("select count from comments_info where xid='post_#{params[:id]}' and app_id='#{Facebook::CONFIG[:app_id]}'", "JSON")
     
     respond_with(@posts) do |format|
       format.js { render :layout => false }
