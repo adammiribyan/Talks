@@ -1,4 +1,4 @@
-require 'lib/recipes/thinking_sphinx'
+require '/home/adam/talks/lib/recipes/thinking_sphinx'
 
 set :user, 'adam'
 
@@ -76,7 +76,7 @@ task :console, :roles => :app do
 end
 
 
-before "deploy:update_code", "thinking_sphinx:install:stop"
-after "deploy:update_code", "customs:config", "customs:symlink_sphinx_indexes", "thinking_sphinx:install:configure", "thinking_sphinx:install:start"
+before "deploy:update_code", "thinking_sphinx:stop"
+after "deploy:update_code", "customs:config", "customs:symlink_sphinx_indexes", "thinking_sphinx:configure", "thinking_sphinx:start"
 after "deploy:symlink","customs:symlink"
 after "deploy", "deploy:cleanup"
