@@ -1,3 +1,5 @@
+require 'lib/recipes/thinking_sphinx'
+
 set :user, 'adam'
 
 set :application, "talks"
@@ -11,6 +13,7 @@ set :repository,  "git@github.com:adammiribyan/Talks.git"
 set :deploy_via, :remote_cache
 
 ssh_options[:forward_agent] = true
+
 default_run_options[:pty] = true
 
 set :keep_releases, 10
@@ -56,6 +59,9 @@ namespace(:customs) do
       ln -nfs #{shared_path}/system/assets #{release_path}/public/assets
     CMD
   end
+  task :symlink_sphinx_indexes, :roles => [:app] do
+    run "ln -nfs #{shared_path}/db/sphinx #{release_path}/db/sphinx"
+  end
 end
 
 desc "Remote console on the production appserver"
@@ -69,6 +75,8 @@ task :console, :roles => :app do
   end
 end
 
-after "deploy:update_code", "customs:config"
+
+before "deploy:update_code", "thinking_sphinx:install:stop"
+after "deploy:update_code", "customs:config", "customs:symlink_sphinx_indexes", "thinking_sphinx:install:configure", "thinking_sphinx:install:start"
 after "deploy:symlink","customs:symlink"
 after "deploy", "deploy:cleanup"
