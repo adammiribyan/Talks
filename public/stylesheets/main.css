@@ -1364,3 +1364,31 @@ body {
 	margin-bottom: 10px;
 	padding: 5px 10px;
 }
+
+.b-search-field {
+	position: relative;
+	width: 100%;
+	zoom: 1;
+}
+
+.b-search-field .results-count {
+	display: inline-block;
+	color: #888;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 6px 0px 0px 3px;	
+}
+
+.b-search-field input {
+	border: 1px solid #CCC;
+	display: inline-block;
+	font-size: 14px;
+	letter-spacing: normal;
+	padding: 8px;
+	width: 450px;
+	zoom: 1;
+}
+
+.b-search-field hr {
+	margin: 20px 0px 30px;
+}

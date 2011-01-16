@@ -15,9 +15,9 @@ Talks::Application.routes.draw do
     end
   end 
   
-  match "/recent" => "posts#recent", :as => :recent_posts
-  
+  match "/recent" => "posts#recent", :as => :recent_posts  
   match "/posts/:id/comments/count" => "posts#comments_count", :as => :post_comments_count
+  match "/search" => "posts#search", :as => :search
   
   root :to => "home#index"
 end

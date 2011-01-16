@@ -34,5 +34,8 @@ Talks::Application.configure do
     :authentication       => 'plain',
     :enable_starttls_auto => true  
   }
+  
+  # The locale for Faker gem  
+  Faker::Config.locale = :ru
 end
 

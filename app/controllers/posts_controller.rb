@@ -2,17 +2,22 @@
 
 class PostsController < ApplicationController 
   
-  before_filter :authenticate, :except => [:index, :show, :recent]
+  before_filter :authenticate, :except => [:index, :show, :recent, :search]
   before_filter :show_picture_preview, :show_additional_details, :only => [:edit, :update]  
-  before_filter :set_the_user_to_posts, :except => [:edit, :update, :show, :recent]
+  before_filter :set_the_user_to_posts, :except => [:edit, :update, :show, :recent, :search]
   before_filter :set_the_user_to_post, :only => :show
   
   load_and_authorize_resource :user, :find_by => :username
-  load_and_authorize_resource :post, :through => :user, :shallow => true, :except => :recent
+  load_and_authorize_resource :post, :through => :user, :shallow => true, :except => [:recent, :search]
   
  
   def index    
     respond_with(@posts)
+  end
+  
+  def search
+    @query = params[:query].to_s
+    @posts = Post.search @query   
   end
     
   def recent
@@ -25,7 +30,8 @@ class PostsController < ApplicationController
   
   def comments_count
     session = ::Facebook.session
-    @data = session.fql_query("select count from comments_info where xid='post_#{params[:id]}' and app_id='#{Facebook::CONFIG[:app_id]}'", "JSON")
+    @result = session.fql_query("select count from comments_info where xid='post_#{params[:id]}' and app_id='#{Facebook::CONFIG[:app_id]}'")
+    @data = @result.map(&:values).flatten.shift
     
     respond_with(@posts) do |format|
       format.js { render :layout => false }

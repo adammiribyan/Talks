@@ -27,13 +27,6 @@ ActiveRecord::Schema.define(:version => 20110107135443) do
     t.datetime "updated_at"
   end
 
-  create_table "pages", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.string   "url"
@@ -50,25 +43,6 @@ ActiveRecord::Schema.define(:version => 20110107135443) do
     t.string   "picture_author_name"
     t.boolean  "featured"
     t.text     "song_code"
-  end
-
-  create_table "profiles", :force => true do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "userpic"
-    t.string   "gender"
-    t.date     "birthday"
-    t.string   "city"
-    t.text     "about"
-    t.text     "contacts"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "user_sessions", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

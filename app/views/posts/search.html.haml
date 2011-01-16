@@ -1,0 +1,28 @@
+- title "Поиск: «#{@query}» — #{search_results_count @posts.count, 2}"
+
+%h1.form Результаты поиска
+%span.head-note.block-inline 
+.b-line.b-line-thin
+  
+.b-search-field  
+  %form{:action => "/search"}
+    %input{:name => "query", :type => "search", :value => @query}
+    %span.results-count= search_results_count @posts.count
+  %hr/
+  
+  
+.posts
+  - @posts.each do |post|
+    .postPreview
+      .image
+        = link_to image_tag(post.picture.url(:preview), :class => "rc4"), post
+      .text
+        .header
+          %h2
+            = link_to post.title, post
+          %span.data
+            = succeed "," do
+              = link_to post.user.username, post.user, :class => 'author'
+            = I18n.l post.created_at.to_date
+        .description
+          = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe
