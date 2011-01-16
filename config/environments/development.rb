@@ -36,6 +36,6 @@ Talks::Application.configure do
   }
   
   # The locale for Faker gem  
-  Faker::Config.locale = :ru
+  # Faker::Config.locale = :ru
 end
 
