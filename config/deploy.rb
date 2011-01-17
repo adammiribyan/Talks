@@ -77,6 +77,6 @@ end
 
 
 before "deploy:update_code", "thinking_sphinx:stop"
-after "deploy:update_code", "customs:config", "customs:symlink_sphinx_indexes", "thinking_sphinx:configure", "thinking_sphinx:start"
+after "deploy:update_code", "customs:config", "customs:symlink_sphinx_indexes", "thinking_sphinx:configure"
 after "deploy:symlink","customs:symlink"
 after "deploy", "deploy:cleanup"
