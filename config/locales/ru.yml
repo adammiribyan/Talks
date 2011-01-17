@@ -229,3 +229,7 @@ ru:
       
   feed:
       new_posts: "Новые параграфы"
+      
+  pagination:
+      prev_page: "Предыдущая страница"
+      next_page: "Следующая страница"

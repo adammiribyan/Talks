@@ -26,3 +26,5 @@
             = I18n.l post.created_at.to_date
         .description
           = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe
+  
+  = will_paginate @posts, :previous_label => t("pagination.prev_page"), :next_label => t("pagination.next_page")

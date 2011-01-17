@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   
   def search
     @query = params[:query].to_s
-    @posts = Post.search @query   
+    @posts = Post.search @query, :page => params[:page], :per_page => 20   
   end
     
   def recent
