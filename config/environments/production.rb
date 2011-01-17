@@ -58,4 +58,10 @@ Talks::Application.configure do
     :authentication       => 'plain',
     :enable_starttls_auto => true  
   }
+  
+  # Configure exception notification which will be sent to your email
+  config.middleware.use ExceptionNotifier,
+  :email_prefix => "We've got a problem: ",
+  :sender_address => %{"notifier" <notifier@t-a-l-k-s.com>},
+  :exception_recipients => %w{adam.miribyan@gmail.com}
 end
