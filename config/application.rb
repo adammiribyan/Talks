@@ -40,6 +40,12 @@ module Talks
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]    
+    config.filter_parameters += [:password]  
+    
+    # Configure exception notification which will be sent to your email
+    config.middleware.use ExceptionNotifier,
+    :email_prefix => "We've got a problem: ",
+    :sender_address => %{"notifier" <notifier@t-a-l-k-s.com>},
+    :exception_recipients => %w{adam.miribyan@gmail.com}
   end
 end
