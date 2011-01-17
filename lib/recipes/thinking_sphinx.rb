@@ -14,21 +14,21 @@ Capistrano::Configuration.instance(:must_exist).load do
 DESC
 
       task :sphinx do
-        with_postgres = false
-        begin
-          run "which pg_config" do |channel, stream, data|
-            with_postgres = !(data.nil? || data == "")
-          end
-        rescue Capistrano::CommandError => e
-          puts "Continuing despite error: #{e.message}"
-        end
+        # with_postgres = false
+        # begin
+        #   run "which pg_config" do |channel, stream, data|
+        #    with_postgres = !(data.nil? || data == "")
+        #  end
+        # rescue Capistrano::CommandError => e
+        #   puts "Continuing despite error: #{e.message}"
+        # end
       
         args = []
-        if with_postgres
-          run "pg_config --pkgincludedir" do |channel, stream, data|
-            args << "--with-pgsql=#{data}"
-          end
-        end
+        # if with_postgres
+        #   run "pg_config --pkgincludedir" do |channel, stream, data|
+        #     args << "--with-pgsql=#{data}"
+        #   end
+        # end
         args << fetch(:thinking_sphinx_configure_args, '')
         
         commands = <<-CMD
