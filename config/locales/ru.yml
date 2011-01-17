@@ -231,5 +231,5 @@ ru:
       new_posts: "Новые параграфы"
       
   pagination:
-      prev_page: "Предыдущая страница"
-      next_page: "Следующая страница"
+      prev_page: "← предыдущая"
+      next_page: "следующая →"
