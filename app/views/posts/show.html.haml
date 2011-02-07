@@ -36,7 +36,17 @@
               #vk_like
               :javascript
                 VK.Widgets.Like("vk_like", {type: "mini"});                                
-          .clear          
+          .clear
+          .rating
+            %span
+              Рейтинг: 
+              = get_votes_count(@post)
+            .rating-actions
+              %span.add
+                +
+              %span.deduct
+                :plain
+                  -            
           .b-share-facebook_like
             \<fb:like href="              
             = request.url            
@@ -52,7 +62,7 @@
       .clear
       .p-post-comments
         %h3 
-          Комментарии,
+          Комментарии
           %span#comments_count
         = "<fb:comments xid='#{@string_id}' numposts='10' width='550' reverse='true' css='http://anton.gladkoborodov.com/stylesheets/facebook.css?500917'></fb:comments>".html_safe
       .clear

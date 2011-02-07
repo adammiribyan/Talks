@@ -1393,3 +1393,36 @@ body {
 .b-search-field hr {
 	margin: 20px 0px 30px;
 }
+<<<<<<< Updated upstream
+=======
+
+.pagination {
+	border-top: 1px solid #d6d6d6;
+	color: #999;
+	padding: 24px 0px 0px 20px;
+	margin-top: 20px;
+}
+
+.pagination a,
+.pagination em {
+	color: #51B98C;
+	font-size: 28px;
+	padding: 0px 5px;
+}
+
+.pagination em {
+	color: #999;	
+	font-style: normal;
+	font-size: 33px;
+}
+
+.pagination .previous_page,
+.pagination .next_page {
+	font-size: 22px;
+}
+
+.rating-actions span {
+	font-size: 16px;
+	cursor: pointer;
+}
+>>>>>>> Stashed changes

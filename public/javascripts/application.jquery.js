@@ -30,5 +30,9 @@ $(document).ready(function(){
 	    jCurrentInput.remove();
 	    
 	    $('input.password').show();
+	});
+	
+	$(".rating-actions > .add").click(function() {
+		alert("add!");
 	})	
 });
