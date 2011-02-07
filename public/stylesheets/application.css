@@ -14,6 +14,7 @@
   position: relative;
   text-align: center;
   width: 100%;
+  padding-bottom: 1.5em;
 }
 .b-whatistalks .b-title h1 {
   font-family: 'Geogia', serif;
@@ -42,17 +43,31 @@
 .b-whatistalks .b-important-content {
   display: inline-block;
   width: 100%;
+  margin-top: 60px;
   margin-right: -50px;
-  padding-left: 125px;
+  padding-left: 130px;
   position: relative;
   zoom: 1;
+}
+.b-whatistalks .b-important-content h2 {
+  margin: 0px 0px 0.648em 0px;
+  padding: 0px;
+  font-family: 'Times New Roman';
+  font-size: 26px;
+  font-style: bold;
+}
+.b-whatistalks .b-important-content p {
+  font-size: 14px;
+  line-height: 1.34em;
+  margin-bottom: 1.34em;
 }
 .b-whatistalks .b-important-content .b-block {
   position: relative;
   display: inline-block;
   width: 350px;
-  float: left;
   margin-right: 50px;
-  height: 250px;
+  margin-bottom: 30px;
+  vertical-align: top;
   zoom: 1;
 }
+.b-whatistalks .b-important-content .b-block .b-par_adding { margin-top: -6px; }
