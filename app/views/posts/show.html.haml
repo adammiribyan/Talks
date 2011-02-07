@@ -36,17 +36,7 @@
               #vk_like
               :javascript
                 VK.Widgets.Like("vk_like", {type: "mini"});                                
-          .clear
-          .rating
-            %span
-              Рейтинг: 
-              = get_votes_count(@post)
-            .rating-actions
-              %span.add
-                +
-              %span.deduct
-                :plain
-                  -            
+          .clear                
           .b-share-facebook_like
             \<fb:like href="              
             = request.url            
