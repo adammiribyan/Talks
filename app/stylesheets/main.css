@@ -1393,6 +1393,8 @@ body {
 .b-search-field hr {
 	margin: 20px 0px 30px;
 }
+<<<<<<< Updated upstream
+=======
 
 .pagination {
 	border-top: 1px solid #d6d6d6;
@@ -1418,3 +1420,10 @@ body {
 .pagination .next_page {
 	font-size: 22px;
 }
+
+.rating-actions span {
+	font-size: 16px;
+	cursor: pointer;
+}
+
+

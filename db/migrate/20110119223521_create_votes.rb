@@ -1,7 +1,8 @@
 class CreateVotes < ActiveRecord::Migration
   def self.up
     create_table :votes do |t|
-      t.text :operator
+      t.string :operator
+      t.string :type
       t.integer :post_id
       t.integer :user_id
 

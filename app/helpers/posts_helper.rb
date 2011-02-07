@@ -24,5 +24,13 @@ module PostsHelper
     
       "#{declinated_name_for_found} #{count.to_s} #{declinated_name_for_result}"
     end
-  end  
+  end 
+  
+  def get_votes_count(post)
+    votes_plus = post.votes.where("operator = ?", "+").count
+    votes_minus = post.votes.where("operator = ?", "-").count
+    votes = (votes_plus.to_i - votes_minus.to_i)
+    
+    return votes
+  end
 end
