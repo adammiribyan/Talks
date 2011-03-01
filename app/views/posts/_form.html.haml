@@ -54,6 +54,8 @@
             = link_to @post.user.username, @post.user
             = I18n.l @post.created_at.to_time
         %hr/
+        = f.input :is_published, :label => 'Публиковать', :hint => 'Показывать параграф другим пользователям.'
+        %hr/
         
       = f.input :picture, :as => :file, :label => 'Картинка', :required => true
       - if @show_picture_preview

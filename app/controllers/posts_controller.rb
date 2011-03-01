@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   
  
   def index    
+    @posts = Post.published.all
     respond_with(@posts)
   end
   
@@ -27,7 +28,7 @@ class PostsController < ApplicationController
   end
     
   def recent
-    @posts = Post.all :order => 'created_at desc'
+    @posts = Post.published.all :order => 'created_at desc'
     
     respond_with(@posts) do |format|
       format.rss { render :layout => false }

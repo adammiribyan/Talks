@@ -2,9 +2,7 @@ class Post < ActiveRecord::Base
   
   belongs_to :user
   has_many :votes
-  has_many :users, :through => :votes
-  
-  scope :published, :conditions => { :is_published => true }
+  has_many :users, :through => :votes  
   
   define_index do
     indexes :conversation
@@ -14,6 +12,7 @@ class Post < ActiveRecord::Base
   end
   
   scope :featured, :conditions => { :featured => true } # TODO: would be better to use is_featured
+  scope :published, :conditions => { :is_published => true }
   
   has_attached_file :picture,
                     :styles => { :normal  => "550x370#",
