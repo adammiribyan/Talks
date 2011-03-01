@@ -5,9 +5,7 @@ Talks::Application.routes.draw do
   resources :invites, :only => [:new, :create]
   
   resources :users, :shallow => true do
-    resources :posts do
-      get "publish_all" => "posts#publish_all", :as => :publish_all
-    end
+    resources :posts
     
     member do
       get "/settings" => "users#redirect_to_settings"
@@ -21,6 +19,8 @@ Talks::Application.routes.draw do
   match "/recent" => "posts#recent", :as => :recent_posts  
   match "/posts/:id/comments/count" => "posts#comments_count", :as => :post_comments_count
   match "/search" => "posts#search", :as => :search  
+  
+  get "/publish_all" => "posts#publish_all", :as => :publish_all
   
   root :to => "home#index"
 end
