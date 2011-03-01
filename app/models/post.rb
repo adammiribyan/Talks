@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
   has_many :votes
   has_many :users, :through => :votes
   
+  scope :published, :conditions => { :is_published => true }
+  
   define_index do
     indexes :conversation
     indexes :title    

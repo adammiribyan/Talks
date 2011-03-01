@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110119223521) do
+ActiveRecord::Schema.define(:version => 20110301181923) do
 
   create_table "applicants", :force => true do |t|
     t.string   "email"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20110119223521) do
     t.string   "picture_author_name"
     t.boolean  "featured"
     t.text     "song_code"
+    t.boolean  "is_published"
   end
 
   create_table "users", :force => true do |t|

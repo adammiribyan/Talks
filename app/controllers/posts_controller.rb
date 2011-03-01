@@ -15,6 +15,10 @@ class PostsController < ApplicationController
     respond_with(@posts)
   end
   
+  def publish_all 
+    Post.update_all :is_published => true
+  end
+  
   def search
     @query = params[:query].to_s
     @posts = Post.search @query, :page => params[:page], :per_page => 20   
