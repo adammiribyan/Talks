@@ -11,8 +11,12 @@ class PostsController < ApplicationController
   load_and_authorize_resource :post, :through => :user, :shallow => true, :except => [:recent, :search]
   
  
-  def index    
-    @posts = Post.published.all
+  def index
+    unless current_user and current_user == @user
+      @posts = @user.posts.published.order("created_at desc")
+    else
+      @posts = @user.posts.order("created_at desc")
+     end
     respond_with(@posts)
   end
   
