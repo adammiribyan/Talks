@@ -16,7 +16,7 @@ class PostsController < ApplicationController
       @posts = @user.posts.published.order("created_at desc")
     else
       @posts = @user.posts.order("created_at desc")
-     end
+    end
     respond_with(@posts)
   end
   
