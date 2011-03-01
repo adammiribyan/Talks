@@ -16,7 +16,9 @@ class PostsController < ApplicationController
   end
   
   def publish_all 
-    Post.update_all :is_published => true
+    if Post.update_all :is_published => true
+      redirect_to :root_url, :notice => "All posts are marked as published."
+    end
   end
   
   def search
