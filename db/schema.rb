@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301202419) do
+ActiveRecord::Schema.define(:version => 20110312114745) do
 
   create_table "applicants", :force => true do |t|
     t.string   "email"
@@ -81,6 +81,14 @@ ActiveRecord::Schema.define(:version => 20110301202419) do
     t.string   "type"
     t.integer  "post_id"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "weeks", :force => true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

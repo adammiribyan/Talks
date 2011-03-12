@@ -1,5 +1,7 @@
 Talks::Application.routes.draw do
 
+  resources :weeks
+
   resources :applicants
   
   resources :invites, :only => [:new, :create]
