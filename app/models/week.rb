@@ -1,5 +1,5 @@
 class Week < ActiveRecord::Base
-  to_param do
+  def to_param
     slug || id.to_s
   end
   
