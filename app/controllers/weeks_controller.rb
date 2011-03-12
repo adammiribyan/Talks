@@ -26,7 +26,7 @@ class WeeksController < ApplicationController
   end
 
   def update
-    @week = Week.find(params[:id])
+    @week = Week.find(params[:id]) or raise ActiveRecord::RecordNotFound
     
     if @week.update_attributes(params[:week])
       recirect_to @week, :notice => t("weeks.update_succeed")

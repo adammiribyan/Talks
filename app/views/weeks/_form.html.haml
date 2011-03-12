@@ -3,7 +3,10 @@
     .column.column-f-x2
       = f.input :name, :label => "Название", :hint => "Крутое название недели.", :required => :true
       = char_counter_for 'week_name', 100
-      = f.input :slug, :label => "Тоже самое, латиницей", :hint => "Только строчные латинские буквы, слова разделять дефисом.", :required => true
+      
+      - unless params[:action] == "edit"        
+        = f.input :slug, :label => "Тоже самое, латиницей", :hint => "Только строчные латинские буквы, слова разделять дефисом. Не использовать слова “talks”, “week”.", :required => true
+     
       = f.input :description, :label => "Описание", :hint => "Предельно короткое описание темы недели."
       = char_counter_for 'week_description', 140
       = submit_button "Сохранить"
