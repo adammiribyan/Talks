@@ -233,3 +233,8 @@ ru:
   pagination:
       prev_page: "← предыдущая"
       next_page: "следующая →"
+  
+  weeks:
+      create_succeed: "Новая неделя успешно создана."
+      update_succeed: "Неделя была успешно изменена."
+      
