@@ -1,0 +1,17 @@
+- title @week.name
+
+%h1.form= @week.name
+%span.head-note.block-inline 
+.b-line.b-line-mid.b-line-thin
+
+.b-week-info-wrap
+  .b-week-info
+    .b-week-info-picture
+      = image_tag @week.picture.url(:thumb)
+    .b-week-info-text
+      = @week.description
+    .b-week-info-actions
+      = link_to 'Редактировать', edit_week_path(@week), :class => 'b-func-button-edit'
+      %br
+      = link_to 'Удалить', @week, :confirm => 'Вы уверены?', :method => :delete, :class => 'b-func-button-destroy'
+  .clear
