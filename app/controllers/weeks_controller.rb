@@ -1,4 +1,8 @@
+# encoding: utf-8
+
 class WeeksController < ApplicationController
+  before_filter :show_picture_preview, :only => [:edit, :update]
+  
   def index
     redirect_to root_url
   end
@@ -26,10 +30,10 @@ class WeeksController < ApplicationController
   end
 
   def update
-    @week = Week.find(params[:id]) or raise ActiveRecord::RecordNotFound
+    @week = Week.find_by_slug(params[:id]) or raise ActiveRecord::RecordNotFound
     
     if @week.update_attributes(params[:week])
-      recirect_to @week, :notice => t("weeks.update_succeed")
+      redirect_to @week, :notice => t("weeks.update_succeed")
     else
       render :action => "edit"
     end
@@ -40,4 +44,9 @@ class WeeksController < ApplicationController
     redirect_to weeks_url if @week.destroy
   end
   
+  private
+    
+    def show_picture_preview
+      @show_picture_preview = true
+    end
 end

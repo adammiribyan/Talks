@@ -1,12 +1,14 @@
-= simple_form_for @week do |f|
+= simple_form_for @week, :html => { :multipart => true } do |f|
   .columns
     .column.column-f-x2
-      = f.input :name, :label => "Название", :hint => "Крутое название недели.", :required => :true
+      = f.input :name, :label => "Название", :hint => "Крутое название недели.", :required => false
       = char_counter_for 'week_name', 100
-      
-      - unless params[:action] == "edit"        
-        = f.input :slug, :label => "Тоже самое, латиницей", :hint => "Только строчные латинские буквы, слова разделять дефисом. Не использовать слова “talks”, “week”.", :required => true
-     
+      = f.input :slug, :label => "Тоже самое, латиницей", :hint => "Только строчные латинские буквы, слова разделять дефисом. Не использовать слова “talks”, “week”.", :required => false
       = f.input :description, :label => "Описание", :hint => "Предельно короткое описание темы недели."
       = char_counter_for 'week_description', 140
       = submit_button "Сохранить"
+    .column.column-f-x1
+      = f.input :picture, :as => :file, :label => 'Картинка', :required => false
+      - if @show_picture_preview
+        .b-picture-preview
+          = image_tag @week.picture.url(:thumb)
