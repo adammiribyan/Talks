@@ -3,6 +3,10 @@
     .column.column-f-x2
       = f.input :title, :label => 'Заголовок'
       = char_counter_for 'post_title', 100  
+      - if @week
+        %div
+          = check_box_tag("post[week_id]", @week.id, @post.week_id.present?)
+          = h @week.name
       = f.input :conversation, :label => 'Диалог'
       .b-formatting-hints#formattingHints       
         .g-left

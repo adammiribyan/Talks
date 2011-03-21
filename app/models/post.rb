@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   
   belongs_to :user
+  belongs_to :week
   has_many :votes
   has_many :users, :through => :votes  
   

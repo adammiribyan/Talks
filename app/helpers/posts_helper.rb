@@ -33,4 +33,5 @@ module PostsHelper
     
     return votes
   end
+  
 end

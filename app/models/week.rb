@@ -3,6 +3,9 @@ class Week < ActiveRecord::Base
     slug || id.to_s
   end 
   
+  scope :current, where(:created_at => 1.week.ago..Time.now)
+  
+  has_many :posts
   has_attached_file :picture, :styles => { :thumb   => "70x70#" },
                   :url => "/assets/:class-:attachment/:id/:basename-:style.:extension",
                   :path => ":rails_root/public/assets/:class-:attachment/:id/:basename-:style.:extension"
