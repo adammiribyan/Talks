@@ -1,6 +1,10 @@
 Talks::Application.routes.draw do
 
-  resources :weeks
+  resources :weeks do
+    member do
+      get "/status/:value" => "weeks#update_status", :as => :update_status
+    end
+  end
 
   resources :applicants
   

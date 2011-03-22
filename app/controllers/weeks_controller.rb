@@ -6,6 +6,19 @@ class WeeksController < ApplicationController
   def index
     redirect_to root_url
   end
+  
+  def update_status
+    @week = Week.find_by_slug(params[:id]) or raise ActiveRecord::RecordNotFound
+    
+    case params[:value]
+    when "open"
+      @week.update_attribute(:is_active, true)
+    when "close"
+      @week.update_attribute(:is_active, false)
+    else
+      redirect_to @week, :notice => t("weeks.status_update_fail")
+    end
+  end 
 
   def show
     @week = Week.find_by_slug(params[:id]) or raise ActiveRecord::RecordNotFound

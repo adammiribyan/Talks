@@ -5,8 +5,7 @@ class PostsController < ApplicationController
   before_filter :authenticate, :except => [:index, :show, :recent, :search]
   before_filter :show_picture_preview, :show_additional_details, :only => [:edit, :update]  
   before_filter :set_the_user_to_posts, :except => [:edit, :update, :show, :recent, :search]
-  before_filter :set_the_user_to_post, :only => :show  
-  before_filter :any_active_week?, :only => [:new, :create, :edit, :update]
+  before_filter :set_the_user_to_post, :only => :show
   
   load_and_authorize_resource :user, :find_by => :username
   load_and_authorize_resource :post, :through => :user, :shallow => true, :except => [:recent, :search]
@@ -107,16 +106,6 @@ class PostsController < ApplicationController
     
       def show_additional_details
         @show_additional_details = true
-      end
-    
-      def any_active_week?
-        @week = Week.current.first
-        
-        if @week.present?
-          @week
-        else
-          nil
-        end
       end
     
 end

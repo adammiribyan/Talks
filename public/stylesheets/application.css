@@ -83,8 +83,6 @@
   width: 100%;
   position: relative;
   zoom: 1;
-  color: #888888;
-  line-height: 1.4;
 }
 .b-week-info .b-week-info-picture {
   height: 70px;
@@ -96,6 +94,8 @@
 .b-week-info .b-week-info-text {
   position: relative;
   width: 60%;
+  color: #888888;
+  line-height: 1.4;
 }
 .b-week-info .b-week-info-actions {
   float: right;
@@ -104,4 +104,26 @@
   right: 15px;
   font-size: 12px;
 }
+.b-week-info .b-week-info-created_at { margin-bottom: 5px; }
+.b-week-info .b-week-info-status {
+  display: block;
+  margin-bottom: 1.4em;
+}
+.b-week-info .b-week-info-status a {
+  border-bottom: 1px dotted black;
+  text-decoration: none;
+  color: black;
+}
+.b-week-info .b-week-info-status a:hover {
+  color: black;
+  text-decoration: none;
+}
+.b-week-info .b-week-info-status a:visited {
+  color: black;
+  text-decoration: none;
+}
 .b-line-mid { margin-bottom: 20px !important; }
+.simple_form .collection_radio {
+  display: block !important;
+  font-weight: normal;
+}

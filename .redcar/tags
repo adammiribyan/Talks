@@ -1,4 +1,4 @@
-1300698969
+1300827450
 APP_NAME	/home/adam/talks/vendor/plugins/paperclip/features/support/rails.rb	APP_NAME         =
 AWSS3Methods	/home/adam/talks/vendor/plugins/paperclip/features/support/s3.rb	module AWSS3Methods
 Ability	/home/adam/talks/app/models/ability.rb	class Ability
@@ -9,6 +9,7 @@ AddAttachmentPictureToWeek	/home/adam/talks/db/migrate/20110313104918_add_attach
 AddDefaultIsPublishedToPosts	/home/adam/talks/db/migrate/20110301202419_add_default_is_published_to_posts.rb	class AddDefaultIsPublishedToPosts 
 AddFeaturedToPost	/home/adam/talks/db/migrate/20101204000250_add_featured_to_post.rb	class AddFeaturedToPost 
 AddInvitesToUser	/home/adam/talks/db/migrate/20101209074435_add_invites_to_user.rb	class AddInvitesToUser 
+AddIsActiveToWeeks	/home/adam/talks/db/migrate/20110322114517_add_is_active_to_weeks.rb	class AddIsActiveToWeeks 
 AddIsPublishedToPosts	/home/adam/talks/db/migrate/20110301181923_add_is_published_to_posts.rb	class AddIsPublishedToPosts 
 AddPictureToWeeks	/home/adam/talks/db/migrate/20110313104346_add_picture_to_weeks.rb	class AddPictureToWeeks 
 AddRoleToUsers	/home/adam/talks/db/migrate/20101117131510_add_role_to_users.rb	class AddRoleToUsers 
@@ -228,7 +229,6 @@ allow_types?	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/matchers/va
 allowed_types_allowed?	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/matchers/validate_attachment_content_type_matcher.rb	        def allowed_types_allowed?
 allowing	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/matchers/validate_attachment_content_type_matcher.rb	        def allowing
 any	/home/adam/talks/public/javascripts/prototype.js	function any(iterator, context)
-any_active_week?	/home/adam/talks/app/controllers/posts_controller.rb	      def any_active_week?
 applicants_count	/home/adam/talks/app/controllers/application_controller.rb	  def applicants_count
 argumentNames	/home/adam/talks/public/javascripts/prototype.js	function argumentNames()
 aspect	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/geometry.rb	    def aspect
@@ -366,6 +366,7 @@ down	/home/adam/talks/db/migrate/20110313104346_add_picture_to_weeks.rb	  def se
 down	/home/adam/talks/db/migrate/20110313104918_add_attachment_picture_to_week.rb	  def self.down
 down	/home/adam/talks/db/migrate/20110313110350_remove_picture_from_weeks.rb	  def self.down
 down	/home/adam/talks/db/migrate/20110313135241_add_week_id_to_posts.rb	  def self.down
+down	/home/adam/talks/db/migrate/20110322114517_add_is_active_to_weeks.rb	  def self.down
 down	/home/adam/talks/tmp/201010251820_create_posts.rb	  def self.down
 down	/home/adam/talks/vendor/plugins/effective_scaffold_rails3/lib/generators/templates/migration.rb	  def self.down
 each	/home/adam/talks/public/javascripts/prototype.js	function each(iterator, context)
@@ -856,6 +857,7 @@ up	/home/adam/talks/db/migrate/20110313104346_add_picture_to_weeks.rb	  def self
 up	/home/adam/talks/db/migrate/20110313104918_add_attachment_picture_to_week.rb	  def self.up
 up	/home/adam/talks/db/migrate/20110313110350_remove_picture_from_weeks.rb	  def self.up
 up	/home/adam/talks/db/migrate/20110313135241_add_week_id_to_posts.rb	  def self.up
+up	/home/adam/talks/db/migrate/20110322114517_add_is_active_to_weeks.rb	  def self.up
 up	/home/adam/talks/tmp/201010251820_create_posts.rb	  def self.up
 up	/home/adam/talks/vendor/plugins/effective_scaffold_rails3/lib/generators/templates/migration.rb	  def self.up
 update	/home/adam/talks/app/controllers/posts_controller.rb	  def update
@@ -867,6 +869,7 @@ update	/home/adam/talks/vendor/plugins/effective_scaffold_rails3/lib/generators/
 update	/home/adam/talks/vendor/plugins/effective_scaffold_rails3/lib/generators/templates/controller.rb	  def update
 update_account	/home/adam/talks/app/controllers/users_controller.rb	  def update_account
 update_profile	/home/adam/talks/app/controllers/users_controller.rb	  def update_profile
+update_status	/home/adam/talks/app/controllers/weeks_controller.rb	  def update_status
 updated_at	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/attachment.rb	    def updated_at
 url	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/attachment.rb	    def url
 url	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/interpolations.rb	    def url
@@ -885,6 +888,7 @@ values	/home/adam/talks/public/javascripts/prototype.js	function values()
 values	/home/adam/talks/public/javascripts/prototype.js	function values(object)
 vertical?	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/geometry.rb	    def vertical?
 viewportOffset	/home/adam/talks/public/javascripts/prototype.js	function viewportOffset(forElement)
+week_status_link	/home/adam/talks/app/helpers/weeks_helper.rb	  def week_status_link(week, status)
 when	/home/adam/talks/vendor/plugins/paperclip/test/attachment_test.rb	  should "include the filesystem module when 
 when	/home/adam/talks/vendor/plugins/paperclip/test/interpolations_test.rb	  should "return the class of the Interpolations module when 
 when	/home/adam/talks/vendor/plugins/paperclip/test/paperclip_test.rb	  should "return a class when 

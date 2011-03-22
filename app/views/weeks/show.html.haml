@@ -9,8 +9,15 @@
     .b-week-info-picture
       = image_tag @week.picture.url(:thumb)
     .b-week-info-text
-      = @week.description
-    .b-week-info-actions
+      = @week.description       
+    .b-week-info-actions      
+      .b-week-info-created_at 
+        Неделя была создана
+        %span.date
+          = succeed "." do
+            = I18n.l @week.created_at.to_date
+      .b-week-info-status
+        = week_status_link(@week, @week.is_active)
       = link_to 'Редактировать', edit_week_path(@week), :class => 'b-func-button-edit'
       %br
       = link_to 'Удалить', @week, :confirm => 'Вы уверены?', :method => :delete, :class => 'b-func-button-destroy'
