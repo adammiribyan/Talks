@@ -4,7 +4,9 @@
       = f.input :title, :label => 'Заголовок'
       = char_counter_for 'post_title', 100  
       = f.input :conversation, :label => 'Диалог'
-      = f.association :week, :as => :radio, :label => "Неделя"      
+      - unless @post.week.is_active?
+        = f.label @post.week.name.titleize
+      = f.input :week_id, :as => :radio, :collection => Week.active.all, :label => "Неделя"
       .b-formatting-hints#formattingHints       
         .g-left
           %div

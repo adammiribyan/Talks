@@ -3,6 +3,8 @@ class Week < ActiveRecord::Base
     slug || id.to_s
   end 
   
+  scope :active, :conditions => { :is_active => true }
+  
   has_many :posts
   has_attached_file :picture, :styles => { :thumb   => "70x70#" },
                   :url => "/assets/:class-:attachment/:id/:basename-:style.:extension",
