@@ -1,7 +1,16 @@
-module ApplicationHelper
-  
+# encoding: utf-8
+
+module ApplicationHelper  
   def title(page_title)
     content_for(:title) { page_title }
+  end
+  
+  def new_post_link
+    if params[:controller] == "weeks"
+      link_to_unless_current "Новый параграф", new_user_post_path(current_user, :week => params[:id])
+    else
+      link_to_unless_current "Новый параграф", new_user_post_path(current_user)
+    end
   end
   
   def form_header(title, hint = " ")

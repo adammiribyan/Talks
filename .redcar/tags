@@ -1,4 +1,4 @@
-1300828562
+1300877255
 APP_NAME	/home/adam/talks/vendor/plugins/paperclip/features/support/rails.rb	APP_NAME         =
 AWSS3Methods	/home/adam/talks/vendor/plugins/paperclip/features/support/s3.rb	module AWSS3Methods
 Ability	/home/adam/talks/app/models/ability.rb	class Ability
@@ -22,7 +22,7 @@ ApplicantsController	/home/adam/talks/app/controllers/applicants_controller.rb	c
 ApplicantsHelper	/home/adam/talks/app/helpers/applicants_helper.rb	module ApplicantsHelper 
 Application	/home/adam/talks/config/application.rb	  class Application 
 ApplicationController	/home/adam/talks/app/controllers/application_controller.rb	class ApplicationController 
-ApplicationHelper	/home/adam/talks/app/helpers/application_helper.rb	module ApplicationHelper
+ApplicationHelper	/home/adam/talks/app/helpers/application_helper.rb	module ApplicationHelper 
 ApplicationResponder	/home/adam/talks/lib/application_responder.rb	class ApplicationResponder 
 Array	/home/adam/talks/vendor/plugins/to_rss/lib/to_rss.rb	    module Array
 Attachment	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/attachment.rb	  class Attachment
@@ -615,6 +615,7 @@ new	/home/adam/talks/app/controllers/users_controller.rb	  def new
 new	/home/adam/talks/app/controllers/weeks_controller.rb	  def new
 new	/home/adam/talks/vendor/plugins/effective_scaffold_rails3/lib/generators/templates/admin_controller.rb	  def new
 new	/home/adam/talks/vendor/plugins/effective_scaffold_rails3/lib/generators/templates/controller.rb	  def new
+new_post_link	/home/adam/talks/app/helpers/application_helper.rb	  def new_post_link
 no_error_when_valid?	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/matchers/validate_attachment_presence_matcher.rb	        def no_error_when_valid?
 observe	/home/adam/talks/public/javascripts/prototype.js	function observe(element, eventName, handler)
 of	/home/adam/talks/vendor/plugins/paperclip/test/interpolations_test.rb	  should "return the class of 
@@ -724,6 +725,7 @@ set_invites_limit	/home/adam/talks/app/models/user.rb	    def set_invites_limit
 set_the_user	/home/adam/talks/app/controllers/users_controller.rb	    def set_the_user
 set_the_user_to_post	/home/adam/talks/app/controllers/posts_controller.rb	      def set_the_user_to_post
 set_the_user_to_posts	/home/adam/talks/app/controllers/posts_controller.rb	      def set_the_user_to_posts
+set_the_week_if_exists	/home/adam/talks/app/controllers/posts_controller.rb	      def set_the_week_if_exists
 set_user_language	/home/adam/talks/app/controllers/application_controller.rb	  def set_user_language
 setup	/home/adam/talks/vendor/plugins/more/test/controller_test.rb	  def setup
 setup	/home/adam/talks/vendor/plugins/paperclip/test/command_line_test.rb	  def setup

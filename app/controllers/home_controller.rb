@@ -7,6 +7,15 @@ class HomeController < ApplicationController
     @latest_posts = Post.published.order('created_at desc').limit(10)
     # @popular_posts = Post.published.all :order => 'created_at desc', :limit => 4
     @popular_posts = Post.published.order('created_at desc').limit(4)
+    
+    # Talks Weeks
+    @last_week = Week.active.last
+    if @last_week.posts.published.count > 0
+      @last_week_posts = @last_week.posts.published.limit(4)
+      @week_is_ready = true
+    else
+      @week_is_ready = false
+    end
   end
   
 end

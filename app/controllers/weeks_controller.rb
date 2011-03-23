@@ -21,7 +21,7 @@ class WeeksController < ApplicationController
   end 
 
   def show
-    @week = Week.find_by_slug(params[:id]) or raise ActiveRecord::RecordNotFound
+    @week = Week.find_by_slug(params[:id]) or raise ActiveRecord::RecordNotFound    
   end
 
   def new

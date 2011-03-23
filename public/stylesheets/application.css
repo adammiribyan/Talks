@@ -74,6 +74,7 @@
 .b-whatistalks .b-important-content .b-block .b-par_adding { margin-top: -6px; }
 .b-week-info-wrap {
   border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 1.633em;
   position: relative;
   padding: 0 0 20px 15px;
   zoom: 1;
@@ -83,6 +84,16 @@
   width: 100%;
   position: relative;
   zoom: 1;
+}
+.b-week-info .b-week-title {
+  margin-bottom: 1.4em;
+  color: black;
+  position: relative;
+}
+.b-week-info .b-week-title h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
 .b-week-info .b-week-info-picture {
   height: 70px;
@@ -126,4 +137,15 @@
 .simple_form .collection_radio {
   display: block !important;
   font-weight: normal;
+}
+h3.last_week-header { border-bottom-color: #1155aa !important; }
+h3.last_week-header a { text-decoration: none; }
+.p-post span.week {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.p-post span.week a {
+  border-bottom: 1px solid red;
+  color: #1155aa;
+  text-decoration: none;
 }

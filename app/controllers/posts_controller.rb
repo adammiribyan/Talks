@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   before_filter :show_picture_preview, :show_additional_details, :only => [:edit, :update]  
   before_filter :set_the_user_to_posts, :except => [:edit, :update, :show, :recent, :search]
   before_filter :set_the_user_to_post, :only => :show
+  before_filter :set_the_week_if_exists, :only => [:new, :create, :edit, :update]
   
   load_and_authorize_resource :user, :find_by => :username
   load_and_authorize_resource :post, :through => :user, :shallow => true, :except => [:recent, :search]
@@ -97,6 +98,18 @@ class PostsController < ApplicationController
       def set_the_user_to_post
         unless params[:id].empty? or params[:id].nil?
           @user = Post.find_by_id(params[:id]).user
+        end
+      end
+      
+      def set_the_week_if_exists
+        if params[:week].present? && @week = Week.find_by_slug(params[:week]) 
+          if @week.is_active?
+            @show_week_header = true
+          else
+            redirect_to @week, :notice => "Вы не можете добавлять параграфы в закрытую неделю."
+          end          
+        else
+          @show_week_header = false
         end
       end
     
