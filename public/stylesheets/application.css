@@ -138,8 +138,10 @@
   display: block !important;
   font-weight: normal;
 }
-h3.last_week-header { border-bottom-color: #1155aa !important; }
-h3.last_week-header a { text-decoration: none; }
+h3.last_week-header a {
+  font-weight: bold;
+  text-decoration: none;
+}
 .week-preview-wrap {
   position: relative;
   width: 70%;
