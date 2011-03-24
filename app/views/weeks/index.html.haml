@@ -1,27 +1,21 @@
-<h1>Listing weeks</h1>
+- title "Недели"
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Slug</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+%h1.form Недели
+%span.head-note.block-inline Monkeys gone to Heaven
+.b-line.b-line-mid.b-line-thin
 
-<% @weeks.each do |week| %>
-  <tr>
-    <td><%= week.name %></td>
-    <td><%= week.slug %></td>
-    <td><%= week.description %></td>
-    <td><%= link_to 'Show', week %></td>
-    <td><%= link_to 'Edit', edit_week_path(week) %></td>
-    <td><%= link_to 'Destroy', week, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Week', new_week_path %>
+.b-new-post-link.b-week
+	= link_to "Новая неделя", new_week_path
+%ul{:style => "margin-top: 15px;"}
+	- @weeks.each do |week|
+		%li
+			.week-preview-wrap
+				.week-preview-picture
+					= link_to image_tag(week.picture.url(:thumb), :class => "rc3"), week_path(week)
+				.week-preview-name
+					= link_to week.name, week_path(week)
+					- if !week.is_active?
+						%span= "была закрыта #{I18n.l week.updated_at.to_date}"
+					- else 
+						%span= "открыта уже #{distance_of_time_in_words(Time.now - week.created_at)}"
+			.clear

@@ -4,7 +4,7 @@ class WeeksController < ApplicationController
   before_filter :show_picture_preview, :only => [:edit, :update]
   
   def index
-    redirect_to root_url
+    @weeks = Week.find(:all)
   end
   
   def update_status

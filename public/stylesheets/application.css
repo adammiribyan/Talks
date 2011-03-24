@@ -140,6 +140,30 @@
 }
 h3.last_week-header { border-bottom-color: #1155aa !important; }
 h3.last_week-header a { text-decoration: none; }
+.week-preview-wrap {
+  position: relative;
+  width: 70%;
+  margin: 1.4em 10px;
+}
+.week-preview-wrap .week-preview-picture {
+  position: relative;
+  float: left;
+  width: 70px;
+}
+.week-preview-wrap .week-preview-name {
+  line-height: 1.4;
+  position: relative;
+  margin-left: 80px;
+}
+.week-preview-wrap .week-preview-name span {
+  color: #999999;
+  font-size: 12px;
+  display: block;
+}
+.b-week {
+  margin-top: 0 !important;
+  z-index: 99;
+}
 .p-post span.week {
   display: inline-block;
   margin-bottom: 5px;

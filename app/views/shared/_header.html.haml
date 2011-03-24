@@ -38,6 +38,9 @@
         %li
           = link_to_unless_current "Заявки", applicants_path
           %span= applicants_count
+      
+      %li= link_to_unless_current "Недели", weeks_path
+      
         
       - if current_user.invites_limit > 0
         %li= link_to_unless_current 'Пригласить друзей', new_invite_path
