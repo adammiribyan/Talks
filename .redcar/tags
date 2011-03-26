@@ -1,4 +1,4 @@
-1301106035
+1301106515
 APP_NAME	/home/adam/talks/vendor/plugins/paperclip/features/support/rails.rb	APP_NAME         =
 AWSS3Methods	/home/adam/talks/vendor/plugins/paperclip/features/support/s3.rb	module AWSS3Methods
 Ability	/home/adam/talks/app/models/ability.rb	class Ability

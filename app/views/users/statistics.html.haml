@@ -3,6 +3,6 @@
 = form_header "Статистика пользователей", "Monkey math."
 
 %p{:style => "line-height: 1.5"}
-  = "Всего #{@users_count} #{Russian.p(@users_count, 'пользователь', 'пользователя', 'пользователей')}, из них #{@male_users_percent}% мальчиков и #{@female_users_percent}% девочек."
+  = "Всего <em>#{@users_count} #{Russian.p(@users_count, 'пользователь', 'пользователя', 'пользователей')}</em>, из них #{@male_users_percent}% декларированных мальчиков и #{@female_users_percent}%, видимо, тоже декларированных девочек.".html_safe
 %p{:style => "line-height: 1.5"}
-  = "Первый #{link_to('параграф', @first_post)} был написан #{I18n.l @first_post.created_at.to_date}. Сегодня на сайте уже #{@all_posts_count} #{Russian.p(@all_posts_count, 'параграф', 'параграфа', 'параграфов')}.".html_safe
+  = "Первый #{link_to('параграф', @first_post)} был написан #{I18n.l @first_post.created_at.to_date}. Сегодня на сайте уже <em>#{@all_posts_count} #{Russian.p(@all_posts_count, 'параграф', 'параграфа', 'параграфов')}</em>.".html_safe
