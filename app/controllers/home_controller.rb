@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     
     # Talks Weeks
     @last_week = Week.active.last
-    if @last_week.posts.published.count > 0
+    if @last_week && @last_week.posts.published.count > 0
       @last_week_posts = @last_week.posts.published.limit(4)
       @week_is_ready = true
     else
