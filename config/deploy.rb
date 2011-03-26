@@ -16,7 +16,7 @@ ssh_options[:forward_agent] = true
 
 default_run_options[:pty] = true
 
-set :keep_releases, 5
+set :keep_releases, 3
 set :use_sudo, false
 
 set :branch, "master"
