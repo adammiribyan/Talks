@@ -9,6 +9,11 @@
     .p-post
       .l-column.l-column-full
         .p-post-header
+        
+          - if @post.week.present?
+            %span.week            
+              = link_to @post.week.name, week_path(@post.week)
+              
           %h1= @post.title 
           %span.p-post-date= I18n.l @post.created_at.to_date
         .p-post-picture

@@ -1,0 +1,44 @@
+- title @week.name
+
+%h1.form= @week.name
+%span.head-note.block-inline 
+.b-line.b-line-mid.b-line-thin
+
+.b-week-info-wrap
+  .b-week-info
+    = render "header"
+    - if can? :update, @week
+      .b-week-info-actions      
+        .b-week-info-created_at 
+          Неделя была создана
+          %span.date
+            = succeed "." do
+              = I18n.l @week.created_at.to_date
+        .b-week-info-status
+          = week_status_change_link(@week, @week.is_active)
+        = link_to 'Редактировать', edit_week_path(@week), :class => 'b-func-button-edit'
+        %br
+        = link_to 'Удалить', @week, :confirm => 'Вы уверены?', :method => :delete, :class => 'b-func-button-destroy'
+  .clear
+  
+.columns
+  .week-rss-wrap
+    %a{:href => posts_week_path(@week, :format => :rss)} 
+      RSS
+      %i
+  .column.column2-x2
+    .posts
+      - @week.posts.each do |post|
+        .postPreview
+          .image
+            = link_to image_tag(post.picture.url(:preview), :class => "rc4"), post
+          .text
+            .header
+              %h2
+                = link_to post.title, post
+              %span.data
+                = succeed "," do
+                  = link_to post.user.username, post.user, :class => 'author'
+                = I18n.l post.created_at.to_date
+            .description
+              = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe

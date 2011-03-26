@@ -38,6 +38,10 @@
         %li
           = link_to_unless_current "Заявки", applicants_path
           %span= applicants_count
+      
+      - if can? :manage, Week
+        %li= link_to_unless_current "Недели", weeks_path
+      
         
       - if current_user.invites_limit > 0
         %li= link_to_unless_current 'Пригласить друзей', new_invite_path
@@ -51,4 +55,4 @@
         
   - if can? :create, Post
     .b-new-post-link
-      = link_to_unless_current 'Новый параграф', new_user_post_path(current_user)
+      = new_post_link

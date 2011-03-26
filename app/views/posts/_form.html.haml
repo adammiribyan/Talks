@@ -1,9 +1,11 @@
 ﻿= simple_form_for [@user, @post], :html => { :multipart => true } do |f|
   .columns
     .column.column-f-x2
+      - if @show_week_header
+        = f.input :week_id, :as => :hidden, :input_html => { :value => @week.id }
       = f.input :title, :label => 'Заголовок'
       = char_counter_for 'post_title', 100  
-      = f.input :conversation, :label => 'Диалог'
+      = f.input :conversation, :label => 'Диалог'      
       .b-formatting-hints#formattingHints       
         .g-left
           %div

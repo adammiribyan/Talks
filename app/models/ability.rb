@@ -18,12 +18,12 @@ class Ability
       can :assign_invites, User
       can :obtain_additional_details, Post
     else
-      can :read, [Post, User]      
+      can :read, [Post, User, Week]      
       can :create, Applicant # For beta only
     end
     
     if user.is? :author
-      can :read, [Post, User]
+      can :read, [Post, User, Week]
       can :create, Post
       can :update, Post do |post|
         post.try(:user) == user

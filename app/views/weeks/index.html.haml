@@ -1,0 +1,19 @@
+- title "Недели"
+
+%h1.form Недели
+%span.head-note.block-inline Monkeys gone to Heaven.
+.b-line.b-line-mid.b-line-thin
+
+- if can? :create, Week
+	.b-new-post-link.b-week
+		= link_to "Новая неделя", new_week_path
+%ul{:style => "margin-top: 15px;"}
+	- @weeks.each do |week|
+		%li
+			.week-preview-wrap
+				.week-preview-picture
+					= link_to image_tag(week.picture.url(:thumb), :class => "rc3"), week_path(week)
+				.week-preview-name
+					= link_to week.name, week_path(week)
+					%span= week_status_text(week)
+			.clear

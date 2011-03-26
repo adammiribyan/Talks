@@ -72,3 +72,189 @@
   zoom: 1;
 }
 .b-whatistalks .b-important-content .b-block .b-par_adding { margin-top: -6px; }
+.b-week-info-wrap {
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 1.633em;
+  position: relative;
+  padding: 0 0 20px 15px;
+  zoom: 1;
+  z-index: 1;
+}
+.b-week-info {
+  width: 100%;
+  position: relative;
+  zoom: 1;
+}
+.b-week-info .b-week-title {
+  margin-bottom: 1.4em;
+  color: black;
+  position: relative;
+}
+.b-week-info .b-week-title h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+.b-week-info .b-week-info-picture {
+  height: 70px;
+  width: 70px;
+  padding-right: 20px;
+  position: relative;
+  float: left;
+}
+.b-week-info .b-week-info-text {
+  position: relative;
+  width: 60%;
+  color: #888888;
+  line-height: 1.4;
+}
+.b-week-info .b-week-info-actions {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 12px;
+}
+.b-week-info .b-week-info-created_at { margin-bottom: 5px; }
+.b-week-info .b-week-info-status {
+  display: block;
+  margin-bottom: 1.4em;
+}
+.b-week-info .b-week-info-status a {
+  border-bottom: 1px dotted black;
+  text-decoration: none;
+  color: black;
+}
+.b-week-info .b-week-info-status a:hover {
+  color: black;
+  text-decoration: none;
+}
+.b-week-info .b-week-info-status a:visited {
+  color: black;
+  text-decoration: none;
+}
+.b-line-mid { margin-bottom: 20px !important; }
+.simple_form .collection_radio {
+  display: block !important;
+  font-weight: normal;
+}
+h3.last_week-header a {
+  font-weight: bold;
+  text-decoration: none;
+}
+.week-preview-wrap {
+  position: relative;
+  width: 70%;
+  margin: 1.4em 10px;
+}
+.week-preview-wrap .week-preview-picture {
+  position: relative;
+  float: left;
+  width: 70px;
+}
+.week-preview-wrap .week-preview-name {
+  line-height: 1.4;
+  position: relative;
+  margin-left: 80px;
+}
+.week-preview-wrap .week-preview-name span {
+  color: #999999;
+  font-size: 12px;
+  display: block;
+}
+.b-week {
+  margin-top: 0 !important;
+  z-index: 99;
+}
+.p-post span.week {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.p-post span.week a {
+  border-bottom: 1px solid red;
+  color: #1155aa;
+  text-decoration: none;
+}
+.weeks-list-wrap {
+  font-size: 13px;
+  float: right;
+  line-height: 1.4;
+  position: relative;
+  width: 234px;
+  text-align: left !important;
+  margin-bottom: 1.5em;
+}
+.weeks-list-wrap .weeks-list-header {
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #0e0e0e;
+}
+.weeks-list-wrap .weeks-list-header h3 {
+  color: #0e0e0e;
+  font: italic normal normal 18px/20px Helvetica, sans-serif;
+  letter-spacing: normal;
+  line-height: 14px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+.weeks-list-wrap .weeks-list-footer { text-align: right; }
+#vk_groups {
+  width: 100% !important;
+  float: right;
+  margin-top: 20px;
+}
+.week-rss-wrap {
+  font-size: 11px;
+  margin-right: 10px;
+  margin-top: -5px;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+}
+.week-rss-wrap a {
+  display: inline-block !important;
+  float: left;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  padding: 0px 12px 0px 0px;
+  position: relative;
+  text-transform: uppercase;
+  white-space: nowrap;
+  zoom: 1;
+}
+.week-rss-wrap a i {
+  background: url("/images/rss.png") no-repeat 0px 0px;
+  cursor: pointer;
+  display: block;
+  height: 11px;
+  left: auto;
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  width: 10px;
+}
+div.week {
+  padding-left: 3px;
+  position: relative;
+  float: left !important;
+  margin-bottom: 0 !important;
+}
+div.week .week-picture {
+  float: left;
+  position: relative;
+}
+div.week .week-info {
+  margin-left: 60px;
+  position: relative;
+}
+div.week .week-info span {
+  color: #999999;
+  font-size: 12px;
+  display: block;
+}
+div.week:after {
+  clear: both;
+  content: '';
+  display: block;
+  height: 0;
+}
