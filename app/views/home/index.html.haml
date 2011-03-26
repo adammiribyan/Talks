@@ -55,18 +55,18 @@
             
   .column.column2-x1.column-last
     %br
-    
-    .weeks-list-wrap
-      .weeks-list-header
-        %h3 Недели Talks
-      - @weeks.each do |week|
-        .week
-          .week-picture
-            = link_to image_tag(week.picture.url(:small), :class => "rc3"), week_path(week)
-          .week-info
-            = link_to week.name, week_path(week)
-            %span= truncate(week.description, :length => 55, :separator => ' ').markdown.typography.html_safe
-        .clear
+    - if can? :create, Week
+      .weeks-list-wrap
+        .weeks-list-header
+          %h3 Недели Talks
+        - @weeks.each do |week|
+          .week
+            .week-picture
+              = link_to image_tag(week.picture.url(:small), :class => "rc3"), week_path(week)
+            .week-info
+              = link_to week.name, week_path(week)
+              %span= truncate(week.description, :length => 55, :separator => ' ').markdown.typography.html_safe
+          .clear
         
     = render '/shared/facebook'    
     = render '/shared/vkontakte'
