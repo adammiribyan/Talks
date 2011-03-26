@@ -732,7 +732,7 @@ body {
 
 .column2-x1 { width: 255px; text-align: right; }
 .column2-x2 { width: 705px; margin-right: 10px; }
-.column2-x1 div { float: right; margin-bottom: 20px; }
+.column2-x1 div { /* float: right; */ margin-bottom: 20px; }
 
 .column-f-x2 { width: 590px; margin-right: 60px; }
 .column-f-x1 { width: 320px; }
@@ -1425,5 +1425,31 @@ body {
 	font-size: 16px;
 	cursor: pointer;
 }
+
+/**
+ * What Is Talks?
+ */
+#what-is-talks {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    top: 49px;
+}
+
+#what-is-talks a {  
+    color: #15A;
+    text-decoration: none;
+    border-bottom: 1px solid red;
+}
+
+#what-is-talks a:hover {
+    text-decoration: none;
+    color: #222 !important;
+}
+
+#what-is-talks a:visited {
+    color: #15A;
+}
+
 
 

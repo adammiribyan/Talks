@@ -1,6 +1,6 @@
 <% case params[:value] 
     when "open" %>
-      $(".b-week-info-status").html('<%= week_status_link(@week, true) %>');
+      $(".b-week-info-status").html('<%= week_status_change_link(@week, true) %>');
 <%  when "close" %>
-      $(".b-week-info-status").html('<%= week_status_link(@week, false) %>');
+      $(".b-week-info-status").html('<%= week_status_change_link(@week, false) %>');
 <% end %>

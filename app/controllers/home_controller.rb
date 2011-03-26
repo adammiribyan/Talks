@@ -16,6 +16,8 @@ class HomeController < ApplicationController
     else
       @week_is_ready = false
     end
+    
+    @weeks = Week.find(:all, :order => "created_at DESC", :limit => 5)
   end
   
 end

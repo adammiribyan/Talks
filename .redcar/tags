@@ -1,4 +1,4 @@
-1301103010
+1301169421
 APP_NAME	/home/adam/talks/vendor/plugins/paperclip/features/support/rails.rb	APP_NAME         =
 AWSS3Methods	/home/adam/talks/vendor/plugins/paperclip/features/support/s3.rb	module AWSS3Methods
 Ability	/home/adam/talks/app/models/ability.rb	class Ability
@@ -651,6 +651,7 @@ pollDoScroll	/home/adam/talks/public/javascripts/prototype.js	function pollDoScr
 positionedOffset	/home/adam/talks/public/javascripts/prototype.js	function positionedOffset(element)
 post_process	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/attachment.rb	    def post_process
 post_process_styles	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/attachment.rb	    def post_process_styles
+posts	/home/adam/talks/app/controllers/weeks_controller.rb	  def posts
 prepareReplacement	/home/adam/talks/public/javascripts/prototype.js	function prepareReplacement(replacement)
 processor	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip.rb	    def processor
 processor_options	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/style.rb	    def processor_options
@@ -890,7 +891,8 @@ values	/home/adam/talks/public/javascripts/prototype.js	function values()
 values	/home/adam/talks/public/javascripts/prototype.js	function values(object)
 vertical?	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/geometry.rb	    def vertical?
 viewportOffset	/home/adam/talks/public/javascripts/prototype.js	function viewportOffset(forElement)
-week_status_link	/home/adam/talks/app/helpers/weeks_helper.rb	  def week_status_link(week, status)
+week_status_change_link	/home/adam/talks/app/helpers/weeks_helper.rb	  def week_status_change_link(week, status)
+week_status_text	/home/adam/talks/app/helpers/weeks_helper.rb	  def week_status_text(week)
 when	/home/adam/talks/vendor/plugins/paperclip/test/attachment_test.rb	  should "include the filesystem module when 
 when	/home/adam/talks/vendor/plugins/paperclip/test/interpolations_test.rb	  should "return the class of the Interpolations module when 
 when	/home/adam/talks/vendor/plugins/paperclip/test/paperclip_test.rb	  should "return a class when 

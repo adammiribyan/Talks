@@ -6,7 +6,8 @@ class Week < ActiveRecord::Base
   scope :active, :conditions => { :is_active => true }
   
   has_many :posts
-  has_attached_file :picture, :styles => { :thumb   => "70x70#" },
+  has_attached_file :picture, :styles => { :thumb   => "70x70#",
+                                           :small   => "50x50#" },
                   :url => "/assets/:class-:attachment/:id/:basename-:style.:extension",
                   :path => ":rails_root/public/assets/:class-:attachment/:id/:basename-:style.:extension"
   

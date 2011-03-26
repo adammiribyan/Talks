@@ -2,6 +2,7 @@ Talks::Application.routes.draw do
   resources :weeks do
     member do
       get "/status/:value" => "weeks#update_status", :as => :update_status
+      get "/posts" => "weeks#posts"
     end
   end
   

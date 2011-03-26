@@ -7,20 +7,25 @@
 .b-week-info-wrap
   .b-week-info
     = render "header"
-    .b-week-info-actions      
-      .b-week-info-created_at 
-        Неделя была создана
-        %span.date
-          = succeed "." do
-            = I18n.l @week.created_at.to_date
-      .b-week-info-status
-        = week_status_link(@week, @week.is_active)
-      = link_to 'Редактировать', edit_week_path(@week), :class => 'b-func-button-edit'
-      %br
-      = link_to 'Удалить', @week, :confirm => 'Вы уверены?', :method => :delete, :class => 'b-func-button-destroy'
+    - if can? :update, @week
+      .b-week-info-actions      
+        .b-week-info-created_at 
+          Неделя была создана
+          %span.date
+            = succeed "." do
+              = I18n.l @week.created_at.to_date
+        .b-week-info-status
+          = week_status_change_link(@week, @week.is_active)
+        = link_to 'Редактировать', edit_week_path(@week), :class => 'b-func-button-edit'
+        %br
+        = link_to 'Удалить', @week, :confirm => 'Вы уверены?', :method => :delete, :class => 'b-func-button-destroy'
   .clear
   
 .columns
+  .week-rss-wrap
+    %a{:href => posts_week_path(@week, :format => :rss)} 
+      RSS
+      %i
   .column.column2-x2
     .posts
       - @week.posts.each do |post|

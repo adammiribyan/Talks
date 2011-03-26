@@ -2,9 +2,19 @@
 
 class WeeksController < ApplicationController
   before_filter :show_picture_preview, :only => [:edit, :update]
+  load_and_authorize_resource :week, :find_by => :slug
   
   def index
-    @weeks = Week.find(:all)
+    @weeks = Week.find(:all, :order => "created_at DESC")
+  end
+  
+  def posts
+    @week = Week.find_by_slug(params[:id]) or raise ActiveRecord::RecordNotFound    
+    @posts = @week.posts.published.all :order => 'created_at desc'
+    
+    respond_with(@posts) do |format|
+      format.rss { render :layout => false }
+    end
   end
   
   def update_status

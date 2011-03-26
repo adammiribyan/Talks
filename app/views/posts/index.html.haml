@@ -23,4 +23,4 @@
               %span.data
                 = I18n.l post.created_at.to_date
             .description
-              = truncate post.conversation, :length => 80, :separator => ' '
+              = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe
