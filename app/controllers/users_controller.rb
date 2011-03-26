@@ -1,7 +1,23 @@
+# encoding: utf-8
+
 class UsersController < Clearance::UsersController
   
   before_filter :set_the_user, :only => [:edit_account, :edit_profile, :update_account, :update_profile]
   before_filter :authenticate, :only => [:edit_account, :edit_profile]
+  
+  def statistics
+    # all users count
+    @users_count = User.count
+    # male users percent
+    @male_users_percent = User.count(:all, :conditions => ["gender = ?", "m"]) * 100 / User.count  
+    # femail users percent
+    @female_users_percent = User.count(:all, :conditions => ["gender = ?", "f"]) * 100 / User.count
+    # first post created at
+    @first_post = Post.first
+    @first_post_created_at = I18n.l(@first_post.created_at.to_date)
+    # all posts count
+    @all_posts_count = Post.count
+  end
   
   def new
     render '/shared/facebook'

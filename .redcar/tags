@@ -1,4 +1,4 @@
-1300790351
+1301106035
 APP_NAME	/home/adam/talks/vendor/plugins/paperclip/features/support/rails.rb	APP_NAME         =
 AWSS3Methods	/home/adam/talks/vendor/plugins/paperclip/features/support/s3.rb	module AWSS3Methods
 Ability	/home/adam/talks/app/models/ability.rb	class Ability
@@ -754,6 +754,7 @@ source_path	/home/adam/talks/vendor/plugins/more/lib/less/more.rb	    def source
 source_root	/home/adam/talks/vendor/plugins/paperclip/lib/generators/paperclip/paperclip_generator.rb	  def self.source_root
 square?	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/geometry.rb	    def square?
 startsWith	/home/adam/talks/public/javascripts/prototype.js	function startsWith(pattern)
+statistics	/home/adam/talks/app/controllers/users_controller.rb	  def statistics
 stop	/home/adam/talks/public/javascripts/prototype.js	function stop(event)
 stopObserving	/home/adam/talks/public/javascripts/prototype.js	function stopObserving(element, eventName, handler)
 stream_to	/home/adam/talks/vendor/plugins/paperclip/lib/paperclip/iostream.rb	  def stream_to

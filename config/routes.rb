@@ -9,6 +9,8 @@ Talks::Application.routes.draw do
   resources :users, :shallow => true do
     resources :posts
     
+    get "/statistics" => "users#statistics", :as => :statistics, :on => :collection
+    
     member do
       get "/settings" => "users#redirect_to_settings"
       get "/settings/profile" => "users#edit_profile", :as => :profile_settings
