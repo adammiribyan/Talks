@@ -109,7 +109,7 @@ class PostsController < ApplicationController
       end
       
       def set_the_week_if_exists
-        if can? :create, Week && params[:week].present? && @week = Week.find_by_slug(params[:week]) 
+        if params[:week].present? && @week = Week.find_by_slug(params[:week]) 
           if @week.is_active?
             @show_week_header = true
           else
