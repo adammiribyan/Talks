@@ -59,7 +59,14 @@ class PostsController < ApplicationController
 
   def new    
     #@post = @user.posts.new
-    @post.title = "§ #{@user.posts.count.to_i + 1}. " # Adding paragraphe sign
+    
+    if @show_week_header
+      posts_count = @week.posts.count.to_i + 1
+    else
+      posts_count = @user.posts.count.to_i + 1
+    end    
+    @post.title = "§ #{posts_count}. " # Adding paragraphe sign
+    
     respond_with(@post)
   end
 
