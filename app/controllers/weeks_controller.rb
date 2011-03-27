@@ -2,7 +2,7 @@
 
 class WeeksController < ApplicationController
   before_filter :show_picture_preview, :only => [:edit, :update]
-  load_and_authorize_resource :week, :find_by => :slug
+  load_and_authorize_resource :week, :find_by => :slug, :except => :posts
   
   def index
     @weeks = Week.find(:all, :order => "created_at DESC")
