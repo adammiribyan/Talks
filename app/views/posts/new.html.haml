@@ -3,7 +3,7 @@
 %h1.form Создание нового параграфа
 %span.head-note.block-inline Поля помеченные * обязательны для заполнения
 
--if can? :create, Week && @show_week_header
+- if @show_week_header && can?(:create, Week)
   .b-line.b-line-thin.b-line-mid
   
   .b-week-info-wrap

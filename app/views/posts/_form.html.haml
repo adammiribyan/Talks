@@ -1,7 +1,7 @@
 ﻿= simple_form_for [@user, @post], :html => { :multipart => true } do |f|
   .columns
     .column.column-f-x2
-      - if can? :create, Week
+      - if @show_week_header && can?(:create, Week)
         = f.input :week_id, :as => :hidden, :input_html => { :value => @week.id }
       = f.input :title, :label => 'Заголовок'
       = char_counter_for 'post_title', 100  
