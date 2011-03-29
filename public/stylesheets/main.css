@@ -665,8 +665,10 @@ body {
 }
 
 .p-post-quote {
-	font: normal normal normal 13px/15px 'Courier New', Courier, serif; 
-	margin-bottom: 20px;
+	font-family: 'Courier New', Courier, serif; 
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 
