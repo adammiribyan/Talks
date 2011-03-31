@@ -31,6 +31,9 @@ class Ability
       can :update, User do |author|
         author == user
       end
+      can :destroy, Post do |post|
+        post.try(:user) == user
+      end
     end
     
     if user.is? :moderator
