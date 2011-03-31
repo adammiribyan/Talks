@@ -34,6 +34,20 @@ var AdminPane = Class.create({
 
 
 $(document).ready(function(){	
+  $(document).keydown(function(event) {
+    if (window.event) event = window.event;
+    switch (event.keyCode ? event.keyCode : event.which ? event.which : null)
+    {
+  		case 0x25:
+  			link = $('#PrevLink');
+  			break;
+  		case 0x27:
+  			link = $('#NextLink');
+  			break;
+      }
+  	if (link && link.href) document.location = link.href;	
+  });
+  
 	$('.password-trigger').click(function() {
 	    // get current input
 	    var jCurrentInput = $(this).siblings('input.password').eq(0)

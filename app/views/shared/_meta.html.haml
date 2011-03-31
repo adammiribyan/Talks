@@ -21,6 +21,10 @@
 %meta{:name => 'yandex-verification', :content => '448837f81d93d532'}
 %link{:rel => "alternate", :type => "application/rss+xml", :title => t("feed.new_posts"), :href => recent_posts_path(:format => :rss)} 
 
+- if params[:action] == "show" && @post.present?
+  %link{:rel => "next", :href => post_path(next_post(@post)), :id => "NextLink"}
+  %link{:rel => "prev", :href => post_path(previous_post(@post)), :id => "PrevLink"}
+
 - if params[:action] == "show"
   - unless @post.nil?
     %link{:rel => "image_src", :href => "#{request.protocol}#{request.host}#{@post.picture.url(:normal)}"}

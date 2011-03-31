@@ -8,13 +8,12 @@
      
     .p-post
       .l-column.l-column-full
-        .p-post-header
-        
+        .p-post-header        
           - if @post.week.present?
             %span.week            
               = link_to @post.week.name, week_path(@post.week)
               
-          %h1= @post.title 
+          %h1= @post.title           
           %span.p-post-date= I18n.l @post.created_at.to_date
         .p-post-picture
           = image_tag(@post.picture.url(:normal))
@@ -49,9 +48,15 @@
             
       .l-column-right
         .b-func-buttons  
+          .control-links
+            = link_to t("post.previous_post_link"), previous_post(@post)
+            %span Ctrl
+            = link_to t("post.next_post_link"), next_post(@post)
+            
           - if can? :update, @post
             = link_to 'Редактировать', edit_post_path(@post), :class => 'b-func-button-edit'
             %br
           - if can? :destroy, @post
             = link_to 'Удалить', @post, :confirm => 'Вы уверены?', :method => :delete, :class => 'b-func-button-destroy'
+
       .clear

@@ -1,6 +1,6 @@
 #coding: utf-8
 
-module PostsHelper
+module PostsHelper  
   def char_counter_for(object, allowed = 100)
     "<script type=\"text/javascript\">
         $(document).ready(function(){
@@ -32,6 +32,30 @@ module PostsHelper
     votes = (votes_plus.to_i - votes_minus.to_i)
     
     return votes
+  end
+  
+  def next_post(post)
+    next_post = current_user_posts[current_user_posts.index(post) + 1]
+    
+    if post != next_post
+      next_post
+    else
+      ""
+    end
+  end
+  
+  def previous_post(post)
+    previous_post = current_user_posts[current_user_posts.index(post) - 1]
+    
+    if post != previous_post
+      previous_post    
+    else
+      ""
+    end
+  end
+  
+  def current_user_posts
+    Post.find_by_id(params[:id]).user.posts.published if params[:id].present?
   end
   
 end

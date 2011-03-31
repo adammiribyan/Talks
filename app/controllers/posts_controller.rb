@@ -41,9 +41,7 @@ class PostsController < ApplicationController
   end
   
   def show
-    #@post = Post.find(params[:id])
-    @string_id = "post_#{@post.id.to_s}"
-    
+    #@post = Post.find(params[:id])    
     respond_with(@post)
   end
 
