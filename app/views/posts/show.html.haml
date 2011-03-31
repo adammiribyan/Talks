@@ -55,9 +55,3 @@
           - if can? :destroy, @post
             = link_to 'Удалить', @post, :confirm => 'Вы уверены?', :method => :delete, :class => 'b-func-button-destroy'
       .clear
-      .p-post-comments
-        %h3 
-          Комментарии
-          %span#comments_count
-        = "<fb:comments xid='#{@string_id}' numposts='10' width='550' reverse='true' css='http://anton.gladkoborodov.com/stylesheets/facebook.css?500917'></fb:comments>".html_safe
-      .clear

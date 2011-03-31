@@ -40,16 +40,6 @@ class PostsController < ApplicationController
     end
   end
   
-  def comments_count
-    session = ::Facebook.session
-    @result = session.fql_query("select count from comments_info where xid='post_#{params[:id]}' and app_id='#{Facebook::CONFIG[:app_id]}'")
-    @data = @result.map(&:values).flatten.shift
-    
-    respond_with(@posts) do |format|
-      format.js { render :layout => false }
-    end
-  end
-
   def show
     #@post = Post.find(params[:id])
     @string_id = "post_#{@post.id.to_s}"
