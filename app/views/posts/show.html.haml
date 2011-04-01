@@ -49,9 +49,9 @@
       .l-column-right
         .b-func-buttons  
           .control-links
-            = link_to t("post.previous_post_link"), previous_post(@post)
+            = previous_post_link(@post)
             %span Ctrl
-            = link_to t("post.next_post_link"), next_post(@post)
+            = next_post_link(@post)
             
           - if can? :update, @post
             = link_to 'Редактировать', edit_post_path(@post), :class => 'b-func-button-edit'

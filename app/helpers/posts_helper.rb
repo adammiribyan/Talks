@@ -32,25 +32,31 @@ module PostsHelper
     votes = (votes_plus.to_i - votes_minus.to_i)
     
     return votes
-  end
+  end  
+  
+  # Posts nagigation helpers
   
   def next_post(post)
-    next_post = current_user_posts[current_user_posts.index(post) + 1]
-    
-    if post != next_post
-      next_post
-    else
-      ""
-    end
+    current_user_posts[current_user_posts.index(post) + 1]
   end
   
   def previous_post(post)
-    previous_post = current_user_posts[current_user_posts.index(post) - 1]
-    
-    if post != previous_post
-      previous_post    
+    current_user_posts[current_user_posts.index(post) - 1]
+  end
+  
+  def next_post_link(post)
+    unless next_post(post).present?
+      t("post.next_post_link")
     else
-      ""
+      link_to t("post.next_post_link"), next_post(post)
+    end
+  end
+  
+  def previous_post_link(post)
+    unless previous_post(post).present?
+      t("post.previous_post_link")
+    else
+      link_to t("post.previous_post_link"), previous_post(post)
     end
   end
   
