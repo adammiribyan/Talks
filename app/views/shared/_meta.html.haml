@@ -22,7 +22,9 @@
 %link{:rel => "alternate", :type => "application/rss+xml", :title => t("feed.new_posts"), :href => recent_posts_path(:format => :rss)} 
 
 - if params[:action] == "show" && @post.present?
-  %link{:rel => "next", :href => post_path(next_post(@post)), :id => "NextLink"}
+  - if next_post(@post).present?
+    %link{:rel => "next", :href => post_path(next_post(@post)), :id => "NextLink"}
+  - if previous_post(@post).present?
   %link{:rel => "prev", :href => post_path(previous_post(@post)), :id => "PrevLink"}
 
 - if params[:action] == "show"

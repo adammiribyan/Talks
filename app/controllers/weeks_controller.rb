@@ -10,7 +10,7 @@ class WeeksController < ApplicationController
   
   def posts
     @week = Week.find_by_slug(params[:id]) or raise ActiveRecord::RecordNotFound    
-    @posts = @week.posts.published.all :order => 'created_at desc'
+    @posts = @week.posts.all :order => 'created_at desc'
     
     respond_with(@posts) do |format|
       format.rss { render :layout => false }

@@ -13,7 +13,6 @@ class Ability
     if user.is? :admin
       can :manage, :all      
       can :assign_featured, Post
-      can :assign_published, Post
       can :assign_roles, User
       can :assign_invites, User
       can :obtain_additional_details, Post

@@ -57,11 +57,8 @@ class UsersController < Clearance::UsersController
   # В след. версиях -- профиль пользователя.
   def show
     @user = User.find_by_username(params[:id])    
-    unless current_user and current_user == @user
-      @posts = User.find_by_username(params[:id]).posts.published.find(:all, :order => 'created_at desc')
-    else
-      @posts = User.find_by_username(params[:id]).posts.find(:all, :order => 'created_at desc')
-    end    
+    @posts = User.find_by_username(params[:id]).posts.find(:all, :order => 'created_at desc')
+    
     render :template => "/posts/index"
   end
   

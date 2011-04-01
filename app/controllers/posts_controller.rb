@@ -13,18 +13,9 @@ class PostsController < ApplicationController
   
  
   def index
-    unless current_user and current_user == @user
-      @posts = @user.posts.published.order("created_at desc")
-    else
-      @posts = @user.posts.order("created_at desc")
-    end
+    @posts = @user.posts.order("created_at desc")
+    
     respond_with(@posts)
-  end
-  
-  def publish_all 
-    if Post.update_all :is_published => true
-      redirect_to :root, :notice => "All posts are marked as published."
-    end
   end
   
   def search
@@ -33,7 +24,7 @@ class PostsController < ApplicationController
   end
     
   def recent
-    @posts = Post.published.all :order => 'created_at desc'
+    @posts = Post.all :order => 'created_at desc'
     
     respond_with(@posts) do |format|
       format.rss { render :layout => false }

@@ -1,17 +1,14 @@
 class HomeController < ApplicationController
   
   def index
-    # @features = Post.published.featured.all :order => 'updated_at desc', :limit => 2
-    @features = Post.published.featured.order('updated_at desc').limit(2)
-    # @latest_posts = Post.published.all :order => 'created_at desc', :limit => 10
-    @latest_posts = Post.published.order('created_at desc').limit(10)
-    # @popular_posts = Post.published.all :order => 'created_at desc', :limit => 4
-    @popular_posts = Post.published.order('created_at desc').limit(4)
+  
+    @features = Post.featured.order('updated_at desc').limit(2)
+    @latest_posts = Post.order('created_at desc').limit(10)
     
     # Talks Weeks
     @last_week = Week.active.last
-    if @last_week && @last_week.posts.published.count > 0
-      @last_week_posts = @last_week.posts.published.limit(4)
+    if @last_week && @last_week.posts.count > 0
+      @last_week_posts = @last_week.posts.limit(4)
       @week_is_ready = true
     else
       @week_is_ready = false

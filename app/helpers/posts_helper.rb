@@ -61,7 +61,7 @@ module PostsHelper
   end
   
   def current_user_posts
-    Post.find_by_id(params[:id]).user.posts.published if params[:id].present?
+    Post.find_by_id(params[:id]).user.posts if params[:id].present?
   end
   
 end

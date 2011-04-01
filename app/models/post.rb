@@ -13,7 +13,6 @@ class Post < ActiveRecord::Base
   end
   
   scope :featured, :conditions => { :featured => true } # TODO: would be better to use is_featured
-  scope :published, :conditions => { :is_published => true }
   
   has_attached_file :picture,
                     :styles => { :normal  => "550x370#",
