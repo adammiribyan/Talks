@@ -834,6 +834,8 @@ div.admin-pane {
       display: inline-block; }
     div.admin-pane ul.admin-categories li.posts-category {
       width: 178px; }
+    div.admin-pane ul.admin-categories li.weeks-category {
+      width: 147px; }    
   div.admin-pane div.admin-logo {
     width: 100%;
     height: 109px;

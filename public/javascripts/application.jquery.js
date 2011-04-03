@@ -1,4 +1,34 @@
-$(document).ready(function(){	
+var AdminPane = { 
+  initialize: function() {
+    if ($(".admin-pane-wrap").length > 0) {
+      this.adminPaneWrap = $(".admin-pane-wrap");
+      this.adminPaneSwitcher = $(".admin-pane-switcher");
+      
+      this.adminPaneWrap.fadeTo(0, 0.9);
+      this.adminPaneWrap.css("height", document.body.clientHeight + "px");
+      this.adminPaneWrap.hide();
+      this.adminPaneWrap.click(function(e) { AdminPane.toggle(e); });
+      this.adminPaneSwitcher.click(function(e) { AdminPane.toggle(e); });
+      this.off = true;
+    }
+  },
+  
+  toggle: function(e) {
+    if (this.off) {
+      this.adminPaneWrap.slideDown();
+      this.off = false;
+    }
+    else {
+      this.adminPaneWrap.slideUp();
+      this.off = true;
+    }
+  }
+};
+
+$(document).ready(function() {	
+  
+  AdminPane.initialize();
+  
 	$('.password-trigger').click(function() {
 	    // get current input
 	    var jCurrentInput = $(this).siblings('input.password').eq(0)
