@@ -26,7 +26,8 @@
           .p-post-song          
             = @post.song_code.html_safe
         .p-post-quote
-          = @post.conversation.markdown.typography.html_safe
+          - @post.conversation.sub("  \n", "")
+          = simple_format @post.conversation.typography.html_safe
         
         .b-share 
           %hr         

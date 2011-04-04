@@ -125,6 +125,8 @@
               .service YouTube
               %a.id{:href => @user.youtube_link}
                 = @user.youtube
+                
+                
   - if @user.posts.count > 0 && params[:action] != "playlist"
     %hr/
     .music-box-wrap

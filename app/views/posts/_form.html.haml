@@ -5,42 +5,7 @@
         = f.input :week_id, :as => :hidden, :input_html => { :value => @week.id }
       = f.input :title, :label => 'Заголовок'
       = char_counter_for 'post_title', 100  
-      = f.input :conversation, :label => 'Диалог'      
-      .b-formatting-hints#formattingHints       
-        .g-left
-          %div
-            %h4
-              %p Заголовок
-              %p ----------------
-          %div
-            %strong **Жирный**
-          %div
-            %em *Курсив*
-          %div
-            [Ссылка](
-            = link_to 'http://t-a-l-k-s.com', 'http://t-a-l-k-s.com'
-            )
-        
-        .g-center
-          %div
-            %blockauote
-              %p > цитата
-              %p > в несколько
-              %p > строк
-          %div
-            * список
-            %br
-            * каких-нибудь
-            %br
-            * строк
-            
-        .g-right
-          %div
-            Тире получится, если набрать два дефиса подряд.
-          %div
-            А для 
-            = link_to 'перевода строки', 'http://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8' 
-            нужно два раза нажать на пробел в конце строки.
+      = f.input :conversation, :label => 'Диалог'
       
       = submit_button "Сохранить"
       
