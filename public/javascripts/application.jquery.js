@@ -1,4 +1,5 @@
-var AdminPane = { 
+var AdminPane = {
+  
   initialize: function() {
     if ($(".admin-pane-wrap").length > 0) {
       this.adminPaneWrap = $(".admin-pane-wrap");

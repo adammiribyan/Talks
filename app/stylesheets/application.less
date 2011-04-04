@@ -319,3 +319,46 @@ div.week:after {
   height: 0;
 }
 
+.odd { background-color: white; }
+.even { background-color: #F9FAF5; }
+
+
+ul.songs-list {
+  position: relative;
+  width: 65%;
+  padding: 0 10px;
+  list-style: none;  
+  
+  li {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 7px 0;
+    
+    span {
+      margin-top: 3px;
+      display: block;      
+      font-size: 12px;
+      padding-left: 20px;
+      line-height: 1.5;
+      color: #888; 
+      
+      a { 
+        color: #121212;        
+      }
+    }
+  }
+    
+}
+
+.music-box-wrap {
+  position: relative;
+  height: 24px;
+  zoom: 1;
+  
+  .music-box {
+    position: absolute;
+    background: url("/images/music-box.png") no-repeat 0 0;
+    height: 24px;
+    padding: 4px 0 0 42px;
+  }
+}

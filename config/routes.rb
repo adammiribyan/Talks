@@ -11,10 +11,11 @@ Talks::Application.routes.draw do
   
   resources :users, :shallow => true do
     resources :posts
-    
+        
     get "/statistics" => "users#statistics", :as => :statistics, :on => :collection
     
     member do
+      get "/playlist" => "users#playlist", :as => :playlist
       get "/settings" => "users#redirect_to_settings"
       get "/settings/profile" => "users#edit_profile", :as => :profile_settings
       get "/settings/account" => "users#edit_account", :as => :account_settings

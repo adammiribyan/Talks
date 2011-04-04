@@ -2,7 +2,7 @@
 
 class UsersController < Clearance::UsersController
   
-  before_filter :set_the_user, :only => [:edit_account, :edit_profile, :update_account, :update_profile]
+  before_filter :set_the_user, :only => [:playlist, :edit_account, :edit_profile, :update_account, :update_profile]
   before_filter :authenticate, :only => [:edit_account, :edit_profile]
   
   def statistics
@@ -29,6 +29,10 @@ class UsersController < Clearance::UsersController
   
   def edit_profile
     authorize! :update, @user
+  end
+  
+  def playlist
+    @posts = Post.where_user_is(@user).order("created_at DESC")
   end
 
   def update_account

@@ -18,6 +18,10 @@ class PostsController < ApplicationController
     respond_with(@posts)
   end
   
+  def user_songs
+    @songs = Post.songs.where_user_is(@user)
+  end
+  
   def search
     @query = params[:query].to_s
     @posts = Post.search @query, :page => params[:page], :per_page => 20   

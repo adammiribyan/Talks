@@ -27,4 +27,11 @@ class Post < ActiveRecord::Base
   validates :picture_author_name, :presence => true
   validates :song_code, :presence => true 
  
+  def self.songs
+    select(:song_code)
+  end
+  
+  def self.where_user_is(user)
+    where(:user_id => user.id)
+  end
 end

@@ -269,3 +269,36 @@ div.week:after {
   display: block;
   height: 0;
 }
+.odd { background-color: white; }
+.even { background-color: #f9faf5; }
+ul.songs-list {
+  position: relative;
+  width: 65%;
+  padding: 0 10px;
+  list-style: none;
+}
+ul.songs-list li {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 7px 0;
+}
+ul.songs-list li span {
+  margin-top: 3px;
+  display: block;
+  font-size: 12px;
+  padding-left: 20px;
+  line-height: 1.5;
+  color: #888888;
+}
+ul.songs-list li span a { color: #121212; }
+.music-box-wrap {
+  position: relative;
+  height: 24px;
+  zoom: 1;
+}
+.music-box-wrap .music-box {
+  position: absolute;
+  background: url("/images/music-box.png") no-repeat 0 0;
+  height: 24px;
+  padding: 4px 0 0 42px;
+}

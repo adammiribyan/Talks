@@ -37,11 +37,7 @@
       - if can? :manage, Applicant
         %li
           = link_to_unless_current "Заявки", applicants_path
-          %span= applicants_count
-      
-      - if can? :manage, Week
-        %li= link_to_unless_current "Недели", weeks_path
-      
+          %span= applicants_count      
         
       - if current_user.invites_limit > 0
         %li= link_to_unless_current 'Пригласить друзей', new_invite_path

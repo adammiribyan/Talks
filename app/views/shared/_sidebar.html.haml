@@ -125,3 +125,7 @@
               .service YouTube
               %a.id{:href => @user.youtube_link}
                 = @user.youtube
+  - if @user.posts.count > 0
+    %hr/
+    .music-box-wrap
+      = link_to "Плейлист автора", playlist_user_url(@user), :class => "music-box"

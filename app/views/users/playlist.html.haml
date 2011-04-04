@@ -1,0 +1,18 @@
+- title "Все песни из параграфов пользователя #{@user.username}"
+
+%h1.form
+	Все песни из параграфов пользователя 
+	= @user.username
+%span.head-note.block-inline 
+.b-line.b-line-mid.b-line-thin
+
+.columns
+	.column.column2-x2
+		%ul.songs-list
+			- @posts.each do |post|
+				%li{:class => cycle("odd", "even")}
+					= post.song_code.html_safe
+					%span
+						= link_to post.title.titleize, post
+						%br/
+						= I18n.l post.created_at.to_date
