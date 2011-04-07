@@ -10,27 +10,27 @@
           %span Talks
           %span Редакция
       
-      .p-loves-p= image_tag "plovesp.png"
+      .hidden
+        .p-loves-p= image_tag "plovesp.png"
       
-      .hidden      
-        %ul.admin-categories
-          %li.posts-category Параграфы
-          %li.weeks-category Недели
-          %li Разное
-        
-        %ul.category-items
-          %li= link_to 'Опубликованные', "/search"
-          %li= link_to 'Фичеры', root_url
-          %li= link_to  'Авторы', root_url      
-          %li.new= link_to  'Жалобы', root_url
-          %li= link_to  'Статистика', statistics_users_url
-        
-        %ul.category-items
-          %li= link_to 'Текущая', weeks_url
-          %li= link_to  'Прошедшие', weeks_url
-        
-        %ul.category-items
-          %li= link_to 'Заявки', applicants_url
-          %li= link_to  'Рассылки', root_url
-          %li= link_to  'Члены команды', root_url
-          %li.new= link_to  'Баннеры', root_url
+      %ul.admin-categories
+        %li.posts-category Параграфы
+        %li.weeks-category Недели
+        %li Разное
+      
+      %ul.category-items
+        %li= link_to 'Опубликованные', "/search"
+        %li= link_to 'Фичеры', root_url
+        %li= link_to  'Авторы', root_url      
+        %li.new= link_to  'Жалобы', root_url
+        %li= link_to  'Статистика', statistics_users_url
+      
+      %ul.category-items
+        %li= link_to 'Текущая', weeks_url
+        %li= link_to  'Прошедшие', weeks_url
+      
+      %ul.category-items
+        %li= link_to 'Заявки', applicants_url
+        %li= link_to  'Рассылки', root_url
+        %li= link_to  'Члены команды', root_url
+        %li.new= link_to  'Баннеры', root_url
