@@ -16,6 +16,7 @@ class Ability
       can :assign_roles, User
       can :assign_invites, User
       can :obtain_additional_details, Post
+      can :trigger_visibility, Post
     else
       can :read, [Post, User, Week]      
       can :create, Applicant # For beta only

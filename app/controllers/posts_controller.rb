@@ -18,6 +18,18 @@ class PostsController < ApplicationController
     respond_with(@posts)
   end
   
+  def trigger_visibility    
+    @post = Post.find_by_id(params[:id])
+    
+    authorize! :trigger_visibility, @post
+    
+    if @post.trigger_visibility!
+      redirect_to(@post)
+    else
+      redirect_to(root_url, :notice => "Ошибка при скрытии или отображении параграфа.")
+    end
+  end
+  
   def user_songs
     @songs = Post.songs.where_user_is(@user)
   end

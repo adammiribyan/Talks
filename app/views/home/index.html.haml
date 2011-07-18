@@ -17,20 +17,7 @@
     .posts
       .header
         %h3 Последние параграфы
-      - @latest_posts.each do |post|
-        .postPreview
-          .image
-            = link_to image_tag(post.picture.url(:preview), :class => "rc4"), post
-          .text
-            .header            
-              %h2
-                = link_to post.title, post
-              %span.data
-                = succeed "," do
-                  = link_to post.user.username, post.user, :class => 'author'
-                = I18n.l post.created_at.to_date
-            .description
-              = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe
+      = render :partial => "/posts/post", :collection => @latest_posts, :as => :post
     
               
     - if @week_is_ready
@@ -38,20 +25,7 @@
         .header
           %h3.last_week-header
             = link_to @last_week.name, @last_week
-        - @last_week_posts.each do |post|
-          .postPreview
-            .image
-              = link_to image_tag(post.picture.url(:preview), :class => "rc4"), post
-            .text
-              .header
-                %h2
-                  = link_to post.title, post
-                %span.data
-                  = succeed "," do
-                    = link_to post.user.username, post.user, :class => 'author'
-                  = I18n.l post.created_at.to_date
-              .description
-                = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe
+        = render :partial => "/posts/post", :collection => @last_week_posts, :as => :post
             
   .column.column2-x1.column-last
     %br

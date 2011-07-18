@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110401203535) do
+ActiveRecord::Schema.define(:version => 20110718013054) do
 
   create_table "applicants", :force => true do |t|
     t.string   "email"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20110401203535) do
     t.boolean  "featured"
     t.text     "song_code"
     t.integer  "week_id"
+    t.boolean  "is_hidden"
   end
 
   create_table "users", :force => true do |t|

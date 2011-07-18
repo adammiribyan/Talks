@@ -10,7 +10,9 @@ Talks::Application.routes.draw do
   resources :invites, :only => [:new, :create]  
   
   resources :users, :shallow => true do
-    resources :posts
+    resources :posts do
+      get "/trigger_visibility" => "posts#trigger_visibility", :as => :trigger_visibility, :on => :member
+    end
         
     get "/statistics" => "users#statistics", :as => :statistics, :on => :collection
     

@@ -34,4 +34,18 @@ class Post < ActiveRecord::Base
   def self.where_user_is(user)
     where(:user_id => user.id)
   end
+  
+  def trigger_visibility!
+    if self.is_hidden.present?
+      value = !self.is_hidden
+    else
+      value = true
+    end
+    
+    self.update_attribute(:is_hidden, value)
+  end
+  
+  def is_hidden?
+    self.is_hidden    
+  end
 end

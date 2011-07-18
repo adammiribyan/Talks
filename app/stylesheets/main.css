@@ -1453,5 +1453,9 @@ body {
     color: #15A;
 }
 
+.post-hidden {
+  background-color: #FFCCCC;
+}
+
 
 

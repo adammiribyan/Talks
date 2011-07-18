@@ -1,4 +1,4 @@
-#coding: utf-8
+#encoding: utf-8
 
 module PostsHelper  
   def char_counter_for(object, allowed = 100)
@@ -62,6 +62,14 @@ module PostsHelper
   
   def current_user_posts
     Post.find_by_id(params[:id]).user.posts if params[:id].present?
+  end
+  
+  def trigger_visibility_link
+    if @post.present?
+      label_action = @post.is_hidden ? "Отобразить" : "Скрыть"
+      
+      link_to "#{label_action} параграф", trigger_visibility_post_path(@post)
+    end
   end
   
 end
