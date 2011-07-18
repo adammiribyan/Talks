@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   
   def index
   
-    @features = Post.featured.order('updated_at desc').limit(2)
+    @features = Post.where(:is_hidden => false).featured.order('updated_at desc').limit(2)
     @latest_posts = Post.order('created_at desc').limit(10)
     
     # Talks Weeks
