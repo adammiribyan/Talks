@@ -7,6 +7,8 @@
         %h2.post-hidden
           = link_to post.title, post
         %span.data
+          = succeed "," do
+            = link_to post.user.username, post.user, :class => 'author'
           = I18n.l post.created_at.to_date
       .description
         = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe
@@ -19,6 +21,8 @@
         %h2
           = link_to post.title, post
         %span.data
+          = succeed "," do
+            = link_to post.user.username, post.user, :class => 'author'
           = I18n.l post.created_at.to_date
       .description
         = truncate(post.conversation, :length => 80, :separator => ' ').markdown.typography.html_safe

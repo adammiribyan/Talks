@@ -1,4 +1,4 @@
-require '/home/adam/talks/lib/recipes/thinking_sphinx'
+require '/home/adam/Projects/Talks/lib/recipes/thinking_sphinx'
 
 set :user, 'adam'
 
