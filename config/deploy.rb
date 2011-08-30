@@ -1,8 +1,8 @@
 require '/home/adam/Projects/Talks/lib/recipes/thinking_sphinx'
-# require "whenever/capistrano"
+require "whenever/capistrano"
 
 set :user, 'adam'
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        # 
 set :application, "talks"
 
 role :app, "t-a-l-k-s.com"
