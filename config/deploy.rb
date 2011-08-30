@@ -1,4 +1,5 @@
 require '/home/adam/Projects/Talks/lib/recipes/thinking_sphinx'
+require "whenever/capistrano"
 
 set :user, 'adam'
 
@@ -21,6 +22,8 @@ set :use_sudo, false
 
 set :branch, "master"
 set :deploy_to, "/home/#{user}/webapps/#{application}"
+
+set :whenever_command, "bundle exec whenever"
 
 namespace :deploy do
   desc "Restart application"
