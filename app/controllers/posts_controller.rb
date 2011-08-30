@@ -48,7 +48,12 @@ class PostsController < ApplicationController
   end
   
   def show
-    #@post = Post.find(params[:id])    
+    #@post = Post.find(params[:id])
+    
+    if @post.is_hidden && !(current_user == @post.user)
+      raise ActiveRecord::RecordNotFound
+    end
+    
     respond_with(@post)
   end
 
