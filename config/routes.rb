@@ -7,7 +7,7 @@ Talks::Application.routes.draw do
   end
   
   resources :applicants  
-  resources :invites, :only => [:new, :create]  
+  resources :invites, :only => [:new, :create]
   
   resources :users, :shallow => true do
     resources :posts do
@@ -28,9 +28,7 @@ Talks::Application.routes.draw do
   
   match "/recent" => "posts#recent", :as => :recent_posts  
   match "/posts/:id/comments/count" => "posts#comments_count", :as => :post_comments_count
-  match "/search" => "posts#search", :as => :search    
-  get "/publish_all" => "posts#publish_all", :as => :publish_all
+  match "/search" => "posts#search", :as => :search  
   
-  root :to => "home#index"
-  
+  root :to => "home#index"  
 end

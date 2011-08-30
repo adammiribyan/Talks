@@ -15,6 +15,7 @@ class Ability
       can :assign_featured, Post
       can :assign_roles, User
       can :assign_invites, User
+      can :assign_moderators, Week
       can :obtain_additional_details, Post
       can :trigger_visibility, Post
     else
@@ -37,9 +38,8 @@ class Ability
     end
     
     if user.is? :moderator
-      can :update, Post
-      can :obtain_additional_details, Post do |post|
-        post.try(:user) != user
+      can :update, Week do |week|
+        week.try(:moderators).include? user
       end
     end
     

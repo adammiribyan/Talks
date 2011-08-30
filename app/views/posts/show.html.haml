@@ -9,7 +9,7 @@
     .p-post
       .l-column.l-column-full
         .p-post-header        
-          - if @post.week.present?
+          - if @post.week
             %span.week            
               = link_to @post.week.name, week_path(@post.week)
           - if @post.is_hidden?
@@ -31,23 +31,7 @@
           - @post.conversation.sub("  \n", "")
           = simple_format @post.conversation.typography.html_safe
         
-        .b-share 
-          %hr         
-          .b-share-others            
-            .twitter
-              %script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
-              %a{:class => "twitter-share-button", :href => "http://twitter.com/share", :data => {:count => "horizontal", :text => @post.title, :via => "talks_news"}} Tweet
-            .facebook              
-              = "<fb:share-button layout='standart' type='button_count' href='#{request.url}'></fb:share-button>".html_safe  
-            .vkontakte            
-              #vk_like
-              :javascript
-                VK.Widgets.Like("vk_like", {type: "mini"});                                
-          .clear                
-          .b-share-facebook_like
-            \<fb:like href="              
-            = request.url            
-            \" show_faces="true" width="450" font="arial"></fb:like>  
+        = render "sharing"
             
       .l-column-right
         .b-func-buttons  

@@ -1,7 +1,17 @@
 class Week < ActiveRecord::Base
+  serialize :moderators, Array
+  
   def to_param
     slug || id.to_s
-  end 
+  end
+  
+  def moderators
+    read_attribute(:moderators).map {|user_id| User.find(user_id) } || write_attribute(:moderators, [])
+  end
+  
+  def moderators_list
+    read_attribute(:moderators)
+  end
   
   scope :active, :conditions => { :is_active => true }
   

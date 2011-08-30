@@ -12,3 +12,5 @@
       - if @show_picture_preview
         .b-picture-preview
           = image_tag @week.picture.url(:thumb)
+      - if can? :assign_moderators, Week
+        = f.input :moderators_list, :as => :string, :label => "Имена пользователей модераторов"

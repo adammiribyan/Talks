@@ -372,3 +372,38 @@ ul.songs-list {
 }
 
 .hidden { display: none; }
+
+.b-new-share {
+  margin: 40px 0 1em 0;
+  white-space: nowrap;
+  z-index: 99;
+  font-size: 0;
+  letter-spacing: -1px;
+  width: 340px;
+  border-top: 1px solid #CCC;
+  padding: 12px 0 0 0;
+  
+  .twitter, .facebook-like, .vkontakte-like, .plus-one {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *display: inline;
+    vertical-align: top;
+    zoom: 1;
+    font-size: 12px;
+    letter-spacing: normal;
+    white-space: normal;
+  }
+  
+  .vkontakte-like {
+    width: 88px !important;
+  }
+  
+  .twitter {
+    padding-top: 2px;
+  }
+  
+  .plus-one {
+    padding-top: 2px;
+    width: 76px;
+  }  
+}

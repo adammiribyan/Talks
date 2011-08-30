@@ -53,6 +53,8 @@ class WeeksController < ApplicationController
   end
 
   def update
+    authorize! :assign_moderators
+    
     @week = Week.find_by_slug(params[:id]) or raise ActiveRecord::RecordNotFound
     
     if @week.update_attributes(params[:week])

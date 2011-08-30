@@ -1,5 +1,5 @@
 namespace :posts do  
-  desc "Set the is_hidden value to false to all posts unless is_hidden is true"
+  desc "Set the is_hidden value to false for all posts unless is_hidden is true"
   task :populate_is_hidden => :environment do
     Post.all.each do |post|
       unless post.is_hidden == true

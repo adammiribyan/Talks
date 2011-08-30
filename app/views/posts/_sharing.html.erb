@@ -1,0 +1,14 @@
+<div class="b-new-share">
+  <div class="twitter">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="talks_news">Tweet</a>
+  </div>
+  <div class="vkontakte-like" id="vk_like">
+    <script>VK.Widgets.Like("vk_like", {type: "mini"});</script>
+  </div>  
+  <div class="plus-one">
+    <g:plusone size="medium" href="<%= request.url %>"></g:plusone>
+  </div>  
+  <div class="facebook-like">
+    <fb:like href="<%= request.url %>" send="false" width="320" show_faces="false" action="like" font="Arial"></fb:like>
+  </div>  
+</div>

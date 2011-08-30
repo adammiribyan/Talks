@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110718013054) do
+ActiveRecord::Schema.define(:version => 20110722200649) do
 
   create_table "applicants", :force => true do |t|
     t.string   "email"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(:version => 20110718013054) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.boolean  "is_active"
+    t.text     "moderators"
   end
 
 end

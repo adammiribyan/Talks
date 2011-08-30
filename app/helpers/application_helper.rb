@@ -6,7 +6,7 @@ module ApplicationHelper
   end
   
   def new_post_link
-    if can? :create, Week && params[:controller] == "weeks"
+    if (params[:controller] == "weeks") && (can? :create, Week)
       link_to_unless_current "Новый параграф", new_user_post_path(current_user, :week => params[:id])
     else
       link_to_unless_current "Новый параграф", new_user_post_path(current_user)

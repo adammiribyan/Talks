@@ -310,3 +310,59 @@ ul.songs-list li span a { color: #121212; }
   margin: 10px 0 50px 0;
 }
 .hidden { display: none; }
+.b-new-share {
+  margin: 40px 0 1em 0;
+  white-space: nowrap;
+  z-index: 99;
+  font-size: 0;
+  letter-spacing: -1px;
+  width: 340px;
+  border-top: 1px solid #cccccc;
+  padding: 12px 0 0 0;
+}
+.b-new-share .twitter {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  zoom: 1;
+  font-size: 12px;
+  letter-spacing: normal;
+  white-space: normal;
+}
+.b-new-share .facebook-like {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  zoom: 1;
+  font-size: 12px;
+  letter-spacing: normal;
+  white-space: normal;
+}
+.b-new-share .vkontakte-like {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  zoom: 1;
+  font-size: 12px;
+  letter-spacing: normal;
+  white-space: normal;
+}
+.b-new-share .plus-one {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  zoom: 1;
+  font-size: 12px;
+  letter-spacing: normal;
+  white-space: normal;
+}
+.b-new-share .vkontakte-like { width: 88px !important; }
+.b-new-share .twitter { padding-top: 2px; }
+.b-new-share .plus-one {
+  padding-top: 2px;
+  width: 76px;
+}
