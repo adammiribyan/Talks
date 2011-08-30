@@ -49,13 +49,13 @@ namespace(:customs) do
       ln -nfs #{shared_path}/system/database.yml #{release_path}/config/database.yml
     CMD
     
-    run <<-CMD
-      ln -nfs #{shared_path}/system/Gemfile #{release_path}/Gemfile
-    CMD
-    
-    run <<-CMD
-      ln -nfs #{shared_path}/system/Gemfile.lock #{release_path}/Gemfile.lock
-    CMD
+    # run <<-CMD
+    #   ln -nfs #{shared_path}/system/Gemfile #{release_path}/Gemfile
+    # CMD
+    # 
+    # run <<-CMD
+    #   ln -nfs #{shared_path}/system/Gemfile.lock #{release_path}/Gemfile.lock
+    # CMD
   end
   task :symlink, :roles => :app do
     run <<-CMD
