@@ -54,7 +54,7 @@ Talks::Application.configure do
     :port                 => 587,
     :domain               => 't-a-l-k-s.com',
     :user_name            => 'adam.miribyan',
-    :password             => 'god.love.sex.',
+    :password             => 'au72coUX',
     :authentication       => 'plain',
     :enable_starttls_auto => true  
   }
